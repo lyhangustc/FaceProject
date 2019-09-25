@@ -1,1 +1,20 @@
 # FaceProject
+
+---
+
+## Meeting Note 2019-9-24
+### Discussion
+##### Image generation from attribute values
+* Image generation from attribute values (instead of attribute labels)
+##### Image generation by mixing two images
+* Weights of two input images
+* Two potential methods based on two architectures: conditional and unconditional
+* Artbreeder.com
+##### Image generation from sketches progressively
+* Image generation progressively from sketches (stroke by stroke, instead of entire well-drawn sketches)
+### Future work
+* Mask-face dataset survey
+* Face2mask, face parsing survey
+* Mask2Face generation by pix2pixHD
+* Mask editing interface
+* Image generation by mixing images survey
