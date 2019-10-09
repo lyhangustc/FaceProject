@@ -1,7 +1,11 @@
 # FaceProject
+
 ---
-[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
+
+To write a readme file using Markdown in github, see: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
+
 ---
+
 ## Meeting Note 2019-10-9
 ### Discussion
 * Task: sketch to photo genertation 
