@@ -5,7 +5,15 @@
 To write a readme file using Markdown in github, see: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 
 ---
-
+## Meeting Note 2019-11-4
+### Discussion
+* Few sketches and many edge maps
+* Domain gap between sketches and edge maps: the gap is larger than that between different classes of natural images, but smaller than that between different style images.
+* Combining **domain transfer** and **few-shot learning**
+### Work Assignment
+* Binxin Yang: paper reading on graph convolution on 11-5 afternoon
+* Zihan Chen: more sketch drawings
+* Zhihua Cheng: investigate papers on transfer learning
 ## Meeting Note 2019-10-9
 ### Discussion
 * Task: sketch to photo genertation 
