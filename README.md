@@ -6,6 +6,11 @@ Lines2Face project page: https://liyuhangustc.github.io/Lines2Face/
 To write a readme file using Markdown in github, see: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 
 ---
+## Meeting Note 2019-11-29
+### paper list
+* Semantic Component Decomposition for Face Attribute Manipulation.[Project](http://jiaya.me/papers/faceattri_cvpr19.pdf)
+* R3 Adversarial Network for Cross Model Face Recognition. [Project](http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_R3_Adversarial_Network_for_Cross_Model_Face_Recognition_CVPR_2019_paper.pdf)
+
 ## Meeting Note 2019-11-8
 ### Work Assignment
 * Binxin Yang: investigate papers on domain adaptation
