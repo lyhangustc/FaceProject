@@ -10,6 +10,7 @@ To write a readme file using Markdown in github, see: [Markdown Cheatsheet](http
 ### paper list
 * Semantic Component Decomposition for Face Attribute Manipulation.[paper](http://jiaya.me/papers/faceattri_cvpr19.pdf)
 * R3 Adversarial Network for Cross Model Face Recognition. [paper](http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_R3_Adversarial_Network_for_Cross_Model_Face_Recognition_CVPR_2019_paper.pdf)
+* SinGAN: Learning a Generative Model from a Single Natural Image.[paper](https://arxiv.org/pdf/1905.01164.pdf)
 
 ## Meeting Note 2019-11-8
 ### Work Assignment
