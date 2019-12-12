@@ -6,6 +6,13 @@ Lines2Face project page: https://liyuhangustc.github.io/Lines2Face/
 To write a readme file using Markdown in github, see: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 
 ---
+## Recommended readings 2019-12-12 by tennyson
+### paper list
+* MarioNETte: Few-shot Face Reenactment Preserving Identity of Unseen Targets.[paper](https://arxiv.org/abs/1911.08139)
+* How far are we from solving the 2D & 3D Face Alignment problem. [paper](https://arxiv.org/abs/1703.07332)
+### relative materials
+* Frequently-used normalization methods: BN, LN, IN and GN.[zhihu](https://zhuanlan.zhihu.com/p/72589565)
+
 ## Meeting Note 2019-11-29
 ### paper list
 * Semantic Component Decomposition for Face Attribute Manipulation.[paper](http://jiaya.me/papers/faceattri_cvpr19.pdf)
