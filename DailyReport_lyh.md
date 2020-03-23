@@ -1,4 +1,4 @@
-## 3-22	
+# 3-22	
 ### All-zero problem 
 ####	Solution plan 1: training few-shot model with random style embedding vector
 *	Code with random style vector done, all-zeros problem not occurred (Figure 1), but
@@ -26,10 +26,22 @@
 - [ ]	Add K1 loss 
 - [x]	Add L2 regularization to model, not compared
 - [x]	Use hinge loss as basic gan loss and discriminator loss, not compared
+### Paper Reading
+##### Which Training Methods for GANs do actually Converge?
+ICML 2018
+##### Conclusion
+*	WGAN and WGAN-GP and DRAGAN do not ensure local convergence of GAN. 
+*	Use Gradient penalty on real data (L2 regularization, R1) and fake data (L2 regularization, R1).
+*	 R1 <=> R2 <=> R1+R2 in stabilizing GAN training. 
+
+![Local Convegence](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![Optimization](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 
-## 3-21
-###Task 1: debug on few-shot sketch2face model
+
+# 3-21
+### Task 1: debug on few-shot sketch2face model
 ##### All-zero problem
 * the outputs of the model are all zeros, the losses are all zeros
 * NaN gradient in decoder: detect NaN gradients in one of decoder layers
