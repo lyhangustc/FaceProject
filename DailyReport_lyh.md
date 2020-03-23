@@ -37,6 +37,8 @@ ICML 2018
 ![Local Convegence](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 ![Optimization](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+### [Different Losses of GANs](https://github.com/TwistedW/tf-GANs-Loss)
+
 
 
 
