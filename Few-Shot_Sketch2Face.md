@@ -24,7 +24,7 @@ The hand-drawn sketches are obtained by people with trained drawing skills. They
 There exists a domain gap between the hand-drawn data and the edge maps/contours. If we train the model with edge maps/contours, and then test the model with hand-drawn sketches/hand-drawn contours, artifacts can be found in the outputs. Three kinds of artifacts are summarized as below.
 1. Hair artifact
 
-![Hair artifact](/figures/CSA-GAN_edge_df2photo/hair_artifacts.png "Hair artifact")
+![Hair artifact](/figures/CSA-GAN_edge_df2photo/hair_artifacts.PNG "Hair artifact")
 
 1. Ornament artifact
 
