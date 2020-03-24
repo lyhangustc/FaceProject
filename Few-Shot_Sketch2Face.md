@@ -28,7 +28,7 @@ There exists a domain gap between the hand-drawn data and the edge maps/contours
 
 1. Ornament artifact
 
-![Ornament artifact](/figures/CSA-GAN_edge_df2photo/ornament _artifacts.png "Ornament  artifact")
+![Ornament artifact](/figures/CSA-GAN_edge_df2photo/ornamenet_artifacts.png "Ornament  artifact")
 
 1. Texture artifact
 
