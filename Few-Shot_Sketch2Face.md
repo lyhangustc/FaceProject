@@ -6,7 +6,7 @@ The hand-drawn sketches are obtained by people with trained drawing skills. They
 * Paired with real face images
 * Complete face structures
 * Different levels of details
-* ~50 sketches only ¨C few-shot
+* ~50 sketches only Â¨C few-shot
 
 ![hand-drawn sketch](/figures/datasets/handdrawn_sketch_groundtruth.png)
 
@@ -24,15 +24,15 @@ The hand-drawn sketches are obtained by people with trained drawing skills. They
 There exists a domain gap between the hand-drawn data and the edge maps/contours. If we train the model with edge maps/contours, and then test the model with hand-drawn sketches/hand-drawn contours, artifacts can be found in the outputs. Three kinds of artifacts are summarized as below.
 1. Hair artifact
 
-![Hair artifact](/figures/datasets/hair_artifacts.png "Hair artifact")
+![Hair artifact](/figures/CSA-GAN_edge_df2photo/hair_artifacts.png "Hair artifact")
 
 1. Ornament artifact
 
-![Ornament artifact](/figures/datasets/ornament _artifacts.png "Ornament  artifact")
+![Ornament artifact](/figures/CSA-GAN_edge_df2photo/ornamenet_artifacts.png "Ornament  artifact")
 
 1. Texture artifact
 
-![Texture artifact](/figures/datasets/texture_artifacts.png "Texture artifact")
+![Texture artifact](/figures/CSA-GAN_edge_df2photo/texture_artifacts.png "Texture artifact")
 
 ### 2. Few-shot
 The number of the collected hand-drawn sketches/hand-drawn contour is not large enough to train a large-scale model. The model is supposed to use the hand-drawn data in a few-shot form.
