@@ -3,7 +3,7 @@
 ---
 Lines2Face project page: https://liyuhangustc.github.io/Lines2Face/
 
-To write a readme file using Markdown in github, see: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
+To write a readme file using Markdown in github, see: [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet) or [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 ---
 ## Recommended readings 2019-12-12 by tennyson
