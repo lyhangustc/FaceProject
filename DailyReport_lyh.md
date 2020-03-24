@@ -1,3 +1,9 @@
+# 3-23
+### Github
+* Setup github environment
+* Write a summary report of the project: `~/Few-Shot_Sketch2Face.md`
+* Collect experimental results and make web files for displaying: `~/results`
+
 # 3-22	
 ### All-zero problem 
 ####	Solution plan 1: training few-shot model with random style embedding vector
