@@ -40,10 +40,14 @@ ICML 2018
 *	Use Gradient penalty on real data (L2 regularization, R1) and fake data (L2 regularization, R1).
 *	 R1 <=> R2 <=> R1+R2 in stabilizing GAN training. 
 
-![Local Convegence](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Local Convegence](/figures/daily_report/3-22/image003.jpg "Local Convegence")
 
-![Optimization](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Optimization](/figures/daily_report/3-22/image004.jpg "Optimization")
+
 ### [Different Losses of GANs](https://github.com/TwistedW/tf-GANs-Loss)
+
+![Different Losses of GANs](/figures/daily_report/3-22/image005.jpg "Local Convegence")
+![Different Losses of GANs](/figures/daily_report/3-22/image006.jpg "Local Convegence")
 
 
 
