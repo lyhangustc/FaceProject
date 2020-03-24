@@ -1,3 +1,40 @@
+# 3-24
+## Paper Reading
+### Unsupervised Generative Attentional Networks with Adaptive Layer-Instance Normalization for Image-to-Image Translation
+Junho Kim (NCSOFT), Minjae Kim (NCSOFT), Hyeonwoo Kang (NCSOFT), Kwanghee Lee (Boeing Korea)
+[ArXiv](https://arxiv.org/abs/1907.10830) [code](https://github.com/taki0112/UGATI)
+* Unsupervised image-to-image translation
+* Focus on geometric/shape changes, [selfie2anime dataset](https://drive.google.com/file/d/1xOWj1UVgp6NKMT3HbPhBbtq2A4EDkghF/view?usp=sharing)
+* Adaptive Layer-Instance Normalization: sum of AdaIN and LN with trainable weights.
+* Auxiliary classifiers (source/target) in both generator and discriminator 
+#### Architecture
+<div align="center">
+  <img src = '/figures/daily_report/3-24/generator_fix.png' width = '785px' height = '500px'>
+</div>
+
+---
+
+<div align="center">
+  <img src = '/figures/daily_report/3-24/discriminator_fix.png' width = '785px' height = '450px'>
+</div>
+
+## Results
+### Ablation study
+<div align="center">
+  <img src = '/figures/daily_report/3-24/ablation.png' width = '438px' height = '346px'>
+</div>
+
+### User study
+<div align="center">
+  <img src = '/figures/daily_report/3-24/user_study.png' width = '738px' height = '187px'>
+</div>
+
+### Kernel Inception Distance (KID)
+<div align="center">
+  <img src = '/figures/daily_report/3-24/kid_fix2.png' width = '750px' height = '400px'>
+</div>
+
+
 # 3-23
 ### Github
 * Setup github environment
