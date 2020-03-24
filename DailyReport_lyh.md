@@ -9,6 +9,14 @@ Junho Kim (NCSOFT), Minjae Kim (NCSOFT), Hyeonwoo Kang (NCSOFT), Kwanghee Lee (B
     * IN: more source semantic details from input in the output
     * LN: more target style in the output 
 * Auxiliary classifiers (source/target) in both generator and discriminator 
+
+## Web page
+* [Selfie2Anime](https://selfie2anime.com) by [Nathan Glover](https://github.com/t04glovern)
+* [Selfie2Waifu](https://waifu.lofiu.com) by [creke](https://github.com/creke)
+* [Baidu AI Selfie2Anime](https://ai.baidu.com/tech/imageprocess/selfie_anime)
+
+## Telegram Bot
+* [Selfie2AnimeBot](https://t.me/selfie2animebot) by [Alex Spirin](https://github.com/sxela)
 #### Code Reading
 * Auxiliary classifier have two branch from global_avg_pooling and global_max_pooling
 * Auxiliary classifier: x==>Global_avg/max_pooling==>fc*==>logit==>cat(avg, max), NHWC==>NC==>N1==>1==>2
