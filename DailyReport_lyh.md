@@ -1,3 +1,22 @@
+# 3-26
+## Embedding projector of Tensorboard
+##### Mnist data can be displayed by the project, but the embeddings of our generator is not able to be displayed.
+* The other dimension rather than the first one (batch_size) should be flattened, e.g. shape=[N, HxWxC].
+* The N and HxWxC should be large than 3 in order to compute PCA/t-SNE, 
+## CelebAMask-HQ dataset
+* 30000 face images from CelebA-HQ
+* Example
+![CelebAMask-HQ Example](/figures/daily_report/3-26/CelebAMask-HQ_example.PNG)
+
+
+# 3-25
+## Debug out of GPU memory
+* The GPU memory is full after running 499 steps
+* 99% of the time, when using tensorflow, "memory leaks" are actually due to operations that are continuously added to the graph while iterating — instead of building the graph first, then using it in a loop. 
+* Call tf.get_default_graph().finalize() before your loop and look for any error it may throw.
+[StackOverThrow](https://stackoverflow.com/questions/51175837/tensorflow-runs-out-of-memory-while-computing-how-to-find-memory-leaks)
+
+
 # 3-24
 ## Paper Reading
 ### Unsupervised Generative Attentional Networks with Adaptive Layer-Instance Normalization for Image-to-Image Translation
