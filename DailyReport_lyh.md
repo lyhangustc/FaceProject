@@ -1,9 +1,39 @@
+# 3-27 Weekly Report
+## Few-shot sketch2face model
+### 1. All-zero problem (solved, [3-21](3-21), [3-22](3-22) for details)
+* The outputs of the model are all zeros, the losses are all zeros
+* NaN gradient in decoder: detect NaN gradients in one of decoder layers
+- [x] The newly implement of SN meets a bug of uninitialized variables.
+- [x] Use the old version of SN to solve this problem.
+
+### 2. Out of GPU memory (solved, [3-25](3-25))
+* Caused continuously added to the graph while iterating
+- [x] Solved by calling tf.get_default_graph().finalize() before iterating
+
+## Embedding projector (not done, [3-21](3-21), [3-26](3-26))
+* Code debugging is done
+* The loading takes too long (~5 min) to start for unknown reason (as comparision, ~30 sec to start training).
+- [ ] Not sure the inputs for the embeddings.
+- [ ] Not tested in Pytorch code.
+
+## CelebAMask-HQ dataset ([3-26](3-26))
+- [ ] Train pix2pixHD with mask_edge2face
+
+## Result collection
+* `~/results`
+- [ ] Online displaying
+
+## Paper Reading 
+### [Which Training Methods for GANs do actually Converge?](which-training-methods-for-gans-do-actually-converge)
+### [Selfie2Anime](3-24)
+
 # 3-26
 ## Embedding projector of Tensorboard
 ##### Mnist data can be displayed by the project, but the embeddings of our generator is not able to be displayed.
 * The other dimension rather than the first one (batch_size) should be flattened, e.g. shape=[N, HxWxC].
 * The N and HxWxC should be large than 3 in order to compute PCA/t-SNE, 
-## CelebAMask-HQ dataset
+## CelebAMask-HQ
+* [Github](https://github.com/switchablenorms/CelebAMask-HQ)
 * 30000 face images from CelebA-HQ
 * Example
 ![CelebAMask-HQ Example](/figures/daily_report/3-26/CelebAMask-HQ_example.PNG)
