@@ -37,15 +37,16 @@ There exists a domain gap between the hand-drawn data and the edge maps/contours
 ### 2. Few-shot
 The number of the collected hand-drawn sketches/hand-drawn contour is not large enough to train a large-scale model. The model is supposed to use the hand-drawn data in a few-shot form.
 #### Basic idea:
-* Embedder: outputs style-invariant embedding
-* Style: line styles of different kinds of sketches (hand-drawn sketches, edge maps, contours)
-* Style-invariant embedding is acquired by averaging embeddings of sketch patches which are cropped from input sketch.
+* Style: line styles of different kinds of sketches (hand-drawn sketches, edge maps, contours, and etc.)
+* Embedder: Besides a generator and a discriminator, we add an embedder network to the model. For each style of sketches, the embedder outputs a set of style-specific embeddings, which are passed to the generator so that the generator can handle different styles of sketches in test stage. 
+* Style-specific embedding is acquired by averaging embeddings of sketch patches which are cropped from input sketch. 
+* Auxiliary classifier: a auxiliary classifier, whose inputs are the embeddings and outputs are probabilities of being different kinds of styles, is added to emphasize the differences among styles.
 
 #### Architecture
 ##### Few-shot hand-drawn face sketches to realistic face images synthesis
 * Similar to few-shot face switch model (e.g. talking head model)
-* Contour2photo with guidance of K(=1, 3, 5, 8) ID face images.
-* Embedder: ID images to ID-specific embedding (with only shape/pose/position information)
+  * Contour2photo with guidance of K(=1, 3, 5, 8) ID face images.
+  * Embedder: ID images to ID-specific embedding (with only shape/pose/position information)
 
 ![Talking head model](/figures/architecture/talking_head_model.png "Talking head model")
  
