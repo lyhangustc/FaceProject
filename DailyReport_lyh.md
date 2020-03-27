@@ -1,6 +1,6 @@
 # 3-27 Weekly Report
 ## Few-shot sketch2face model
-### 1. All-zero problem (solved, [3-21](3-21), [3-22](3-22) for details)
+### 1. All-zero problem (solved, [3-21](#3-21), [3-22](3-22) for details)
 * The outputs of the model are all zeros, the losses are all zeros
 * NaN gradient in decoder: detect NaN gradients in one of decoder layers
 - [x] The newly implement of SN meets a bug of uninitialized variables.
