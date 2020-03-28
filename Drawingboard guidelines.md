@@ -7,7 +7,8 @@
    * Start drawing
  * model：
    * model1:Pix2PixHD
-   * model2:CSA-GAN
+   * model2:Pix2PixHD
  * Files:
    * Input file: 1080ti:/data/tennyson/pix2pixHD-master/drawingboard/static/input
    * Output file：1080ti：/data/tennyson/pix2pixHD-master/drawingboard/static/output
+   * Marker: 1080ti：/data/tennyson/pix2pixHD-master/drawingboard/static/marker/marker_blank.png
