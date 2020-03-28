@@ -1,5 +1,5 @@
 # Drawingboard 101
- * Location: 1080ti:/data/tennyson/pix2pixHD-master/drawingboard
+ * Location: 1080ti:/data/tennyson/Interactive system/drawingboard
  * Usage:
    * change the parameters in test.sh: assign gpu
    * sh test.sh
@@ -9,6 +9,6 @@
    * model1:Pix2PixHD
    * model2:Pix2PixHD
  * Files:
-   * Input file: 1080ti:/data/tennyson/pix2pixHD-master/drawingboard/static/input
-   * Output file：1080ti：/data/tennyson/pix2pixHD-master/drawingboard/static/output
-   * Marker: 1080ti：/data/tennyson/pix2pixHD-master/drawingboard/static/marker/marker_blank.png
+   * Input file: 1080ti:/data/tennyson/Interactive system/drawingboard/static/input
+   * Output file：1080ti：/data/tennyson/Interactive system/drawingboard/static/output
+   * Marker: 1080ti：/data/tennyson/Interactive system/drawingboard/static/marker/marker_blank.png
