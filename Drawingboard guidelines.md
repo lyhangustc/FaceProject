@@ -5,5 +5,9 @@
    * sh test.sh
    * Go to 202.38.69.241:42231
    * Start drawing
+ * model：
+   * model1:Pix2PixHD
+   * model2:CSA-GAN
  * Files:
-   * Input file: 1080ti:/data/tennyson/pix2pixHD-master/drawingboard/
+   * Input file: 1080ti:/data/tennyson/pix2pixHD-master/drawingboard/static/input
+   * Output file：1080ti：/data/tennyson/pix2pixHD-master/drawingboard/static/output
