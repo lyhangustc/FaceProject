@@ -1,6 +1,61 @@
+- [Paper List](#paper-list)
+  * [Sketch](#sketch)
+    + [Sketch Paper Collection](#sketch-paper-collection)
+    + [3D Sketching](#3d-sketching)
+  * [Image Generation](#image-generation)
+    + [GAN](#gan)
+    + [DCGAN](#dcgan)
+    + [SAGAN](#sagan)
+    + [BigGAN](#biggan)
+    + [PGGAN](#pggan)
+    + [StyleGAN](#stylegan)
+    + [StyleGAN2](#stylegan2)
+  * [Image2Image](#image2image)
+    + [Pix2pix](#pix2pix)
+    + [CycleGAN](#cyclegan)
+    + [BicycleGAN](#bicyclegan)
+    + [Pix2pixHD](#pix2pixhd)
+    + [CyCADA](#cycada)
+    + [SPADE](#spade)
+    + [CoupleGAN](#couplegan)
+    + [UNIT](#unit)
+    + [MUNIT](#munit)
+    + [FUNIT](#funit)
+  * [Image2Image Applications about Sketch](#image2image-applications-about-sketch)
+    + [CariGAN](#carigan)
+    + [U-GAT-IT (Selfie2anime)](#u-gat-it-selfie2anime)
+  * [Vid2vid](#vid2vid)
+    + [Vid2vid](#vid2vid-1)
+    + [Few-shot Vid2vid](#few-shot-vid2vid)
+  * [Normalization](#normalization)
+    + [Batch Normalization](#batch-normalization)
+    + [Weight Normalization](#weight-normalization)
+    + [Layer Normalization](#layer-normalization)
+    + [Instance Normalization](#instance-normalization)
+    + [Group Normalization](#group-normalization)
+    + [Adaptive Instance Normalization](#adaptive-instance-normalization)
+    + [Spatially Adaptive Normalization](#spatially-adaptive-normalization)
+    + [Adaptive Layer-Instance Normalization](#adaptive-layer-instance-normalization)
+    + [Domain Layer Normalizatin](#domain-layer-normalizatin)
+  * [GAN Understanding](#gan-understanding)
+    + [Object Emerge](#object-emerge)
+    + [GAN Dissection](#gan-dissection)
+    + [GAN Paint](#gan-paint)
+    + [GANalyze](#ganalyze)
+    + [InterFaceGAN](#interfacegan)
+    + [Steerability of GANs](#steerability-of-gans)
+    + [GANseeing](#ganseeing)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+
 # Paper List
 
 ## Sketch
+### Sketch Paper Collection
+[Sketch Synthesis](https://github.com/MarkMoHR/Awesome-Sketch-Synthesis)
+[Sketch-Based Applications](https://github.com/MarkMoHR/Awesome-Sketch-Based-Applications)
 ### 3D Sketching
 ![3D Sketching](http://web.mit.edu/phillipi/www/images/3DSketch.jpg)
 
@@ -161,8 +216,10 @@ NeurIPS, 2019
 ### Group Normalization
 ### Adaptive Instance Normalization
 ### Spatially Adaptive Normalization
-### [Adaptive Layer-Instance Normalization](https://github.com/taki0112/UGATIT)
-### [Domain Layer Normalizatin](Domain Layer Norm)
+### Adaptive Layer-Instance Normalization
+[Adaptive Layer-Instance Normalization](https://github.com/taki0112/UGATIT)
+### Domain Layer Normalizatin
+[Domain Layer Normalizatin]()
 
 ## GAN Understanding
 ### Object Emerge
