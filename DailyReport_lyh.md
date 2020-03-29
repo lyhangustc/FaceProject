@@ -1,3 +1,8 @@
+# 3-29
+### Related Work Investigation
+### Make Paper List
+* `~/PaperList.md`
+
 # 3-27 Weekly Report
 ## Few-shot sketch2face model
 ### 1. All-zero problem (solved, [3-21](#3-21), [3-22](#3-22))
