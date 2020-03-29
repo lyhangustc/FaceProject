@@ -63,7 +63,9 @@ CVPR, 2020.
 <b>Comment:</b> Shifts the distribution by "steering" the latent code to change camera motion and image color tone.
 
 ### GANseeing
-<img src="http://ganseeing.csail.mit.edu/img/906_t_anon.png"><br>
+<img src="http://ganseeing.csail.mit.edu/img/906_t_anon.png">
+<img src="http://ganseeing.csail.mit.edu/img/906_r.png">
+<br>
 <a href="http://ganseeing.csail.mit.edu/">
   Seeing What a GAN Cannot Generate
 </a>
