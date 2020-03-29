@@ -1,5 +1,5 @@
 # Drawingboard 101
- * Location: 1080ti:/data/tennyson/Interactive system/drawingboard
+ * Location: 1080ti, 192.168.2.231:/data/tennyson/Interactive system/drawingboard
  * Usage:
    * change the parameters in test.sh: assign gpu
    * sh test.sh
