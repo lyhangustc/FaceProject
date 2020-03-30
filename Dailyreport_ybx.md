@@ -1,3 +1,7 @@
+# 3-29
+## homework and half a day off.
+
+
 # 3-28
 ## Group meeting(to do list)
 * Complete the motivation of experiments, the reason to do this exp. More details about the exp.
