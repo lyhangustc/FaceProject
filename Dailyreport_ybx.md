@@ -4,6 +4,13 @@
 * Run global version0 and global version2 on hand-draw contour to see the performance
 * Oberservation：
   * The details of generated image from version0 is more sharp. It indicates version0 keeps more structrue information of contour. 
+## To do list
+* Complete the motivation of experiments, the reason to do this exp. More details about the exp.
+* Read paper UNSUPERVISED GENERATIVE ATTENTIONAL NETWORKS WITH ADAPTIVE LAYERINSTANCE NORMALIZATION FOR IMAGE-TO-IMAGE
+TRANSLATION
+* Try to design a local spatial norm
+* Read paper Unsupervised Discovery of Object Landmarks as Structural Representations
+* Read paper Deep Plastic Surgery: Robust and Controllable Image Editing with Human-Drawn Sketches
 
 
 # 3-29
