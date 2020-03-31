@@ -1,4 +1,9 @@
 # 3-29
+## homework and Courses.
+## experiment
+* Run global version0 and global version2 on hand-draw contour
+
+# 3-29
 ## homework and half a day off.
 
 
