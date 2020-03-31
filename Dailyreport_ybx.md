@@ -1,7 +1,10 @@
 # 3-29
 ## homework and Courses.
 ## experiment
-* Run global version0 and global version2 on hand-draw contour
+* Run global version0 and global version2 on hand-draw contour to see the performance
+* Oberservation：
+  * The details of generated image from version0 is more sharp. It indicates version0 keeps more structrue information of contour. 
+
 
 # 3-29
 ## homework and half a day off.
