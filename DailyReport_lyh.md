@@ -1,7 +1,9 @@
 # 4-1
-### A TensorFlow version of Pix2pixHD Implement
+### Code
+* A TensorFlow version of Pix2pixHD Implement
 * Train on mask-edge2face dataset
-### Train official Pix2pixHD on mask-edge2face
+* Train official Pix2pixHD on mask-edge2face
+- [ ] Implement a self-spatial-attention layer
 
 
 # 3-30
