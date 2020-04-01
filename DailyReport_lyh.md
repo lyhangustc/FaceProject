@@ -1,3 +1,9 @@
+# 4-1
+### A TensorFlow version of Pix2pixHD Implement
+* Train on mask-edge2face dataset
+### Train official Pix2pixHD on mask-edge2face
+
+
 # 3-30
 ### Related work Investigation on sketch2face, other conferences
 ### Paper Reading on Deep Plastic Surgery
