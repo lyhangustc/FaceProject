@@ -1,3 +1,19 @@
+# 4-2
+### Code 
+* Debug pix2pixHD_TensorFlow
+- [ ] Implement a new attention layer in pix2pixHD_Pytorch
+- [ ] Implement a new attention layer in pix2pixHD_TensorFlow
+### Study Normalizations
+* Add new papers on normalization to `~/PaperList.md`
+
+<a href="https://zhuanlan.zhihu.com/p/69659844" class="internal" data-za-detail-view-id="1043">如何区分并记住常见的几种 Normalization 算法</a>
+
+<a href="https://zhuanlan.zhihu.com/p/33173246" class="internal" data-za-detail-view-id="1043">详解深度学习中的Normalization，BN/LN/WN</a>
+
+<a href="https://zhuanlan.zhihu.com/p/29824075" class="internal" data-za-detail-view-id="1043">神经网络之Normalization</a>
+
+<a href="https://www.zhihu.com/question/38102762/answer/85238569" class="internal" data-za-detail-view-id="1043">深度学习中 Batch Normalization为什么效果好？ - 魏秀参的回答 - 知乎</a>
+
 # 4-1
 ### Code
 * A TensorFlow version of Pix2pixHD Implement
