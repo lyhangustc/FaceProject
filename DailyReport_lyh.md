@@ -1,3 +1,26 @@
+# 4-4
+### Code
+* Debug new PyTorch layer
+   - [x] Ouput shape is not compatiable with the next layer
+   - [x] Use nn.Sequential to arrange layers
+   - [ ] Plot the output of the layer
+   - [ ] Plot histogram/distribution of the layer
+
+# 4-3
+### Code
+* Dilate image with radius map
+
+<div align="center">
+  <img src = '/figures/daily_report/4-4/input.png' width = '125px' height = '125px'>
+</div>
+<div align="center">
+  <img src = '/figures/daily_report/4-4/radius.png' width = '125px' height = '125px'>
+</div>
+<div align="center">
+  <img src = '/figures/daily_report/4-4/output.png' width = '125px' height = '125px'>
+</div>
+
+
 # 4-2
 ### Code 
 * Debug pix2pixHD_TensorFlow
