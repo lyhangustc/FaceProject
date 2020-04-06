@@ -1,3 +1,12 @@
+# 4-6 
+### Code
+* Online display results for `~/results`, check `index.md` in each result directory.
+
+### Experiments
+* Add results of mask-edge2photo at `~/results/pix2pixHD/mask_edge2photo`
+* Test mask_edge2photo model with hand-drawn sketches, not good
+   * Add transform including translation, rotation to the mask_edge2photo model
+
 # 4-4
 ### Code
 * Debug new PyTorch layer
