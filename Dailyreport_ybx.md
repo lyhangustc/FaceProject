@@ -2,7 +2,7 @@
 ## homework and class
 ## design a spatial local response nomrn
 <div align="center">
-  <img src = 'FaceProject/figures/daily_report_Yang/SLRN.jpg' width = '230px' height = '220px'>
+  <img src = '/figures/daily_report_Yang/SLRN.jpg' width = '230px' height = '220px'>
 </div>
 # 4-1
 ## fix rubber bug
