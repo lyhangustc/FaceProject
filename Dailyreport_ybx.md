@@ -1,3 +1,9 @@
+# 4-7
+## homework and class
+## design a spatial local response nomrn
+<div align="center">
+  <img src = '/t-sne/Figure/fig1.png' width = '230px' height = '220px'>
+</div>
 # 4-1
 ## fix rubber bug
 # 3-30
