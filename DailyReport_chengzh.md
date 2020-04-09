@@ -1,3 +1,5 @@
+# 4-8
+* Different versions of pix2pixHD model were used to extract the feature maps of the sketches I drew, and then I visualized them with tsne and analyzed.
 # 4-6
 * TA work: Correct student's exercise books. 
 * Learn how to ues ustcthesis Latex templates, including how to insert tables, pictures and how to write a formula, etc.
