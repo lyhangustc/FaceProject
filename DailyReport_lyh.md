@@ -1,3 +1,28 @@
+# 4-10
+### Code
+
+
+# 4-9
+### Code
+* Spatial attention (sa)
+* Debug on ca
+### Experiment
+* Dilate (training)
+* Dilate_augment (failed)
+* Dilate_augment_ca (failed)
+
+# 4-8
+### Code
+* Channel attention (ca)
+* Transform data augmentation
+### Experiment
+* Dilate
+* Dilate_augment
+* Dilate_augment_ca
+
+# 4-7
+### Study on Attention
+
 # 4-6 
 ### Code
 * Online display results for `~/results`, check `index.md` in each result directory.
@@ -19,13 +44,13 @@
 ### Code
 * Dilate image with radius map
 
-<div align="center">
+<div>
   <img src = '/figures/daily_report/4-4/input.png' width = '125px' height = '125px'>
 </div>
-<div align="center">
+<div>
   <img src = '/figures/daily_report/4-4/radius.png' width = '125px' height = '125px'>
 </div>
-<div align="center">
+<div>
   <img src = '/figures/daily_report/4-4/output.png' width = '125px' height = '125px'>
 </div>
 
