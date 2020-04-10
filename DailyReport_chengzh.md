@@ -1,5 +1,5 @@
 # 4-9 and 4-10
-* I start to write my thesis, the first part about pix2pixHD.
+* I start to write my 'thesis', the first part about pix2pixHD.
 * I run the autotrace program downloaded from official website but can't produce valid results, so I found an online image vectorizer called Autotracer, but it can only process one picture at a time. The results are shown below:
 
 # 4-8
