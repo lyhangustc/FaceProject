@@ -4,9 +4,6 @@
 # 4-7
 ## homework and class
 ## design a spatial local response norm
-<div align="center">
-  <img src = '/figures/daily_report_Yang/SLRN.jpg' >
-</div>
 
 # 4-1
 ## fix rubber bug
