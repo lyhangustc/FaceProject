@@ -1,6 +1,11 @@
+# 4-11
+### Code 
+# Hierarchical discriminator and hierarchical feature matching loss
+
+
 # 4-10
 ### Code
-
+# Debug Attention
 
 # 4-9
 ### Code
