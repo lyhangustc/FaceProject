@@ -1,3 +1,23 @@
+# AutoTrace install
+### 
+1. `git clone https://github.com/autotrace/autotrace`
+2. `apt-get install intltool gettext intltool libglib2.0-dev libtool autoconf automake pkg-config imagemagick graphicsmagick libpstoedit-dev`
+3. `autoreconf -ivf`
+4. `intltoolize --force`
+5. `autoconf configure.ac`
+6. `./configure`
+7. `make`
+8. `sudo make install`
+9. Usage `autotrace --input-format bmp --output-file output.svg --output-format svg 151415.bmp`
+
+[How to find which lib is needed](https://unix.stackexchange.com/questions/456458/warning-macro-am-glib-gnu-gettext-not-found-in-library)
+
+[A simple example of use pkg-config](https://blog.csdn.net/innocent_sheld/article/details/87996135)
+
+[Add a directory to autoconf](https://blog.csdn.net/xiayu0912/article/details/6096730)
+
+[Online svg editor](https://c.runoob.com/more/svgeditor/)
+
 # 4-11
 ### Code 
 * Hierarchical discriminator and hierarchical feature matching loss
