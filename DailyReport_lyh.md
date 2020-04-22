@@ -1,3 +1,20 @@
+# 4-21
+### The training is too slow
+* Training for one epoch lasts ~2 hours
+* The whole training (100 epoch) would last ~9 days
+* Add multiple-GPU training, debugging
+
+# 4-20
+### Make more deform sketch
+* For each sketch, make 10 deform sketch with deform `radius=10` and `prob=0.5`
+* It is too slow to upload deform data to GPU server.
+* Train a pix2pixHD model with 
+  * CelebAMask_edge and photo
+  * Maxpooling + channel-wise/spatial attention
+  * Generator feature matching
+  * Sketch_deform_10
+
+
 # AutoTrace install
 ### 
 1. `git clone https://github.com/autotrace/autotrace`
