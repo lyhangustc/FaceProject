@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.4.14)  24 APR 2020 14:46
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.4.14)  24 APR 2020 17:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1799,34 +1799,70 @@ tf
 
 ])
 (./relatedwork.tex) (./algorithm.tex
-Overfull \hbox (2.16599pt too wide) in paragraph at lines 6--9
+Overfull \hbox (2.16599pt too wide) in paragraph at lines 8--11
 \TU/LinLibertine(0)/m/n/9 image translation problem. We use the state-of-the-ar
 t Pix2PixHd []
  []
 
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 17.
+(Font)              scaled to size 9.0pt on input line 19.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;ma
 pping=tex-text;" at 9.0pt
  -> g:/texlive/2020/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.ot
 f
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 17.
+(Font)              scaled to size 9.0pt on input line 19.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;m
 apping=tex-text;" at 9.0pt
  -> g:/texlive/2020/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RI.o
 tf
 
-Class acmart Warning: A possible image without description on input line 25.
+Class acmart Warning: A possible image without description on input line 27.
 
 
-Overfull \hbox (13.90352pt too wide) in paragraph at lines 28--35
+Overfull \hbox (13.90352pt too wide) in paragraph at lines 30--37
 \TU/LinLibertine(0)/m/n/9 trained model on the distortion and roughness of hand
 -drawn sketches.
  []
 
+(./sketch_data.tex
 
-Overfull \hbox (8.74777pt too wide) in paragraph at lines 39--41
+Package natbib Warning: Citation `HED' on page 2 undefined on input line 5.
+
+
+Package natbib Warning: Citation `CSAGAM' on page 2 undefined on input line 6.
+
+
+Package natbib Warning: Citation `CelebAMask-HQ' on page 2 undefined on input l
+ine 7.
+
+
+Overfull \hbox (1.69872pt too wide) in paragraph at lines 4--8
+\TU/LinLibertine(0)/m/n/9 problems[]. Although CSAGAN [\TU/LinLibertine(0)/b/n/
+9 ?\TU/LinLibertine(0)/m/n/9 ] applied self-attention mechanism
+ []
+
+
+Overfull \hbox (10.3545pt too wide) in paragraph at lines 4--8
+\TU/LinLibertine(0)/m/n/9 fore we use another method to generate clearer and co
+mplete sketches
+ []
+
+
+Package natbib Warning: Citation `AutoTrace' on page 2 undefined on input line 
+9.
+
+
+Overfull \hbox (6.6405pt too wide) in paragraph at lines 9--10
+\TU/LinLibertine(0)/m/n/9 der to break the edge-alignment and mimic the hand-dr
+awn sketches,
+ []
+
+
+Class acmart Warning: A possible image without description on input line 17.
+
+)
+Overfull \hbox (8.74777pt too wide) in paragraph at lines 42--44
  \TU/LinBiolinum(0)/m/it/9 3.1.4 pix2pixHD without instance normalization.[] \T
 U/LinLibertine(0)/m/n/9 The baseline model,
  []
@@ -1834,56 +1870,44 @@ U/LinLibertine(0)/m/n/9 The baseline model,
 (./sap.tex
 
 Package natbib Warning: Citation `DeepSurgery' on page 2 undefined on input lin
-e 6.
+e 8.
 
 
-Overfull \hbox (6.05452pt too wide) in paragraph at lines 2--10
+Overfull \hbox (6.05452pt too wide) in paragraph at lines 4--12
  \TU/LinBiolinum(0)/m/it/9 3.1.5 Spatial Attention Pooling.[] \TU/LinLibertine(
 0)/m/n/9 When the input hand-drawn sketch
  []
 
-
-LaTeX Font Warning: Font shape `OT1/LinLibertine(0)/sb/n' undefined
-(Font)              using `OT1/LinLibertine(0)/m/n' instead on input line 11.
-
-
-LaTeX Font Warning: Font shape `OT1/LinLibertine(0)/sb/n' in size <5.5> not ava
-ilable
-(Font)              size <5> substituted on input line 11.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.11 ...f{r}$ to get ${P_{r_i}(s) | i=1,2,...,N_r$
-                                                  . Then we compute the spat...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (4.30353pt too wide) in paragraph at lines 11--12
-\TU/LinLibertine(0)/m/n/9 spatial attention pooling (SAP), to dilate the input 
-sketch in a spacial-
- []
-
-)
-Overfull \hbox (6.40578pt too wide) in paragraph at lines 51--52
- []\TU/LinLibertine(0)/m/it/9 Sketch Data Generation.[] \TU/LinLibertine(0)/m/n
-/9 Four options to generate sketches: Canny,
- []
-
-) (./results.tex
-Underfull \vbox (badness 1360) has occurred while \output is active []
-
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 13.
+(Font)              scaled to size 7.0pt on input line 12.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;ma
 pping=tex-text;" at 7.0pt
  -> g:/texlive/2020/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.ot
 f
- [2.2]
+[2.2]
+
+LaTeX Font Warning: Font shape `OT1/LinLibertine(0)/sb/n' undefined
+(Font)              using `OT1/LinLibertine(0)/m/n' instead on input line 13.
+
+
+LaTeX Font Warning: Font shape `OT1/LinLibertine(0)/sb/n' in size <5.5> not ava
+ilable
+(Font)              size <5> substituted on input line 13.
+
+
+Overfull \hbox (4.30353pt too wide) in paragraph at lines 13--14
+\TU/LinLibertine(0)/m/n/9 spatial attention pooling (SAP), to dilate the input 
+sketch in a spacial-
+ []
+
+) (./loss.tex
+Missing character: There is no · in font cmr9!
+
+
+Package natbib Warning: Citation `pix2pixHD' on page 3 undefined on input line 
+19.
+
+)) (./results.tex
 File: figs/interface.png Graphic file (type bmp)
 <figs/interface.png>
 
@@ -1904,6 +1928,10 @@ Package natbib Warning: There were undefined citations.
 
 Class acmart Warning: Some images may lack descriptions.
 
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
 [3.3]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
@@ -1922,12 +1950,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 29904 strings out of 481358
- 563906 string characters out of 5927881
- 835346 words of memory out of 5000000
- 46711 multiletter control sequences out of 15000+600000
+ 29914 strings out of 481358
+ 564038 string characters out of 5927881
+ 835479 words of memory out of 5000000
+ 46716 multiletter control sequences out of 15000+600000
  554962 words of font info for 130 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
- 69i,16n,111p,840b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,16n,111p,854b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on SketchFace.pdf (3 pages).

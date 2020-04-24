@@ -1,3 +1,5 @@
+% !TeX root = SketchFace.tex
+
 \section{Deep Network for Sketch-Photo Translation}
 \label{sec:network}
 
@@ -33,7 +35,8 @@ Moreover, as an interactive system, we also simply provide a reference sketch, l
 We place an averaged face contour image on the canvas to provide a reference coordinate system for user to draw their strokes. 
 Therefore, the drawn sketches under this geometric reference will be located in or close to space of the training sketches.
 
-\subsubsection{Data augmentation with sketch dilation}
+%%%% \subsubsection{Data augmentation with sketch dilation}
+\input{sketch_data.tex}
 
 \subsubsection{pix2pixHD without instance normalization}
 The baseline model, as well as many existing stylization DNNs, uses spatial normalization to extract style statistics, treating them as spatially uniform on the entire image. 
@@ -41,13 +44,17 @@ However, the shallow convolution layers typically extract texture or brightness 
 
 We think that strokes mainly describe the shape features, without little texture information. 
 
+%%% \subsubsection{Spatial Attention Pooling}
 \input{sap}
+%%% \subsubsection{Spatial Local Respond Normalization}
+%\input{slrn}
+%%% \subsubsection{Losses}
+\input{loss}
 
 
 
 
-
-\paragraph{Sketch Data Generation}
-Four options to generate sketches: Canny, HED, AutoTrace [Web..], and Contour. 
+%\paragraph{Sketch Data Generation}
+%Four options to generate sketches: Canny, HED, AutoTrace [Web..], and Contour. 
 
 . 

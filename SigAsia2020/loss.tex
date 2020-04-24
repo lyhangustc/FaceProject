@@ -1,0 +1,28 @@
+% !TeX root = SketchFace.tex
+
+\subsubsection{Losses}
+\td{generator feature matching effect and losses summary}
+
+
+
+Let $G_q(·)$ be the  feature maps of the $q$th generator layer.
+Given an input sketch $s$ and the corresponding deformed sketch $s'$, we compute the generator feature matching loss as:
+
+\begin{equation}
+	\label{eqn:loss_GFM}
+	\mathcal{L}_{GFM}(G)=\mathbb{E}_{\mathbf{s}\sim p_{data}(s)} \frac{1}{N_Q} \sum_{q\in Q}  \frac{1}{N_Q} \|G_q(s)-G_q(s') \|_1,
+\end{equation}
+
+where $n_q$ denotes the number of elements of $G_q$, $Q$ indicates a set of the selected generator layers for computing this loss and the size of $Q$ is $N_Q$. 
+We select \td{the xxx layers} of the generator in our experiments.
+
+Besides the generator feature matching loss $\mathcal{L}_{GFM}(G)$, for generator $G$ and multi-scale discriminator $D={D_k | k=1,2,...,N_D}$, the adversarial loss $\mathcal{L}_{GAN}(G, D)$ and the discriminator feature matching loss $\mathcal{L}_{DFM}(G, D)$ are computed as the same form as those in pix2pixHD~\cite{pix2pixHD}.
+%
+The objective of the proposed model is:
+
+\begin{equation}
+	\label{eqn:new_minmax_game}
+	\min_G \max_{D} \mathcal{L}_{GAN}(G, D)+\lambda \mathcal{L}_{DFM}(G, D) +\mu \mathcal{L}_{GFM}(G).
+\end{equation}
+
+where $\lambda$ and $\mu$ are the weights for balancing different losses. We set $\lambda=\td{xxx}$ and $\mu=\td{xxx}$ in our experiments.
