@@ -1,0 +1,44 @@
+
+\section{Introduction}
+
+
+
+Flexibly creating new content is one of the most important goals in both computer graphics and computer-human interaction. While sketching is an efficient and natural way for common users to express their ideas for designing and editing new content, sketch-based interaction techniques have been extensively studied since the very early stage of computer graphics~\cite{SutherlandSketchPad64,Zeleznik-Sketch96,Igarashi-teddy99,Chen_sketchingreality08,Chen09sketch2photo}. 
+Imagery content is the most ubiquitous media with a large variety of display devices everywhere in our daily life. 
+Creating new imagery content is one way to show people's creativity and communicate smart ideas.
+%
+In this paper, we target portrait imagery, which is inextricably bound to our life, and present a sketch-based system that allows common users to create new face imagery and edit them by specifying the desired facial shapes via free-hand strokes. 
+
+%% face photo editing using DL
+Deep learning techniques bring significant improvement on the realism of virtual images. 
+Recently, a large number of studies have been conducted on face image editing. 
+\cxj{Add papers.}
+All these methods require a real image as the start points. 
+When creating a non-existed face, sketching is the most natural way to describe the desired structure and shapes. 
+%
+Treating free-hand sketches as a painting style, image translation techniques can be directly applied. \cxj{Cite image translation and style transfer papers.}
+However, the challenges in image translation is the edge alignment problem. 
+The ambiguities and large discrepancy from real face shapes existed in imperfect free-hand sketches poses significant challenges for image translation networks which have strong power on realistic texture synthesis but perform poorly on geometric shape creation. 
+Moreover, local editing is not supported in these uninterpretable end-to-end networks. 
+
+
+
+\cxj{Space and scale varying ambiguity in sketches}
+In order to support user's control on the creation and local editing from imperfect sketches, the ambiguities of hand-drawn strokes which vary in different facial regions at different scales should be solved for generating geometrically correct guidance. 
+\cxj{Spatially-varying.} A user may draw the face contour in a casual way or depict the eye or eyebrow shape carefully in little ambiguity. 
+\cxj{Temporally-varying.} As immediately see the generated face image, the user may add or edit local strokes with more careful control. Therefore, the ambiguity and distortion in different stage of the sketching process vary from the beginning to the end. 
+
+
+\cxj{Is speed an issue for sketch-base interface?}
+
+
+\cxj{Contributions}
+In summary, our contribution in this paper is three-fold.
+\begin{itemize}
+	\item Based on comprehensive analysis on the edge alignment issue in image translation DNNs, we propose an sketch-to-face system that allows users to control the desired facial shapes in adaptive precision. 
+	\item A spatial varying feature normalization in deep neural network to support global creation and local editing in multiple scales. 
+	
+	\item Robust to various styles of hand-drawn strokes and allows progressively refinement to generate desired shapes and facial details. 
+	
+	\item An easy-to-use system for face creation and editing which requires hand-drawn sketches only as input without any other specification of region masks.
+\end{itemize}

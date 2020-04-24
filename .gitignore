@@ -1,3 +1,7 @@
+*.zip
+*.gz
+*.xz
+*.rar
 
 ############## for tex #######################
 SketchFace.pdf

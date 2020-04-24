@@ -1,0 +1,97 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{5}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Chen, ming Cheng, Tan, Shamir, and min
+  Hu}{Chen et~al\mbox{.}}{[n.d.]}]%
+        {Chen09sketch2photo}
+\bibfield{author}{\bibinfo{person}{Tao Chen}, \bibinfo{person}{Ming ming
+  Cheng}, \bibinfo{person}{Ping Tan}, \bibinfo{person}{Ariel Shamir}, {and}
+  \bibinfo{person}{Shi min Hu}.} \bibinfo{year}{[n.d.]}\natexlab{}.
+\newblock \showarticletitle{Sketch2{P}hoto: {I}nternet image montage}.
+\newblock \bibinfo{journal}{\emph{ACM Trans. Graph}}
+  (\bibinfo{year}{[n.\,d.]}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Chen, Kang, qing Xu, and Dorsey}{Chen
+  et~al\mbox{.}}{2008}]%
+        {Chen_sketchingreality08}
+\bibfield{author}{\bibinfo{person}{Xuejin Chen}, \bibinfo{person}{Sing~Bing
+  Kang}, \bibinfo{person}{Ying qing Xu}, {and} \bibinfo{person}{Julie Dorsey}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Sketching reality: Realistic interpretation of
+  architectural designs}.
+\newblock \bibinfo{journal}{\emph{ACM Trans. Graph.}} \bibinfo{volume}{27},
+  \bibinfo{number}{2} (\bibinfo{year}{2008}), \bibinfo{pages}{11:1--11:15}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Igarashi, Matsuoka, and Tanaka}{Igarashi
+  et~al\mbox{.}}{1999}]%
+        {Igarashi-teddy99}
+\bibfield{author}{\bibinfo{person}{Takeo Igarashi}, \bibinfo{person}{Satoshi
+  Matsuoka}, {and} \bibinfo{person}{Hidehiko Tanaka}.}
+  \bibinfo{year}{1999}\natexlab{}.
+\newblock \showarticletitle{Teddy: A sketching interface for 3-D freeform
+  design}. In \bibinfo{booktitle}{\emph{Proc. SIGGRAPH}}.
+  \bibinfo{pages}{409--416}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Sutherland}{Sutherland}{1964}]%
+        {SutherlandSketchPad64}
+\bibfield{author}{\bibinfo{person}{Ivan~E. Sutherland}.}
+  \bibinfo{year}{1964}\natexlab{}.
+\newblock \showarticletitle{Sketch pad a man-machine graphical communication
+  system}. In \bibinfo{booktitle}{\emph{DAC}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Zeleznik, Herndon, and Hughes}{Zeleznik
+  et~al\mbox{.}}{1996}]%
+        {Zeleznik-Sketch96}
+\bibfield{author}{\bibinfo{person}{Robert~C. Zeleznik},
+  \bibinfo{person}{Kenneth~P. Herndon}, {and} \bibinfo{person}{John~F.
+  Hughes}.} \bibinfo{year}{1996}\natexlab{}.
+\newblock \showarticletitle{{SKETCH}: An Interface for Sketching 3D Scenes}. In
+  \bibinfo{booktitle}{\emph{Proc. SIGGRAPH}}. \bibinfo{pages}{163--170}.
+\newblock
+
+
+\end{thebibliography}

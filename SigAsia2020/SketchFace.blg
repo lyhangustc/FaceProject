@@ -1,0 +1,19 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: SketchFace.aux
+The style file: ACM-Reference-Format.bst
+Database file #1: sketchRef.bib
+You're missing a field name---line 41 of file sketchRef.bib
+ : 
+ : % volume = {27},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty year in Chen09sketch2photo
+Warning--no number and no volume in Chen09sketch2photo
+Warning--page numbers missing in both pages and numpages fields in Chen09sketch2photo
+Warning--empty publisher in Igarashi-teddy99
+Warning--empty address in Igarashi-teddy99
+Warning--empty publisher in SutherlandSketchPad64
+Warning--empty address in SutherlandSketchPad64
+Warning--page numbers missing in both pages and numpages fields in SutherlandSketchPad64
+Warning--empty publisher in Zeleznik-Sketch96
+Warning--empty address in Zeleznik-Sketch96
+(There was 1 error message)
