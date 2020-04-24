@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.4.14)  24 APR 2020 17:45
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.4.14)  24 APR 2020 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1908,6 +1908,8 @@ Package natbib Warning: Citation `pix2pixHD' on page 3 undefined on input line
 19.
 
 )) (./results.tex
+Underfull \vbox (badness 1132) has occurred while \output is active []
+
 File: figs/interface.png Graphic file (type bmp)
 <figs/interface.png>
 
