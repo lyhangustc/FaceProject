@@ -272,3 +272,12 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
+*.aux
+SigAsia2020/SketchFace.blg
+SigAsia2020/SketchFace.log
+SigAsia2020/SketchFace.pdf
+SigAsia2020/SketchFace.synctex.gz
+SigAsia2020/SketchFace.synctex.gz
+SigAsia2020/SketchFace.out
+*.log
+*.blg

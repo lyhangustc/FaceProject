@@ -6,6 +6,13 @@ You're missing a field name---line 41 of file sketchRef.bib
  : % volume = {27},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "HED"
+Warning--I didn't find a database entry for "CSAGAM"
+Warning--I didn't find a database entry for "CelebAMask-HQ"
+Warning--I didn't find a database entry for "AutoTrace"
+Warning--I didn't find a database entry for "DeepSurgery"
+Warning--I didn't find a database entry for "pix2pixHD"
 Warning--empty year in Chen09sketch2photo
 Warning--no number and no volume in Chen09sketch2photo
 Warning--page numbers missing in both pages and numpages fields in Chen09sketch2photo

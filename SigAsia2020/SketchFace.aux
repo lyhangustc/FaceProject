@@ -14,15 +14,15 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand*\HyPL@Entry[1]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{SutherlandSketchPad64,Zeleznik-Sketch96,Igarashi-teddy99,Chen_sketchingreality08,Chen09sketch2photo}
-\HyPL@Entry{0<</S/D>>}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces This is a teaser\relax }}{1}{figure.caption.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces This is a teaser\relax }}{1}{figure.caption.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:teaser}{{1}{1}{This is a teaser\relax }{figure.caption.1}{}}
 \providecommand \oddpage@label [2]{}
-\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
 \citation{}
 \citation{}
 \citation{}
@@ -33,43 +33,47 @@
 \citation{CSAGAM}
 \citation{CelebAMask-HQ}
 \citation{AutoTrace}
-\citation{DeepSurgery}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Generated face images from a sketch that does not follow the aligned face layout.\relax }}{2}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:global-align-fail}{{2}{2}{Generated face images from a sketch that does not follow the aligned face layout.\relax }{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Deep Network for Sketch-Photo Translation}{2}{section.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Generated face images from a sketch that does not follow the globally aligned face layout.\relax }}{2}{figure.caption.6}}
+\newlabel{fig:global-align-fail}{{2}{2}{Generated face images from a sketch that does not follow the globally aligned face layout.\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Deep Network for Sketch-Photo Translation}{2}{section.3}}
 \newlabel{sec:network}{{3}{2}{Deep Network for Sketch-Photo Translation}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Edge alignment in baseline Model}{2}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Global alignment}{2}{subsubsection.3.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Data augmentation with geometric translation}{2}{subsubsection.3.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison between a sketch generated from edge detection and from semantic boundary.\relax }}{2}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:sketch_data}{{3}{2}{Comparison between a sketch generated from edge detection and from semantic boundary.\relax }{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Face Sketches and Data Augmentation}{2}{subsubsection.3.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}pix2pixHD without instance normalization}{2}{subsubsection.3.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}Spatial Attention Pooling}{2}{subsubsection.3.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Edge alignment in baseline Model}{2}{subsection.3.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Global alignment}{2}{subsubsection.3.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Data augmentation with geometric translation}{2}{subsubsection.3.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison between a sketch generated from edge detection and from semantic boundary.\relax }}{2}{figure.caption.8}}
+\newlabel{fig:sketch_data}{{3}{2}{Comparison between a sketch generated from edge detection and from semantic boundary.\relax }{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Face Sketches and Data Augmentation}{2}{subsubsection.3.1.3}}
+\@writefile{toc}{\contentsline {paragraph}{Stroke Deformation}{2}{section*.7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}pix2pixHD without instance normalization}{2}{subsubsection.3.1.4}}
+\newlabel{eq:instance-norm}{{1}{2}{pix2pixHD without instance normalization}{equation.3.1}{}}
+\citation{DeepSurgery}
 \citation{pix2pixHD}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}Spatial Attention Pooling}{3}{subsubsection.3.1.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.6}Losses}{3}{subsubsection.3.1.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Spatial attention pooling to balance edge alignment and stroke ambiguity at different facial regions. \relax }}{3}{figure.caption.9}}
+\newlabel{fig:sap}{{4}{3}{Spatial attention pooling to balance edge alignment and stroke ambiguity at different facial regions. \relax }{figure.caption.9}{}}
+\newlabel{eqn:loss_GFM}{{3}{3}{Losses}{equation.3.3}{}}
+\newlabel{eqn:new_minmax_game}{{4}{3}{Losses}{equation.3.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{3}{section.4}}
+\newlabel{sec:experiments}{{4}{3}{Experiments}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Sketch Interface}{3}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Comparison with Image Translation networks}{3}{subsection.4.2}}
 \bibstyle{ACM-Reference-Format}
 \bibdata{sketchRef}
-\bibcite{Chen09sketch2photo}{{1}{[n.d.]}{{Chen et~al\mbox  {.}}}{{Chen, ming Cheng, Tan, Shamir, and min Hu}}}
-\bibcite{Chen_sketchingreality08}{{2}{2008}{{Chen et~al\mbox  {.}}}{{Chen, Kang, qing Xu, and Dorsey}}}
-\bibcite{Igarashi-teddy99}{{3}{1999}{{Igarashi et~al\mbox  {.}}}{{Igarashi, Matsuoka, and Tanaka}}}
+\bibcite{Chen09sketch2photo}{{1}{[n.d.]}{{Chen et~al\unhbox \voidb@x \hbox {.}}}{{Chen, ming Cheng, Tan, Shamir, and min Hu}}}
+\bibcite{Chen_sketchingreality08}{{2}{2008}{{Chen et~al\unhbox \voidb@x \hbox {.}}}{{Chen, Kang, qing Xu, and Dorsey}}}
+\bibcite{Igarashi-teddy99}{{3}{1999}{{Igarashi et~al\unhbox \voidb@x \hbox {.}}}{{Igarashi, Matsuoka, and Tanaka}}}
 \bibcite{SutherlandSketchPad64}{{4}{1964}{{Sutherland}}{{Sutherland}}}
-\bibcite{Zeleznik-Sketch96}{{5}{1996}{{Zeleznik et~al\mbox  {.}}}{{Zeleznik, Herndon, and Hughes}}}
+\bibcite{Zeleznik-Sketch96}{{5}{1996}{{Zeleznik et~al\unhbox \voidb@x \hbox {.}}}{{Zeleznik, Herndon, and Hughes}}}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
 \newlabel{tocindent1}{4.185pt}
-\newlabel{tocindent2}{10.35pt}
-\newlabel{tocindent3}{18.198pt}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.6}Losses}{3}{subsubsection.3.1.6}\protected@file@percent }
-\newlabel{eqn:loss_GFM}{{2}{3}{Losses}{equation.3.2}{}}
-\newlabel{eqn:new_minmax_game}{{3}{3}{Losses}{equation.3.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Sketch interface. \leavevmode {\color  {blue}Full interface with editing tools.}\relax }}{3}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:interface}{{4}{3}{Sketch interface. \td {Full interface with editing tools.}\relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{3}{section.4}\protected@file@percent }
-\newlabel{sec:experiments}{{4}{3}{Experiments}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Sketch Interface}{3}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Comparison with Image Translation networks}{3}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Comparison with Image Editing}{3}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Limitations and future work}{3}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{3}{section*.10}\protected@file@percent }
-\newlabel{TotPages}{{3}{3}{}{page.3}{}}
+\newlabel{tocindent2}{10.34999pt}
+\newlabel{tocindent3}{20.22pt}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Sketch interface. \leavevmode {\color  {blue}Full interface with editing tools.}\relax }}{4}{figure.caption.10}}
+\newlabel{fig:interface}{{5}{4}{Sketch interface. \td {Full interface with editing tools.}\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Comparison with Image Editing}{4}{subsection.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Limitations and future work}{4}{subsection.4.4}}
+\@writefile{toc}{\contentsline {section}{References}{4}{section*.12}}
+\newlabel{TotPages}{{4}{4}{}{page.4}{}}
