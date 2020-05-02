@@ -8,3 +8,4 @@
   * global_version3: Using global generator, use SLRN to replace the norm of downsample, data augmentation using contour translation and rotation.
   * global_version4: celebAHQ-mask 1width as input, Using global generator, use SLRN to replace the norm of downsample, data augmentation using contour translation and rotation.
   * global_version5: celebAHQ-mask 2width as input, Using global generator, use SLRN to replace the norm of downsample, data augmentation using contour translation and rotation.
+  * global_version6: celebAHQ-mask 2width as input, Using global generator, baseline.
