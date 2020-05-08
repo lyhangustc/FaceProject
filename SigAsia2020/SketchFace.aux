@@ -14,15 +14,26 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand\HyField@AuxAddToFields[1]{}
-\providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand*\HyPL@Entry[1]{}
 \citation{SutherlandSketchPad64,Zeleznik-Sketch96,Igarashi-teddy99,Chen_sketchingreality08,Chen09sketch2photo}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces This is a teaser\relax }}{1}{figure.caption.1}}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces This is a teaser\relax }}{1}{figure.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:teaser}{{1}{1}{This is a teaser\relax }{figure.caption.1}{}}
 \providecommand \oddpage@label [2]{}
-\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
+\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{pix2pix}
+\citation{outdoor_scene}
+\citation{BicycleGAN}
+\citation{CycleGAN}
+\citation{DualGAN}
+\citation{DiscoGAN}
+\citation{StarGAN}
+\citation{pix2pixHD}
+\citation{Sketch2Photo}
+\citation{PhotoSketcher}
+\citation{SketchyGAN}
 \citation{}
 \citation{}
 \citation{}
@@ -32,48 +43,70 @@
 \citation{HED}
 \citation{CSAGAM}
 \citation{CelebAMask-HQ}
-\citation{AutoTrace}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Generated face images from a sketch that does not follow the globally aligned face layout.\relax }}{2}{figure.caption.6}}
-\newlabel{fig:global-align-fail}{{2}{2}{Generated face images from a sketch that does not follow the globally aligned face layout.\relax }{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Deep Network for Sketch-Photo Translation}{2}{section.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Image-to-Image Translation}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Sketch-based Image generation}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}pooling}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Face Generation and Editing}{2}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Deep Network for Sketch-Photo Translation}{2}{section.3}\protected@file@percent }
 \newlabel{sec:network}{{3}{2}{Deep Network for Sketch-Photo Translation}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Edge alignment in baseline Model}{2}{subsection.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Global alignment}{2}{subsubsection.3.1.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Data augmentation with geometric translation}{2}{subsubsection.3.1.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison between a sketch generated from edge detection and from semantic boundary.\relax }}{2}{figure.caption.8}}
-\newlabel{fig:sketch_data}{{3}{2}{Comparison between a sketch generated from edge detection and from semantic boundary.\relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Face Sketches and Data Augmentation}{2}{subsubsection.3.1.3}}
-\@writefile{toc}{\contentsline {paragraph}{Stroke Deformation}{2}{section*.7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}pix2pixHD without instance normalization}{2}{subsubsection.3.1.4}}
-\newlabel{eq:instance-norm}{{1}{2}{pix2pixHD without instance normalization}{equation.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Edge alignment in baseline Model}{2}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Global alignment}{2}{subsubsection.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Data augmentation with geometric translation}{2}{subsubsection.3.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Face Sketches and Data Augmentation}{2}{subsubsection.3.1.3}\protected@file@percent }
+\citation{AutoTrace}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The architecture of our model.\relax }}{3}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:architecture}{{2}{3}{The architecture of our model.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Generated face images from a sketch that does not follow the globally aligned face layout.\relax }}{3}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:global-align-fail}{{3}{3}{Generated face images from a sketch that does not follow the globally aligned face layout.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{Stroke Deformation}{3}{section*.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison between a sketch generated from edge detection and from semantic boundary.\relax }}{3}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:sketch_data}{{4}{3}{Comparison between a sketch generated from edge detection and from semantic boundary.\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}pix2pixHD without instance normalization}{3}{subsubsection.3.1.4}\protected@file@percent }
+\newlabel{eq:instance-norm}{{1}{3}{pix2pixHD without instance normalization}{equation.3.1}{}}
 \citation{DeepSurgery}
 \citation{pix2pixHD}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}Spatial Attention Pooling}{3}{subsubsection.3.1.5}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.6}Losses}{3}{subsubsection.3.1.6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Spatial attention pooling to balance edge alignment and stroke ambiguity at different facial regions. \relax }}{3}{figure.caption.9}}
-\newlabel{fig:sap}{{4}{3}{Spatial attention pooling to balance edge alignment and stroke ambiguity at different facial regions. \relax }{figure.caption.9}{}}
-\newlabel{eqn:loss_GFM}{{3}{3}{Losses}{equation.3.3}{}}
-\newlabel{eqn:new_minmax_game}{{4}{3}{Losses}{equation.3.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{3}{section.4}}
-\newlabel{sec:experiments}{{4}{3}{Experiments}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Sketch Interface}{3}{subsection.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Comparison with Image Translation networks}{3}{subsection.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Sap\relax }}{4}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:architecture}{{5}{4}{Sap\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}Spatial Attention Pooling}{4}{subsubsection.3.1.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Spatial attention pooling to balance edge alignment and stroke ambiguity at different facial regions. \relax }}{4}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:sap}{{6}{4}{Spatial attention pooling to balance edge alignment and stroke ambiguity at different facial regions. \relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.6}Losses}{4}{subsubsection.3.1.6}\protected@file@percent }
+\newlabel{eqn:loss_GFM}{{3}{4}{Losses}{equation.3.3}{}}
+\newlabel{eqn:new_minmax_game}{{4}{4}{Losses}{equation.3.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{4}{section.4}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{4}{Experiments}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Sketch Interface}{4}{subsection.4.1}\protected@file@percent }
+\citation{}
+\citation{tsne}
+\citation{tsne}
 \bibstyle{ACM-Reference-Format}
 \bibdata{sketchRef}
-\bibcite{Chen09sketch2photo}{{1}{[n.d.]}{{Chen et~al\unhbox \voidb@x \hbox {.}}}{{Chen, ming Cheng, Tan, Shamir, and min Hu}}}
-\bibcite{Chen_sketchingreality08}{{2}{2008}{{Chen et~al\unhbox \voidb@x \hbox {.}}}{{Chen, Kang, qing Xu, and Dorsey}}}
-\bibcite{Igarashi-teddy99}{{3}{1999}{{Igarashi et~al\unhbox \voidb@x \hbox {.}}}{{Igarashi, Matsuoka, and Tanaka}}}
+\bibcite{Chen09sketch2photo}{{1}{[n.d.]}{{Chen et~al\mbox  {.}}}{{Chen, ming Cheng, Tan, Shamir, and min Hu}}}
+\bibcite{Chen_sketchingreality08}{{2}{2008}{{Chen et~al\mbox  {.}}}{{Chen, Kang, qing Xu, and Dorsey}}}
+\bibcite{Igarashi-teddy99}{{3}{1999}{{Igarashi et~al\mbox  {.}}}{{Igarashi, Matsuoka, and Tanaka}}}
 \bibcite{SutherlandSketchPad64}{{4}{1964}{{Sutherland}}{{Sutherland}}}
-\bibcite{Zeleznik-Sketch96}{{5}{1996}{{Zeleznik et~al\unhbox \voidb@x \hbox {.}}}{{Zeleznik, Herndon, and Hughes}}}
+\bibcite{Zeleznik-Sketch96}{{5}{1996}{{Zeleznik et~al\mbox  {.}}}{{Zeleznik, Herndon, and Hughes}}}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
 \newlabel{tocindent1}{4.185pt}
-\newlabel{tocindent2}{10.34999pt}
+\newlabel{tocindent2}{10.35pt}
 \newlabel{tocindent3}{20.22pt}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Sketch interface. \leavevmode {\color  {blue}Full interface with editing tools.}\relax }}{4}{figure.caption.10}}
-\newlabel{fig:interface}{{5}{4}{Sketch interface. \td {Full interface with editing tools.}\relax }{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Comparison with Image Editing}{4}{subsection.4.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Limitations and future work}{4}{subsection.4.4}}
-\@writefile{toc}{\contentsline {section}{References}{4}{section*.12}}
-\newlabel{TotPages}{{4}{4}{}{page.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Sketch interface. \leavevmode {\color  {blue}Full interface with editing tools.}\relax }}{5}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:interface}{{7}{5}{Sketch interface. \td {Full interface with editing tools.}\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Face generation with different models. From left to right: (a) hand-drawn sketches as input. (b) Results generated by pix2pixHD that is retrained using our contour-photo dataset. (c) Results generated by pix2pixHD that is retrained using our contour-photo dataset with geometric transformation as data augmentation. (d) Results generated by removing instance normalization at the shallow convolution layers (five layers in the global generator). (e) Results from our model (pix2pixHd architecture by replacing instance normalization with the proposed SLRN. ) More results can be found here: \leavevmode {\color  {red}(Provide a link for all results.)} \relax }}{5}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:cmp-contour-generation}{{8}{5}{Face generation with different models. From left to right: (a) hand-drawn sketches as input. (b) Results generated by pix2pixHD that is retrained using our contour-photo dataset. (c) Results generated by pix2pixHD that is retrained using our contour-photo dataset with geometric transformation as data augmentation. (d) Results generated by removing instance normalization at the shallow convolution layers (five layers in the global generator). (e) Results from our model (pix2pixHd architecture by replacing instance normalization with the proposed SLRN. ) More results can be found here: \cxj {Provide a link for all results.} \relax }{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Face Generation from Contours}{5}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:contourExp}{{4.2}{5}{Face Generation from Contours}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Contour Dataset}{5}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Photo Generation from Contours}{5}{section*.14}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Local face editing with different models. \leavevmode {\color  {blue}The proposed SLRN captures the shape details in the drawn sketches and successfully avoid edge-aligned artifacts caused by distortion in hand-drawn sketches.} More results can be found here: \leavevmode {\color  {red}(Provide a link for all results.)} \relax }}{5}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:cmp-contour-editing}{{9}{5}{Local face editing with different models. \td {The proposed SLRN captures the shape details in the drawn sketches and successfully avoid edge-aligned artifacts caused by distortion in hand-drawn sketches.} More results can be found here: \cxj {Provide a link for all results.} \relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {paragraph}{Face Editing with Strokes}{5}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Comparison with Image Translation networks}{5}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Comparison with Image Editing}{5}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Limitations and future work}{5}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{5}{section*.20}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Visualization of extracted features under local editing. We extract the features at different convolution layers at the left eye position (a) from three groups of sketches (b) with different types of local editing. The extracted high-dimensional features using different models including pix2pixHD-DA, pix2pixHD-wo-IN, and our SLRN) are mapped into 2D space using TSNE\nonbreakingspace \citep  {tsne} in (c). \leavevmode {\color  {red}(ChengZhiHua: provide a link for all results.)} \relax }}{6}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:vis-feature-slpn}{{10}{6}{Visualization of extracted features under local editing. We extract the features at different convolution layers at the left eye position (a) from three groups of sketches (b) with different types of local editing. The extracted high-dimensional features using different models including pix2pixHD-DA, pix2pixHD-wo-IN, and our SLRN) are mapped into 2D space using TSNE~\cite {tsne} in (c). \cxj {ChengZhiHua: provide a link for all results.} \relax }{figure.caption.18}{}}
+\newlabel{TotPages}{{6}{6}{}{page.6}{}}

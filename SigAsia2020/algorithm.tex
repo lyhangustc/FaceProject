@@ -36,7 +36,7 @@ We place an averaged face contour image on the canvas to provide a reference coo
 Therefore, the drawn sketches under this geometric reference will be located in or close to space of the training sketches.
 
 %%%% \subsubsection{Data augmentation with sketch dilation}
-\input{sketch_data.tex}
+\input{algorithm_data.tex}
 
 \subsubsection{pix2pixHD without instance normalization}
 The baseline model, as well as many existing stylization DNNs, uses spatial normalization \cxj{instance normalization?} to extract style statistics, treating them as spatially uniform on the entire image. 
@@ -56,11 +56,11 @@ The user may draw very carefully for features such as eyes, eyebrows, but not so
 
 
 %%% \subsubsection{Spatial Attention Pooling}
-\input{sap}
+\input{algorithm_sap}
 %%% \subsubsection{Spatial Local Respond Normalization}
 %\input{slrn}
 %%% \subsubsection{Losses}
-\input{loss}
+\input{algorithm_loss}
 
 
 
@@ -68,4 +68,3 @@ The user may draw very carefully for features such as eyes, eyebrows, but not so
 %\paragraph{Sketch Data Generation}
 %Four options to generate sketches: Canny, HED, AutoTrace [Web..], and Contour. 
 
-. 
