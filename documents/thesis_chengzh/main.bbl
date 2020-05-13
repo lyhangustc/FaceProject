@@ -1,0 +1,110 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\relax\else
+  \urlstyle{same}\fi
+\providecommand{\href}[2]{\url{#2}}
+\providecommand{\doi}[1]{\href{https://doi.org/#1}{#1}}
+
+\bibitem[{Yin Xi} et~al.(2017){Yin Xi}, {Yu Xiang}, {Sohn Kihyuk}, {Liu
+  Xiaoming}, and {Chandraker Manmohan}]{Yin_2017_ICCV}
+{Yin Xi}, {Yu Xiang}, {Sohn Kihyuk}, et~al.
+\newblock Towards large-pose face frontalization in the
+  wild\allowbreak[C]//\allowbreak
+\textit{The IEEE International Conference on Computer Vision (ICCV)}.
+\newblock 2017.
+
+\bibitem[{Li Yijun} et~al.(2017){Li Yijun}, {Liu Sifei}, {Yang Jimei}, and
+  {Yang Ming-Hsuan}]{Li_2017_CVPR}
+{Li Yijun}, {Liu Sifei}, {Yang Jimei}, et~al.
+\newblock Generative face completion\allowbreak[C]//\allowbreak
+\textit{The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}.
+\newblock 2017.
+
+\bibitem[{Antipov} et~al.(2017){Antipov}, {Baccouche}, and
+  {Dugelay}]{G_2017_ICIP}
+{Antipov}~G, {Baccouche}~M, {Dugelay}~J.
+\newblock Face aging with conditional generative adversarial
+  networks\allowbreak[C]//\allowbreak
+\textit{2017 IEEE International Conference on Image Processing (ICIP)}.
+\newblock 2017: 2089-2093.
+
+\bibitem[{Zhang} et~al.(2020){Zhang}, {Zhang}, {Mao}, and {Xu}]{ggfr}
+{Zhang}~F, {Zhang}~T, {Mao}~Q, et~al.
+\newblock Geometry guided pose-invariant facial expression
+  recognition\allowbreak[J].
+\newblock \textit{IEEE Transactions on Image Processing}, 2020, 29:\penalty0
+  4445-4460.
+
+\bibitem[{He} et~al.(2019){He}, {Zuo}, {Kan}, {Shan}, and {Chen}]{attrgan}
+{He}~Z, {Zuo}~W, {Kan}~M, et~al.
+\newblock Attgan: Facial attribute editing by only changing what you
+  want\allowbreak[J].
+\newblock \textit{IEEE Transactions on Image Processing}, 2019, 28\penalty0
+  (11):\penalty0 5464-5478.
+
+\bibitem[{Cao Kaidi} et~al.(2018){Cao Kaidi}, {Liao Jing}, and {Yuan
+  Lu}]{carigan}
+{Cao Kaidi}, {Liao Jing}, {Yuan Lu}.
+\newblock Carigans: Unpaired photo-to-caricature translation\allowbreak[J].
+\newblock \textit{CoRR}, 2018, abs/1811.00222.
+
+\bibitem[{Tingting Li} et~al.(2018){Tingting Li}, {Ruihe Qian}, {Chao Dong},
+  {Si Liu}, Yan, Zhu, and Lin]{beautygan}
+{Tingting Li}, {Ruihe Qian}, {Chao Dong}, et~al.
+\newblock Beautygan: Instance-level facial makeup transfer with deep generative
+  adversarial network\allowbreak[C]//\allowbreak
+\textit{Multimedia Conference on Multimedia Conference(MM)}.
+\newblock 2018: 645-653.
+
+\bibitem[{Isola Phillip} et~al.(2017){Isola Phillip}, {Zhu Jun-Yan}, {Zhou
+  Tinghui}, and {Efros Alexei A.}]{pix2pix}
+{Isola Phillip}, {Zhu Jun-Yan}, {Zhou Tinghui}, et~al.
+\newblock Image-to-image translation with conditional adversarial
+  networks\allowbreak[C]//\allowbreak
+\textit{The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}.
+\newblock 2017.
+
+\bibitem[{Goodfellow Ian} et~al.(2014){Goodfellow Ian}, {Pouget-Abadie Jean},
+  {Mirza Mehdi}, {Xu Bing}, Warde-Farley, Ozair, Courville, and Bengio]{gan}
+{Goodfellow Ian}, {Pouget-Abadie Jean}, {Mirza Mehdi}, et~al.
+\newblock Generative adversarial nets\allowbreak[M]//\allowbreak
+\textit{Advances in Neural Information Processing Systems(NIPS)}.
+\newblock 2014: 2672-2680.
+
+\bibitem[{Mirza} et~al.(2014){Mirza} and {Osindero}]{cgan}
+{Mirza}~M, {Osindero}~S.
+\newblock Conditional generative adversarial nets\allowbreak[J].
+\newblock 2014.
+
+\bibitem[{Wang Ting-Chun} et~al.(2018){Wang Ting-Chun}, {Liu Ming-Yu}, {Zhu
+  Jun-Yan}, {Tao Andrew}, {Kautz Jan}, and {Catanzaro Bryan}]{pix2pixhd}
+{Wang Ting-Chun}, {Liu Ming-Yu}, {Zhu Jun-Yan}, et~al.
+\newblock High-resolution image synthesis and semantic manipulation with
+  conditional gans\allowbreak[C]//\allowbreak
+\textit{The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}.
+\newblock 2018.
+
+\bibitem[{Chen Qifeng} et~al.(2017){Chen Qifeng} and {Koltun Vladlen}]{crn}
+{Chen Qifeng}, {Koltun Vladlen}.
+\newblock Photographic image synthesis with cascaded refinement
+  networks\allowbreak[C]//\allowbreak
+\textit{The IEEE International Conference on Computer Vision (ICCV)}.
+\newblock 2017.
+
+\bibitem[{Ulyanov Dmitry} et~al.(2017){Ulyanov Dmitry}, {Vedaldi Andrea}, and
+  {Lempitsky Victor}]{instance_norm}
+{Ulyanov Dmitry}, {Vedaldi Andrea}, {Lempitsky Victor}.
+\newblock Improved texture networks: Maximizing quality and diversity in
+  feed-forward stylization and texture synthesis\allowbreak[C]//\allowbreak
+\textit{The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}.
+\newblock 2017.
+
+\bibitem[{Tero Karras} et~al.(2017){Tero Karras}, {Timo Aila}, {Samuli Laine},
+  and {Jaakko Lehtinen}]{pggan}
+{Tero Karras}, {Timo Aila}, {Samuli Laine}, et~al.
+\newblock Progressive growing of gans for improved quality, stability, and
+  variation\allowbreak[J].
+\newblock \textit{CoRR}, 2017, \textit{abs/1710.10196}.
+
+\end{thebibliography}

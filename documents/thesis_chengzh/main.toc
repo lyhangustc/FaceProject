@@ -1,0 +1,43 @@
+\contentsline {chapter}{中文内容摘要}{3}{chapter*.7}% 
+\contentsline {chapter}{英文内容摘要}{4}{chapter*.8}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}绪论}{5}{chapter.1}% 
+\contentsline {section}{\numberline {第一节}研究背景}{5}{section.1.1}% 
+\contentsline {section}{\numberline {第二节}本文工作}{6}{section.1.2}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}相关模型介绍}{7}{chapter.2}% 
+\contentsline {section}{\numberline {第一节}pix2pixHD的模型结构}{7}{section.2.1}% 
+\contentsline {subsection}{\numberline {一}简介}{7}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {二}网络结构}{7}{subsection.2.1.2}% 
+\contentsline {subsubsection}{\numberline {1}多层级的生成器}{7}{subsubsection.2.1.2.1}% 
+\contentsline {subsubsection}{\numberline {2}多尺度的判别器}{8}{subsubsection.2.1.2.2}% 
+\contentsline {subsection}{\numberline {三}目标函数}{8}{subsection.2.1.3}% 
+\contentsline {subsubsection}{\numberline {1}对抗生成损失}{9}{subsubsection.2.1.3.1}% 
+\contentsline {subsubsection}{\numberline {2}特征匹配损失}{9}{subsubsection.2.1.3.2}% 
+\contentsline {subsubsection}{\numberline {3}VGG损失}{9}{subsubsection.2.1.3.3}% 
+\contentsline {section}{\numberline {第二节}实例标准化}{9}{section.2.2}% 
+\contentsline {section}{\numberline {第三节}模型引入}{11}{section.2.3}% 
+\contentsline {section}{\numberline {第四节}数据集生成}{12}{section.2.4}% 
+\contentsline {subsection}{\numberline {一}CelebA-HQ数据集}{12}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {二}轮廓数据集}{12}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {三}手绘草图的生成}{12}{subsection.2.4.3}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}特征可视化}{14}{chapter.3}% 
+\contentsline {section}{\numberline {第一节}t-SNE原理}{14}{section.3.1}% 
+\contentsline {subsection}{\numberline {一}SNE}{14}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {二}t-SNE}{15}{subsection.3.1.2}% 
+\contentsline {section}{\numberline {第二节}草图特征分析}{16}{section.3.2}% 
+\contentsline {section}{\numberline {第三节}PCA可视化分析}{18}{section.3.3}% 
+\contentsline {section}{\numberline {第四节}t-SNE可视化分析}{20}{section.3.4}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}实验结果及分析}{22}{chapter.4}% 
+\contentsline {section}{\numberline {第一节}数据增广}{22}{section.4.1}% 
+\contentsline {subsection}{\numberline {一}输入数据的全局对齐问题}{22}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {二}训练数据的增广}{22}{subsection.4.1.2}% 
+\contentsline {section}{\numberline {第二节}我们模型的生成效果及对比实验}{23}{section.4.2}% 
+\contentsline {subsection}{\numberline {一}针对实例标准化的消融实验}{23}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {二}我们的模型与pix2pixHD的对比实验}{24}{subsection.4.2.2}% 
+\addvspace {12\bp@ }
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}总结和展望}{26}{chapter.5}% 
+\contentsline {chapter}{参考文献}{28}{chapter*.29}% 
+\contentsfinish 
