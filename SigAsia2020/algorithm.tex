@@ -3,62 +3,25 @@
 \section{Deep Network for Sketch-Photo Translation}
 \label{sec:network}
 
-\subsection{Edge alignment in baseline Model}
-
-Generating a realistic photo from sketch can be considered as an image translation problem. 
-We use the state-of-the-art Pix2PixHd~\cite{} as our baseline. 
-% 
- 
-We use the CelebA-HD dataset~\cite{} which contains \td{xxx face images in WxH}. All the face images are globally aligned according to their eye positions. 
-For each photo, we generate sketch samples \td{by xxx method}.
-\td{XX for training and xx for testing.}
-%
-Using this paired sketch-photo dataset, \td{we trained our method and other state-of-the-art approaches for comparison}.
-
-\subsubsection{Global alignment}
-While all the face images in the CelebA dataset \cite{} are globally aligned with their eye positions, the learned generator implicitly embeds the global layout. Once the drawn sketches deviate from this implicitly embedded layout, the learned translation model generate awkward results, \cxj{as Fig.~\ref{fig:global-align-fail} shows}. 
 
 
-\begin{figure}
-	\centering
-	\vspace{1.0cm}
-	\caption{Generated face images from a sketch that does not follow the globally aligned face layout.}
-	\label{fig:global-align-fail}
-\end{figure}
+%%% \subsection{Edge alignment in baseline Model}
+%%% \subsubsection{Data augmentation with geometric translation}
+%%% \subsubsection{pix2pixHD without instance normalization}
+%\input{algorithm_baseline}
 
-\subsubsection{Data augmentation with geometric translation}
-A straightforward way is to augment the training set by random geometric transformation of input sketches. 
-However, large interval/range of the transform yields un-convergence of the network training. 
-We limit the transformation range to $(-\frac{\pi}{10},\frac{\pi}{10})$ rotation, $(-\frac{W}{20},\frac{W}{20})$ translation, and \cxj{scale?} in order to increase the tolerance of the trained model on the distortion and roughness of hand-drawn sketches. 
-%
-Moreover, as an interactive system, we also simply provide a reference sketch, like ShadowDrawing~\cite{}.
-We place an averaged face contour image on the canvas to provide a reference coordinate system for user to draw their strokes. 
-Therefore, the drawn sketches under this geometric reference will be located in or close to space of the training sketches.
+%%% \subsection{Model Overview}
+\input{algorithm_overview}
 
-%%%% \subsubsection{Data augmentation with sketch dilation}
-\input{algorithm_data.tex}
-
-\subsubsection{pix2pixHD without instance normalization}
-The baseline model, as well as many existing stylization DNNs, uses spatial normalization \cxj{instance normalization?} to extract style statistics, treating them as spatially uniform on the entire image. 
-The instance normalization is defined as
-\begin{equation}\label{eq:instance-norm}
-f^i(x,y,c)=\frac{f^i(x,y,c)}{\sum_{x,y}f^i(x,y)},
-\end{equation}
-where $i, x,y,c$ respectively indicates feature map layer, pixel position, and channel indexes.  
-However, the shallow convolution layers typically extract texture or brightness statistics, which are varying dramatically on different local regions of a drand-drawn sketch due to its sparsity. For example, there might be a large number strokes around hair regions or mouth regions to describe details. These heavy strokes bring significant difference while instance normalization at each convolution layer normalizes local patch features with a global factor. Therefore, the extracted features for identical eye strokes could be very different. 
-This instance normalization term leads to significant change of local shapes, as shown in Fig.~\ref{}.\cxj{add a figure here or show comparison in result section. }
-
-
-We think that strokes mainly describe the shape features, without little texture information. Normalization is expected to remove the variance of global stroke styles, such as stroke widths, stroke curveness, and stroke coarseness. 
-During painting, the stroke coarseness is spatially varying when user depict different facial features. 
-The user may draw very carefully for features such as eyes, eyebrows, but not so accurate on cheek shapes. 
-
-
+%%% \subsubsection{Face Sketches and Stroke Deformation}
+\input{algorithm_data}
 
 %%% \subsubsection{Spatial Attention Pooling}
 \input{algorithm_sap}
-%%% \subsubsection{Spatial Local Respond Normalization}
-%\input{slrn}
+
+%%% \subsubsection{Edge Penalty}
+\input{algorithm_ep}
+
 %%% \subsubsection{Losses}
 \input{algorithm_loss}
 

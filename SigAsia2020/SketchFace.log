@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.4.14)  8 MAY 2020 22:15
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.4.14)  17 MAY 2020 02:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1417,17 +1417,14 @@ Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen197
 )
 Excluding comment 'screenonly' Include comment 'printonly'
-Excluding comment 'anonsuppress' Excluding comment 'acks' (./SketchFace.aux
-
-LaTeX Warning: Label `fig:architecture' multiply defined.
-
-)
+Excluding comment 'anonsuppress' Excluding comment 'acks' (./SketchFace.aux)
 \openout1 = `SketchFace.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 54.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
  54.
- (g:/texlive/2020/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+
+(g:/texlive/2020/texmf-dist/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
 LaTeX Font Info:    ... okay on input line 54.
@@ -1802,131 +1799,134 @@ tf
 
 ])
 (./relatedwork.tex
-File: figs/architecture.png Graphic file (type bmp)
-<figs/architecture.png>
 
+Package natbib Warning: Citation `pix2pix' on page 2 undefined on input line 6.
 
-Class acmart Warning: A possible image without description on input line 7.
-
-
-Package natbib Warning: Citation `pix2pix' on page 2 undefined on input line 12
-.
 
 
 Package natbib Warning: Citation `outdoor_scene' on page 2 undefined on input l
-ine 14.
+ine 8.
 
 
 Package natbib Warning: Citation `BicycleGAN' on page 2 undefined on input line
- 16.
+ 10.
 
 
 Package natbib Warning: Citation `CycleGAN' on page 2 undefined on input line 1
-8.
+2.
 
 
-Package natbib Warning: Citation `DualGAN' on page 2 undefined on input line 18
+Package natbib Warning: Citation `DualGAN' on page 2 undefined on input line 12
 .
 
 
 Package natbib Warning: Citation `DiscoGAN' on page 2 undefined on input line 1
-8.
+2.
 
 
-Package natbib Warning: Citation `StarGAN' on page 2 undefined on input line 20
+Package natbib Warning: Citation `StarGAN' on page 2 undefined on input line 14
 .
 
 
 Package natbib Warning: Citation `pix2pixHD' on page 2 undefined on input line 
-22.
+16.
 
 
 Package natbib Warning: Citation `Sketch2Photo' on page 2 undefined on input li
-ne 27.
+ne 21.
 
 
 Package natbib Warning: Citation `PhotoSketcher' on page 2 undefined on input l
-ine 27.
+ine 21.
 
 
 Package natbib Warning: Citation `SketchyGAN' on page 2 undefined on input line
- 33.
+ 27.
 
-) (./algorithm.tex
-Overfull \hbox (2.16599pt too wide) in paragraph at lines 8--11
-\TU/LinLibertine(0)/m/n/9 image translation problem. We use the state-of-the-ar
-t Pix2PixHd []
- []
+) (./algorithm.tex (./algorithm_overview.tex
+File: figs/architecture.png Graphic file (type bmp)
+<figs/architecture.png>
 
+
+Class acmart Warning: A possible image without description on input line 6.
+
+
+Package natbib Warning: Citation `pix2pixHD' on page 2 undefined on input line 
+16.
+
+
+LaTeX Warning: Reference `subsec:algorithm_' on page 2 undefined on input line 
+25.
+
+) (./algorithm_data.tex
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 19.
+(Font)              scaled to size 9.0pt on input line 5.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;ma
 pping=tex-text;" at 9.0pt
  -> g:/texlive/2020/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.ot
 f
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 19.
+(Font)              scaled to size 9.0pt on input line 5.
 Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;m
 apping=tex-text;" at 9.0pt
  -> g:/texlive/2020/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RI.o
 tf
 
-Class acmart Warning: A possible image without description on input line 27.
+
+Package natbib Warning: Citation `HED' on page 2 undefined on input line 6.
 
 
-Overfull \hbox (13.90352pt too wide) in paragraph at lines 30--37
-\TU/LinLibertine(0)/m/n/9 trained model on the distortion and roughness of hand
--drawn sketches.
+Package natbib Warning: Citation `CSAGAM' on page 2 undefined on input line 11.
+
+
+
+Overfull \hbox (1.19998pt too wide) in paragraph at lines 5--12
+[]\TU/LinLibertine(0)/m/n/9 other problems[]. []Discuss the advance of make-edg
+es over edge maps
  []
 
-(./algorithm_data.tex
 
-Package natbib Warning: Citation `HED' on page 2 undefined on input line 5.
+Overfull \hbox (1.04477pt too wide) in paragraph at lines 5--12
+\TU/LinLibertine(0)/m/n/9 handdrawn sketches, not because of the incompleteness
+.)[] []Although
+ []
 
 
-Package natbib Warning: Citation `CSAGAM' on page 2 undefined on input line 8.
+Package natbib Warning: Citation `pix2pixHD' on page 2 undefined on input line 
+13.
 
 
-Package natbib Warning: Citation `CelebAMask-HQ' on page 2 undefined on input l
-ine 9.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `TU/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 13.
+(Font)              scaled to size 7.0pt on input line 14.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;ma
 pping=tex-text;" at 7.0pt
  -> g:/texlive/2020/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.ot
 f
-[2.2]
+ [2.2]
+
+Package natbib Warning: Citation `CelebAMask-HQ' on page 3 undefined on input l
+ine 15.
+
+
+Package natbib Warning: Citation `FaceShop' on page 3 undefined on input line 2
+0.
+
 
 Package natbib Warning: Citation `AutoTrace' on page 3 undefined on input line 
-15.
+20.
 
 
-Overfull \hbox (11.09428pt too wide) in paragraph at lines 15--16
-\TU/LinLibertine(0)/m/n/9 Trace algorithm [\TU/LinLibertine(0)/b/n/9 ?\TU/LinLi
-bertine(0)/m/n/9 ], and add an offset randomly selected from $\LMS/ntxsy/m/n/9 
-»^^@\OML/nxlmi/m/it/9 d; d\LMS/ntxsy/m/n/9 ¼[]$
+Overfull \hbox (1.45728pt too wide) in paragraph at lines 20--23
+\TU/LinLibertine(0)/m/n/9 sketches using AutoTrace algorithm [\TU/LinLibertine(
+0)/b/n/9 ?\TU/LinLibertine(0)/m/n/9 ], and add an offset randomly
  []
 
 
-Class acmart Warning: A possible image without description on input line 23.
+Class acmart Warning: A possible image without description on input line 30.
 
-)
-Overfull \hbox (8.74777pt too wide) in paragraph at lines 42--44
- \TU/LinBiolinum(0)/m/it/9 3.1.4 pix2pixHD without instance normalization.[] \T
-U/LinLibertine(0)/m/n/9 The baseline model,
- []
-
-
-LaTeX Warning: Reference `' on page 3 undefined on input line 49.
-
-
-Overfull \hbox (5.32652pt too wide) in paragraph at lines 52--55
-\TU/LinLibertine(0)/m/n/9 curveness, and stroke coarseness. During painting, th
-e stroke coarse-
- []
-
-[3.3] (./algorithm_sap.tex
+) (./algorithm_sap.tex
 File: figs/sap.png Graphic file (type bmp)
 <figs/sap.png>
 
@@ -1934,30 +1934,37 @@ File: figs/sap.png Graphic file (type bmp)
 Class acmart Warning: A possible image without description on input line 8.
 
 
-Package natbib Warning: Citation `DeepSurgery' on page 4 undefined on input lin
-e 17.
+Package natbib Warning: Citation `DeepSurgery' on page 3 undefined on input lin
+e 19.
 
 
-Overfull \hbox (6.05452pt too wide) in paragraph at lines 12--22
- \TU/LinBiolinum(0)/m/it/9 3.1.5 Spatial Attention Pooling.[] \TU/LinLibertine(
-0)/m/n/9 When the input hand-drawn sketch
+Underfull \vbox (badness 5817) has occurred while \output is active []
+
+ [3.3]
+Missing character: There is no · in font cmr9!
+
+Overfull \hbox (7.79579pt too wide) in paragraph at lines 41--43
+[]\TU/LinLibertine(0)/m/n/9 A straightforward way to get $\OML/nxlmi/m/it/9 A$ 
+\TU/LinLibertine(0)/m/n/9 is passing the input sketch through
  []
 
 
-Overfull \hbox (4.30353pt too wide) in paragraph at lines 23--31
-\TU/LinLibertine(0)/m/n/9 spatial attention pooling (SAP), to dilate the input 
-sketch in a spacial-
+Overfull \hbox (5.35353pt too wide) in paragraph at lines 41--43
+\TU/LinLibertine(0)/m/n/9 a few convolutional layers and these convolutional la
+yers are trained
  []
 
-File: figs/box.png Graphic file (type bmp)
-<figs/box.png>
 
-Class acmart Warning: A possible image without description on input line 44.
+Overfull \hbox (13.1955pt too wide) in paragraph at lines 41--43
+\TU/LinLibertine(0)/m/n/9 classifier to extract features of the input sketch $\
+OML/nxlmi/m/it/9 S$ \TU/LinLibertine(0)/m/n/9 to get $[]$,
+ []
 
+Missing character: There is no · in font cmr9!
 ) (./algorithm_loss.tex
 
 Package natbib Warning: Citation `pix2pixHD' on page 4 undefined on input line 
-20.
+22.
 
 )) (./results.tex
 File: figs/interface.png Graphic file (type bmp)
@@ -1966,7 +1973,7 @@ File: figs/interface.png Graphic file (type bmp)
 
 Class acmart Warning: A possible image without description on input line 22.
 
-[4.4] (./contourExp.tex
+(./contourExp.tex [4.4]
 File: figs/contour-generation.png Graphic file (type bmp)
 <figs/contour-generation.png>
 
@@ -1995,7 +2002,11 @@ Package natbib Warning: Citation `tsne' on page 5 undefined on input line 46.
 
 Class acmart Warning: A possible image without description on input line 48.
 
-)) (./SketchFace.bbl
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+(./SketchFace.bbl
 LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/it' will be
 (Font)              scaled to size 7.0pt on input line 47.
 Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;
@@ -2020,7 +2031,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 191.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
 Package rerunfilecheck Info: File `SketchFace.out' has not changed.
-(rerunfilecheck)             Checksum: 19E49B48104A6DCBDFC5CF564D97B3CC;2997.
+(rerunfilecheck)             Checksum: EBA918D530BAC0ED83336C0F935CF7DD;2744.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2032,17 +2043,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 29956 strings out of 481358
- 564843 string characters out of 5927881
- 840341 words of memory out of 5000000
- 46750 multiletter control sequences out of 15000+600000
+ 29953 strings out of 481358
+ 564846 string characters out of 5927881
+ 838950 words of memory out of 5000000
+ 46746 multiletter control sequences out of 15000+600000
  554962 words of font info for 130 fonts, out of 8000000 for 9000
  197 hyphenation exceptions out of 8191
- 69i,16n,111p,823b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,16n,111p,982b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on SketchFace.pdf (6 pages).
