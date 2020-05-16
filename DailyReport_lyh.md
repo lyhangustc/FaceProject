@@ -1,3 +1,20 @@
+# 5-10
+### Bug in SAP
+* Bug: the output of SAP is all white, or gray edge maps with one-pixel width.
+* Reason: max pooling with kernel size > 1 makes edge maps all white (
+* We should use "min pooling" since the edge pixels are zeros and background pixels are 255.
+* Solved by ```255 - sketch``` before ```max_pooling(sketch)```
+
+### Baseline + SAP + GFM + Deform (full model)
+* Submitted
+### Full model super parameter tuning
+* Generator feature matching for different layers of generator
+  * [0]
+  * [0, 1, 2, 3]
+  * [0, -2, -3, -4]
+  * [0, 1, 2, 3, -2, -3, -4]
+  
+
 # 4-21
 ### The training is too slow
 * Training for one epoch lasts ~2 hours

@@ -1,0 +1,28 @@
+% !TeX root = ../main.tex
+
+\ustcsetup{
+  keywords = {
+    图像翻译, 手绘草图, 图像编辑, 可视化
+  },
+  keywords* = {
+    image translation, hand-drawn sketch,
+    image editing, visulization
+  },
+}
+
+\begin{abstract}
+  pix2pixHD是目前比较先进的一种图像翻译神经网络，适用于多种不同的图像翻译任务，其中包括从草图到人脸照片的生成。但是pix2pixHD对手绘草图输入的生成效果并不是很理想，生成质量不高，草图上某一位置的变化会引起生成图像全局的改变。
+  
+  本文用可视化的方法分析了pix2pixHD生成器中间层的特征，发现了其网络结构存在的缺陷，并改进了其模型。改进后的模型生成质量更高，纹理细节更加丰富，而且还实现了图像编辑的功能。
+  
+  本文还对训练数据进行了增广，使得训练和测试的过程更加鲁棒。
+\end{abstract}
+
+\begin{enabstract}
+  Pix2pixHD is a relatively advanced image translation neural network which is suitable for a variety of different image translation tasks, including face photo generation from hand-drawn sketches. However, the generation effect of pix2pixHD for hand-drawn sketch input is not really precise, and the generated images are ofen limited to the lack of some textures. The change of a certain position on the sketch will cause the global change of the generated image.
+  
+  In this paper, the features of the middle layer of pix2pixHD generator are analyzed by visualization method, the defects of its network structure are found, and the model is improved. The improved model produces higher quality, richer texture details, and realizes the function of image editing.
+  
+  The training data are also augmented to make the training and testing process more robust.
+
+\end{enabstract}
