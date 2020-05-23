@@ -3,7 +3,12 @@
 \section{Deep Network for Sketch-Photo Translation}
 \label{sec:network}
 
-
+\begin{figure*}
+	\includegraphics[width=0.9\textwidth]{figs/architecture}
+	\caption{The architecture of our model.}
+	\label{fig:architecture}
+\end{figure*}
+%
 
 %%% \subsection{Edge alignment in baseline Model}
 %%% \subsubsection{Data augmentation with geometric translation}
@@ -14,20 +19,31 @@
 \input{algorithm_overview}
 
 %%% \subsubsection{Face Sketches and Stroke Deformation}
+\subsubsection{Face Sketches and Stroke Deformation}
+\label{subsec:algorithm_data}
 \input{algorithm_data}
 
 %%% \subsubsection{Spatial Attention Pooling}
+% 
+\begin{figure}
+	\includegraphics[width=\columnwidth]{figs/sap.png}
+	\caption{Sap}
+	\label{fig:sap}
+\end{figure}
+%
+
+\subsubsection{Spatial Attention Pooling}
+\label{subsec:algorithm_sap}
 \input{algorithm_sap}
 
-%%% \subsubsection{Edge Penalty}
+%%% \subsubsection{Traning Schedule}
+\subsection{Traning Schedule}
+\label{subsec:training}
 \input{algorithm_ep}
 
 %%% \subsubsection{Losses}
+\subsubsection{Losses}
+\label{subsec:algorithm_loss}
 \input{algorithm_loss}
 
-
-
-
-%\paragraph{Sketch Data Generation}
-%Four options to generate sketches: Canny, HED, AutoTrace [Web..], and Contour. 
 

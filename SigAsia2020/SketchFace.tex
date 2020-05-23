@@ -4,9 +4,11 @@
 
 \usepackage{booktabs} % For formal tables
 \usepackage{color}
+ % to balance the end of two columns
+\usepackage{balance}
 
 % TOG prefers author-name bib system with square brackets
-\citestyle{acmauthoryear}
+%\citestyle{acmauthoryear}
 %\setcitestyle{nosort,square} % nosort to allow for manual chronological ordering
 
 
@@ -19,7 +21,7 @@
 \SetAlCapHSkip{0pt}
 
 % Metadata Information
-\acmJournal{TOG}
+%\acmJournal{TOG}
 %\acmVolume{38}
 %\acmNumber{4}
 %\acmArticle{39}
@@ -55,74 +57,6 @@
 % Title portion
 \title{FaceSketching: Interactive Realistic Face Image Creation from Free-hand Sketches }
 
-% DO NOT ENTER AUTHOR INFORMATION FOR ANONYMOUS TECHNICAL PAPER SUBMISSIONS TO SIGGRAPH 2019!
-%\author{Gang Zhou}
-%\orcid{1234-5678-9012-3456}
-%\affiliation{%
-%  \institution{College of William and Mary}
-%  \streetaddress{104 Jamestown Rd}
-%  \city{Williamsburg}
-%  \state{VA}
-%  \postcode{23185}
-%  \country{USA}}
-%\email{gang_zhou@wm.edu}
-%\author{Valerie B\'eranger}
-%\affiliation{%
-%  \institution{Inria Paris-Rocquencourt}
-%  \city{Rocquencourt}
-%  \country{France}
-%}
-%\email{beranger@inria.fr}
-%\author{Aparna Patel}
-%\affiliation{%
-% \institution{Rajiv Gandhi University}
-% \streetaddress{Rono-Hills}
-% \city{Doimukh}
-% \state{Arunachal Pradesh}
-% \country{India}}
-%\email{aprna_patel@rguhs.ac.in}
-%\author{Huifen Chan}
-%\affiliation{%
-%  \institution{Tsinghua University}
-%  \streetaddress{30 Shuangqing Rd}
-%  \city{Haidian Qu}
-%  \state{Beijing Shi}
-%  \country{China}
-%}
-%\email{chan0345@tsinghua.edu.cn}
-%\author{Ting Yan}
-%\affiliation{%
-%  \institution{Eaton Innovation Center}
-%  \city{Prague}
-%  \country{Czech Republic}}
-%\email{yanting02@gmail.com}
-%\author{Tian He}
-%\affiliation{%
-%  \institution{University of Virginia}
-%  \department{School of Engineering}
-%  \city{Charlottesville}
-%  \state{VA}
-%  \postcode{22903}
-%  \country{USA}
-%}
-%\affiliation{%
-%  \institution{University of Minnesota}
-%  \country{USA}}
-%\email{tinghe@uva.edu}
-%\author{Chengdu Huang}
-%\author{John A. Stankovic}
-%\author{Tarek F. Abdelzaher}
-%\affiliation{%
-%  \institution{University of Virginia}
-%  \department{School of Engineering}
-%  \city{Charlottesville}
-%  \state{VA}
-%  \postcode{22903}
-%  \country{USA}
-%}
-
-%\renewcommand\shortauthors{Zhou, G. et al}
- 
 
 \begin{abstract}
 In this paper, we explore the task of generating photo-realistic face images from sketches based on image-to-image translation framework. 
@@ -137,34 +71,18 @@ We conduct extensive experiments on CelebA-HQ dataset. The experiment results sh
 % Please copy and paste the code instead of the example below.
 %
 \begin{CCSXML}
-<ccs2012>
- <concept>
-  <concept_id>10010520.10010553.10010562</concept_id>
-  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
-  <concept_significance>500</concept_significance>
- </concept>
- <concept>
-  <concept_id>10010520.10010575.10010755</concept_id>
-  <concept_desc>Computer systems organization~Redundancy</concept_desc>
-  <concept_significance>300</concept_significance>
- </concept>
- <concept>
-  <concept_id>10010520.10010553.10010554</concept_id>
-  <concept_desc>Computer systems organization~Robotics</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
- <concept>
-  <concept_id>10003033.10003083.10003095</concept_id>
-  <concept_desc>Networks~Network reliability</concept_desc>
-  <concept_significance>100</concept_significance>
- </concept>
-</ccs2012>
+	<ccs2012>
+	<concept>
+	<concept_id>10010147.10010257.10010293.10010294</concept_id>
+	<concept_desc>Computing methodologies~Neural networks</concept_desc>
+	<concept_significance>500</concept_significance>
+	</concept>
+	</ccs2012>
 \end{CCSXML}
 
-\ccsdesc[500]{Computer systems organization~Embedded systems}
-\ccsdesc[300]{Computer systems organization~Redundancy}
-\ccsdesc{Computer systems organization~Robotics}
-\ccsdesc[100]{Networks~Network reliability}
+\ccsdesc[500]{Computing methodologies~Neural networks}
+
+\keywords{spatial attention; conditional generative adversarial nets; face; sketch; realistic images}
 
 %
 % End generated code
@@ -186,10 +104,12 @@ face editing, deep neural network}
 \input{intro}
 \input{relatedwork}
 \input{algorithm}
-\input{results}
+\input{experiment}
 
 % Bibliography
 \bibliographystyle{ACM-Reference-Format}
+\balance 
+\bibliography{sketch}
 \bibliography{sketchRef}
 
 \end{document}

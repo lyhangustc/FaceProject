@@ -1,18 +1,9 @@
 % !TeX root = SketchFace.tex
 
-% 
-\begin{figure}
-	\includegraphics[width=\columnwidth]{figs/sap.png}
-	\caption{Sap}
-	\label{fig:sap}
-\end{figure}
-%
 
-\subsubsection{Spatial Attention Pooling}
-\label{subsec:algorithm_sap}
 \td{(Check if the idea about the relax is well-described)}
 \td{(Spatial-specific?Position-specific?Spatially variant?)}
-When a input hand-drawn sketch is not well-drawn, line distortions of the sketch damages the quality of the generated face image. Tt is a trade-off between the realism of the output face image and the alignment between the input sketch and the output face image.
+When a input hand-drawn sketch is not well-drawn, line distortions of the sketch damages the quality of the generated face image. It is a trade-off between the realism of the output face image and the alignment between the input sketch and the output face image.
 %
 In order to alleviate the edge alignment between the input sketch and the output face image, we desire to relax thin strokes to ambiguity bands with various width or uncertainty.
 One of the straightforward ways is to smooth the lines of sketches using image smoothing algorithm. 

@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{5}
+\begin{thebibliography}{11}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -37,60 +37,168 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
-\bibitem[\protect\citeauthoryear{Chen, ming Cheng, Tan, Shamir, and min
-  Hu}{Chen et~al\mbox{.}}{[n.d.]}]%
-        {Chen09sketch2photo}
-\bibfield{author}{\bibinfo{person}{Tao Chen}, \bibinfo{person}{Ming ming
+\bibitem[\protect\citeauthoryear{Chen, Cheng, Tan, Shamir, and Hu}{Chen
+  et~al\mbox{.}}{2009}]%
+        {Sketch2Photo}
+\bibfield{author}{\bibinfo{person}{Tao Chen}, \bibinfo{person}{Ming{-}Ming
   Cheng}, \bibinfo{person}{Ping Tan}, \bibinfo{person}{Ariel Shamir}, {and}
-  \bibinfo{person}{Shi min Hu}.} \bibinfo{year}{[n.d.]}\natexlab{}.
-\newblock \showarticletitle{Sketch2{P}hoto: {I}nternet image montage}.
-\newblock \bibinfo{journal}{\emph{ACM Trans. Graph}}
-  (\bibinfo{year}{[n.\,d.]}).
+  \bibinfo{person}{Shi{-}Min Hu}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Sketch2Photo: internet image montage}.
+\newblock \bibinfo{journal}{\emph{{ACM} Trans. Graph.}} \bibinfo{volume}{28},
+  \bibinfo{number}{5} (\bibinfo{year}{2009}), \bibinfo{pages}{124:1--124:10}.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Chen, Kang, qing Xu, and Dorsey}{Chen
-  et~al\mbox{.}}{2008}]%
-        {Chen_sketchingreality08}
-\bibfield{author}{\bibinfo{person}{Xuejin Chen}, \bibinfo{person}{Sing~Bing
-  Kang}, \bibinfo{person}{Ying qing Xu}, {and} \bibinfo{person}{Julie Dorsey}.}
-  \bibinfo{year}{2008}\natexlab{}.
-\newblock \showarticletitle{Sketching reality: Realistic interpretation of
-  architectural designs}.
-\newblock \bibinfo{journal}{\emph{ACM Trans. Graph.}} \bibinfo{volume}{27},
-  \bibinfo{number}{2} (\bibinfo{year}{2008}), \bibinfo{pages}{11:1--11:15}.
+\bibitem[\protect\citeauthoryear{{Eitz}, {Richter}, {Hildebrand}, {Boubekeur},
+  and {Alexa}}{{Eitz} et~al\mbox{.}}{2011}]%
+        {PhotoSketcher}
+\bibfield{author}{\bibinfo{person}{M. {Eitz}}, \bibinfo{person}{R. {Richter}},
+  \bibinfo{person}{K. {Hildebrand}}, \bibinfo{person}{T. {Boubekeur}}, {and}
+  \bibinfo{person}{M. {Alexa}}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Photosketcher: Interactive Sketch-Based Image
+  Synthesis}.
+\newblock \bibinfo{journal}{\emph{IEEE Computer Graphics and Applications}}
+  \bibinfo{volume}{31}, \bibinfo{number}{6} (\bibinfo{date}{Nov}
+  \bibinfo{year}{2011}), \bibinfo{pages}{56--66}.
+\newblock
+\showISSN{0272-1716}
+
+
+\bibitem[\protect\citeauthoryear{Isola, Zhu, Zhou, and Efros}{Isola
+  et~al\mbox{.}}{2017}]%
+        {pix2pix}
+\bibfield{author}{\bibinfo{person}{Phillip Isola}, \bibinfo{person}{Jun-Yan
+  Zhu}, \bibinfo{person}{Tinghui Zhou}, {and} \bibinfo{person}{Alexei~A.
+  Efros}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Image-to-Image Translation with Conditional
+  Adversarial Networks}. In \bibinfo{booktitle}{\emph{2017 IEEE Conference on
+  Computer Vision and Pattern Recognition (CVPR)}}.
+  \bibinfo{pages}{5967--5976}.
+\newblock
+\showISSN{1063-6919}
+\urldef\tempurl%
+\url{https://doi.org/10.1109/CVPR.2017.632}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Karacan, Akata, Erdem, and Erdem}{Karacan
+  et~al\mbox{.}}{2016}]%
+        {outdoor_scene}
+\bibfield{author}{\bibinfo{person}{Levent Karacan}, \bibinfo{person}{Zeynep
+  Akata}, \bibinfo{person}{Aykut Erdem}, {and} \bibinfo{person}{Erkut Erdem}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Learning to Generate Images of Outdoor Scenes from
+  Attributes and Semantic Layouts}.
+\newblock \bibinfo{journal}{\emph{CoRR}}  \bibinfo{volume}{abs/1612.00215}
+  (\bibinfo{year}{2016}).
+\newblock
+\showeprint[arxiv]{1612.00215}
+
+
+\bibitem[\protect\citeauthoryear{Kim, Cha, Kim, Lee, and Kim}{Kim
+  et~al\mbox{.}}{2017}]%
+        {DiscoGANs}
+\bibfield{author}{\bibinfo{person}{Taeksoo Kim}, \bibinfo{person}{Moonsu Cha},
+  \bibinfo{person}{Hyunsoo Kim}, \bibinfo{person}{Jung~Kwon Lee}, {and}
+  \bibinfo{person}{Jiwon Kim}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Learning to discover cross-domain relations with
+  generative adversarial networks}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1703.05192}}
+  (\bibinfo{year}{2017}).
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Igarashi, Matsuoka, and Tanaka}{Igarashi
-  et~al\mbox{.}}{1999}]%
-        {Igarashi-teddy99}
-\bibfield{author}{\bibinfo{person}{Takeo Igarashi}, \bibinfo{person}{Satoshi
-  Matsuoka}, {and} \bibinfo{person}{Hidehiko Tanaka}.}
-  \bibinfo{year}{1999}\natexlab{}.
-\newblock \showarticletitle{Teddy: A sketching interface for 3-D freeform
-  design}. In \bibinfo{booktitle}{\emph{Proc. SIGGRAPH}}.
-  \bibinfo{pages}{409--416}.
+\bibitem[\protect\citeauthoryear{Li, Chen, Wu, and Zha}{Li
+  et~al\mbox{.}}{2019}]%
+        {Lines2Face}
+\bibfield{author}{\bibinfo{person}{Yuhang Li}, \bibinfo{person}{Xuejin Chen},
+  \bibinfo{person}{Feng Wu}, {and} \bibinfo{person}{Zheng-Jun Zha}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{LinesToFacePhoto: Face Photo Generation From Lines
+  With Conditional Self-Attention Generative Adversarial Networks}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 27th ACM International
+  Conference on Multimedia}} (Nice, France) \emph{(\bibinfo{series}{MM '19})}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{New York, NY, USA},
+  \bibinfo{pages}{2323--2331}.
 \newblock
+\showISBNx{978-1-4503-6889-6}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3343031.3350854}
+\showDOI{\tempurl}
 
 
-\bibitem[\protect\citeauthoryear{Sutherland}{Sutherland}{1964}]%
-        {SutherlandSketchPad64}
-\bibfield{author}{\bibinfo{person}{Ivan~E. Sutherland}.}
-  \bibinfo{year}{1964}\natexlab{}.
-\newblock \showarticletitle{Sketch pad a man-machine graphical communication
-  system}. In \bibinfo{booktitle}{\emph{DAC}}.
+\bibitem[\protect\citeauthoryear{Wang, Liu, Zhu, Tao, Kautz, and
+  Catanzaro}{Wang et~al\mbox{.}}{2018}]%
+        {pix2pixHD}
+\bibfield{author}{\bibinfo{person}{Ting{-}Chun Wang},
+  \bibinfo{person}{Ming{-}Yu Liu}, \bibinfo{person}{Jun{-}Yan Zhu},
+  \bibinfo{person}{Andrew Tao}, \bibinfo{person}{Jan Kautz}, {and}
+  \bibinfo{person}{Bryan Catanzaro}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{High-Resolution Image Synthesis and Semantic
+  Manipulation With Conditional GANs}. In \bibinfo{booktitle}{\emph{2018 IEEE
+  Conference on Computer Vision and Pattern Recognition (CVPR)}}.
+  \bibinfo{pages}{8798--8807}.
 \newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/CVPR.2018.00917}
+\showDOI{\tempurl}
 
 
-\bibitem[\protect\citeauthoryear{Zeleznik, Herndon, and Hughes}{Zeleznik
-  et~al\mbox{.}}{1996}]%
-        {Zeleznik-Sketch96}
-\bibfield{author}{\bibinfo{person}{Robert~C. Zeleznik},
-  \bibinfo{person}{Kenneth~P. Herndon}, {and} \bibinfo{person}{John~F.
-  Hughes}.} \bibinfo{year}{1996}\natexlab{}.
-\newblock \showarticletitle{{SKETCH}: An Interface for Sketching 3D Scenes}. In
-  \bibinfo{booktitle}{\emph{Proc. SIGGRAPH}}. \bibinfo{pages}{163--170}.
+\bibitem[\protect\citeauthoryear{Xie and Tu}{Xie and Tu}{2015}]%
+        {HED}
+\bibfield{author}{\bibinfo{person}{Saining Xie} {and} \bibinfo{person}{Zhuowen
+  Tu}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Holistically-Nested Edge Detection}. In
+  \bibinfo{booktitle}{\emph{2015 IEEE International Conference on Computer
+  Vision (ICCV)}}. \bibinfo{pages}{1395--1403}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICCV.2015.164}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Yi, Zhang, Tan, and Gong}{Yi
+  et~al\mbox{.}}{2017}]%
+        {DualGANs}
+\bibfield{author}{\bibinfo{person}{Z. Yi}, \bibinfo{person}{H. Zhang},
+  \bibinfo{person}{P. Tan}, {and} \bibinfo{person}{M. Gong}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{DualGAN: Unsupervised Dual Learning for
+  Image-to-Image Translation}. In \bibinfo{booktitle}{\emph{2017 IEEE
+  International Conference on Computer Vision (ICCV)}}.
+  \bibinfo{pages}{2868--2876}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICCV.2017.310}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Zhu, Park, Isola, and Efros}{Zhu
+  et~al\mbox{.}}{2017a}]%
+        {CycleGANs}
+\bibfield{author}{\bibinfo{person}{J.~Y. Zhu}, \bibinfo{person}{T. Park},
+  \bibinfo{person}{P. Isola}, {and} \bibinfo{person}{A.~A. Efros}.}
+  \bibinfo{year}{2017}\natexlab{a}.
+\newblock \showarticletitle{Unpaired Image-to-Image Translation Using
+  Cycle-Consistent Adversarial Networks}. In \bibinfo{booktitle}{\emph{2017
+  IEEE International Conference on Computer Vision (ICCV)}}.
+  \bibinfo{pages}{2242--2251}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICCV.2017.244}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Zhu, Zhang, Pathak, Darrell, Efros, Wang, and
+  Shechtman}{Zhu et~al\mbox{.}}{2017b}]%
+        {BicycleGANs}
+\bibfield{author}{\bibinfo{person}{Jun-Yan Zhu}, \bibinfo{person}{Richard
+  Zhang}, \bibinfo{person}{Deepak Pathak}, \bibinfo{person}{Trevor Darrell},
+  \bibinfo{person}{Alexei~A Efros}, \bibinfo{person}{Oliver Wang}, {and}
+  \bibinfo{person}{Eli Shechtman}.} \bibinfo{year}{2017}\natexlab{b}.
+\newblock \showarticletitle{Toward Multimodal Image-to-Image Translation}. In
+  \bibinfo{booktitle}{\emph{Advances in Neural Information Processing Systems
+  30}}. \bibinfo{pages}{465--476}.
 \newblock
 
 
