@@ -4,7 +4,7 @@
 
 \begin{figure*}[tb]
 	\includegraphics[width=0.9\textwidth]{figs/architecture}
-	\caption{The architecture of our model.}
+	\caption{The architecture of our dual-generator model. In order to train a face image generator $G_m$ for hand-drawn sketches, we synthesize deformed sketches $S'$ from an edge-aligned sketch $S$ and design a spatially attention pooling module to extract shape and structure features from distorted sketches. The dual generators $G_m$ and $G_m$ are trained simultaneously in an adversarial manner. }
 	\label{fig:architecture}
 \end{figure*}
 %
@@ -28,7 +28,7 @@
 %%% TODO: add semantic map 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{figs/sap}
-	\caption{Sap}
+	\caption{Network architecture of our spatial attention pooling module.}
 	\label{fig:sap}
 \end{figure}
 
@@ -43,7 +43,7 @@
 %%%%%%%%%%%%%% Losses  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Losses}
 \label{subsec:algorithm_loss}
-%\input{algorithm_loss}
+\input{algorithm_loss}
 
 %%%%%%%%%%%%%% Traning Schedule %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Training Schedule}
