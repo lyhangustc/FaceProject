@@ -10,10 +10,11 @@ The synthesized sketches $\mathcal{S}_{syn}$ are usually well aligned with the f
 These models typically fail to generalize to hand-drawn sketches by common users. 
 %
 
+\dlt{
 
 As shown in Figure~\ref{fig:architecture}, $G_m$ is the main generator trained by deformed sketches $S'$, aiming to generate plausible photo-realistic face images from unseen hand-drawn sketches in test stage. 
 $G_a$ is an auxiliary generator trained with edge-aligned sketches whose goal is to guide $G_m$ to adaptively sense the line distortion in deformed sketches.
-
+}
 
 We propose a novel network architecture with a specially designed training strategy to improve the capability of the sketch-based image generator.
 %
