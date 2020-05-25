@@ -3,22 +3,20 @@
 
 Our task is to train a sketch-to-face translation model that is robust to hand-drawn sketches. Existing methods trained with edge-aligned sketches fail to be generalized to hand-drawn sketches. Hence, we propose a novel framework which consists of two generators and trained by both edge-aligned sketches and deformed sketches.
 
-As shown in Figure~\ref{fig:architecture}, $G_m$ is the main generator trained by deformed sketches, aiming to generate plausible photo-realistic face images from unseen hand-drawn sketches 
+As shown in Figure~\ref{fig:architecture}, $G_m$ is the main generator trained by deformed sketches $S'$, aiming to generate plausible photo-realistic face images from unseen hand-drawn sketches in test stage. 
+$G_A$ is an auxiliary generator trained with edge-aligned sketches whose goal is to guide $G_m$ to adaptively sense the line distortion in deformed sketches.
 
-The architecture of the proposed model is shown in Figure~\ref{fig:architecture}.
-Our model consists of two generators and one multi-scale discriminator.
-The first generator $G$ generate realistic face image $G(S)$ from an edge-aligned sketch $S$ while the second generator $G'$ generate $G'(S')$ from a deformed sketch $S'$. 
-Both generators are encoder-residual-decoder architectures, including a downsample encoder, several residual blocks and an upsample decoder, which is proven to be effective for generate high-quality images. 
-The proposed spatial attention pooling module (SAP) is added before the encoder $E'$ of $G'$ to adaptively adjust the spatial-variant balance between \textit{the realism} and \textit{the correspondence}. 
+Both generators are encoder-residual-decoder architectures, including an encoder, several residual blocks and a decoder, which is proven to be effective for generate high-quality images. 
+The proposed spatial attention pooling module (SAP) is added before the encoder $E_m$ of $G_m$ to adaptively adjust the spatial-variant balance between \textit{the realism} and \textit{the conformance}. 
 The generators share weights of the residual blocks and decoders since the high-level features of both generators are supposed to share with each other.
 
 
 %
 The discriminator is a multi-scale discriminator~\cite{pix2pixHD} which distinguishes real face images from generated fake images in both global and local scales.
-For the discriminator, the generated image $G(S)$ and $G'(S')$ concatenated with their input sketch $S$ and $S'$ respectively are treated as fake samples while a real face image sampled from real face distribution concatenated with its corresponding sketch is regarded as a real sample. 
+For the discriminator, the generated image $G_m(S')$ and $G_A(S)$ concatenated with their input sketch $S$ and $S'$ respectively are treated as fake samples while a real face image sampled from real face distribution concatenated with its corresponding sketch is regarded as a real sample. 
 %
 %In the adversarial training stage, the generator and the discriminator are updated alternately.
 
-In order to guide the model with SAP to be tolerant with line distortion of deformed sketches, we design a novel generator feature matching loss for our task, besides the adversarial loss, the reconstruction loss and the discriminator feature matching loss used in pix2pixHD. The model is trained in a multi-stage training schedule to ensure the convergence of the training.
+In order to guide the model with SAP to be tolerant with line distortion of deformed sketches, we design a novel generator feature matching loss for our task, besides the adversarial loss, the reconstruction loss and the discriminator feature matching loss. The model is trained in a multi-stage training schedule to ensure the convergence of the training.
 %
 
