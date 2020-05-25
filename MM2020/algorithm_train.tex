@@ -1,3 +1,3 @@
 % !TeX root = SketchFace.tex
 
-In order to train our model more stably, we introduce a multi-stage training schedule. 
+In order to train our model more stably, we introduce a multi-stage training schedule. At the first stage, we use edge-aligned sketches and real images to train $G_a$ and $D$ without loss function related to $G_m$. At the second stage, we train SAP and the encoder of $G_m$ and $D$ from scratch while fixing weights of other parts. Note that the residual blocks and the decoder of $G_m$ share weights with those of $G_a$ and are kept unchanged in this stage. At the last stage, we finetune the whole model. 
