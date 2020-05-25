@@ -49,17 +49,17 @@ Visual results are shown in Figure~\ref{fig:generative_quality}
 \begin{table}[h]
 	\centering	
 	\caption{Results of generative quality comparison.}
-	\begin{tabular}{|c|c|c|c|c|c|}\hline
-		& Pix2pix \cite{pix2pix} & Lines2face~\cite{Lines2Face} & Baseline~\cite{pix2pixHD} & Baseline\_deform & Ours \\\hline
-		IS & $-$ & $-$ & $2.298$ & $2.369$ & $2.411$\\\hline
-		FID & $-$ & $-$ & $635.87$ & $625.98$ & $\textbf{606.73}$\\\hline
-		KID & $-$ & $-$ & $-$ & $-$ & $-$\\\hline
+	\begin{tabular}{|c|c|c|c|c|}\hline
+		& Pix2pix \cite{pix2pix} & Baseline~\cite{pix2pixHD} & Baseline\_deform & Ours \\\hline
+		IS & $2.186$ & $2.298$ & $2.369$ & $2.411$\\\hline
+		FID & $289.3$ & 259.1$ & $625.98$ & $\textbf{606.73}$\\\hline
+		KID & $-$ & $-$ & $-$ & $-$\\\hline
 	\end{tabular}
 	\label{tab:generative_quality}
 \end{table} 
 
 \begin{figure}
-	\includegraphics[width=\linewidth]{figs/generalization_examples}
+	\includegraphics[width=0.9\linewidth]{figs/generalization_examples}
 	\caption{\td{Result analyze, use generalization\_examples.pdf as placeholder}}
 	\label{fig:generative_quality}
 \end{figure}
@@ -74,21 +74,34 @@ As mentioned in Subsection~\ref{subsec:algorithm_data}, we deform a edge-aligned
 In this experiment, the input sketches are deformed by large offsets where the maximum $d$ is set to $30$. 
 As shown in Figure~\ref{fig:generalization_examples}, strokes in the largely deformed sketches are quite different from those in the training sketches including edge-aligned sketches $S$ and deformed sketches $S_11'$. \td{xxxxx}.
 \begin{figure}
-	\includegraphics[width=\linewidth]{figs/generalization_examples}
+	\includegraphics[width=0.9\linewidth]{figs/generalization_examples}
 	\caption{\td{Result analyze}}
 	\label{fig:generalization_examples}
 \end{figure}
 
 \subsubsection{Hand-Drawn Sketches}
-In this experiment, we examine model generalization ability by comparing our model with baseline model tested with two kinds of hand-drawn sketches: expert hand-drawn sketches and common hand-drawn sketches.
+In this experiment, we examine model generalization ability by comparing performances of our model with baseline model tested with two kinds of hand-drawn sketches: expert hand-drawn sketches and common hand-drawn sketches.
 
-We invite professional users with well-trained drawing skills to draw expert sketches for testing. These expert sketches are drawn on a drawing board device which enables strokes to be drawn smoothly and accurately. Figure~\ref{fig:expert_sketches}
+\paragraph{Expert Sketches}
+We invite professional users with well-trained drawing skills to draw expert sketches for testing. These expert sketches are drawn on a drawing board device which enables strokes to be drawn smoothly and accurately. Figure~\ref{fig:expert_sketches} shows that texture of our results are more realistic and those of both \textit{baseline} model and \textit{baseline\_deform} model are blurred in some facial areas. 
 
 \begin{figure}
-	\includegraphics[width=\linewidth]{figs/well-drawn\_sketches}
+	\includegraphics[width=0.9\linewidth]{figs/expertsketches}
 	\caption{\td{Result analyze}}
 	\label{fig:expert_sketches}
 \end{figure}
+
+
+\paragraph{Common Sketches}
+We also introduce common user without drawing skills to draw common hand-drawn sketches. The common sketches are drawn by common users using a mouse of computer. Hence, strokes of the common sketches depicts the ideal face images roughly. Also, common sketches turn to be of different levels of details. For example, some sketches contains several strokes inside the hair areas which are blanket in training sketches. Results shown in Figure~\ref{fig:common_sketches} demonstrate that our model is robust to these common sketches while the different stroke styles and different detail levels damage the quality of results from \textit{baseline} model and \textit{baseline\_deform} model heavily.
+
+
+\begin{figure}
+	\includegraphics[width=0.9\linewidth]{figs/commonsketches}
+	\caption{\td{Result analyze}}
+	\label{fig:common_sketches}
+\end{figure}
+
 
 \subsection{Limitations and future work}
 
