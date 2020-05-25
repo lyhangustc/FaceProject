@@ -8,7 +8,7 @@ For either generator, a reconstruction loss is applied to guide the generated im
 \begin{equation}
 \label{eqn:loss_rec}
 \begin{aligned}
-\mathcal{L}_{Rec}(G, G') &=\mathbb{E}_{(S, x)\sim p_{data}(S,x)\|G(S) - x\|_1} \\
+\mathcal{L}_{Rec}(G, G') &=\textbf{E}_{(S, x)\sim p_{data}(S,x)\|G(S) - x\|_1} \\
 &+ \mathbb{E}_{(S', x)\sim p_{data}(S',x)\|G'(S') - x\|_1},
 \end{aligned}
 \end{equation}
@@ -18,7 +18,7 @@ The multi-scale discriminator~\cite{pix2pixHD} $D$ consists of three sub-discrim
 \begin{equation}
 \label{eqn:new_loss_adv}
 \begin{aligned}
-\mathcal{L}_{adv}(G;D) &=\frac{1}{3}\sum_{i=1}^{3}\mathbb{E}_{(\bm{S},\bm{x})\sim p_{data}(\bm{S},\bm{x})}\big[\log D_i(\bm{S},\bm{x})\big] \\
+\textbf{L}_{adv}(G;D) &=\frac{1}{3}\sum_{i=1}^{3}\textbf{E}_{(\bm{S},\bm{x})\sim p_{data}(\bm{S},\bm{x})}\big[\log D_i(\bm{S},\bm{x})\big] \\
 & + E_{\bm{x}\sim p_{data}(\bm{S})}\Big[\log \Big(1-D_i \big(\bm{S},G(\bm{S})\big)\Big)\Big].
 \end{aligned}
 \end{equation}
