@@ -18,7 +18,7 @@ The multi-scale discriminator~\cite{pix2pixHD} $D$ consists of three sub-discrim
 \begin{equation}
 \label{eqn:new_loss_adv}
 \begin{aligned}
-\mathcal{L}_{adv}(G;D)&=\frac{1}{3}\sum_{i=1}^{3}E_{(\bm{S},\bm{x})\sim p_{data}(\bm{S},\bm{x})}\big[\log D_i(\bm{S},\bm{x})\big] \\
+\mathcal{L}_{adv}(G;D) &=\frac{1}{3}\sum_{i=1}^{3}\mathbb{E}_{(\bm{S},\bm{x})\sim p_{data}(\bm{S},\bm{x})}\big[\log D_i(\bm{S},\bm{x})\big] \\
 & + E_{\bm{x}\sim p_{data}(\bm{S})}\Big[\log \Big(1-D_i \big(\bm{S},G(\bm{S})\big)\Big)\Big].
 \end{aligned}
 \end{equation}
@@ -33,13 +33,14 @@ where $Q$ is the selected layers of discriminator for computing this loss, $NQ$ 
 Also, the discriminator feature matching loss for $G'$ and $D$ is defined similarly.
 
 \paragraph{Generator Feature Matching Loss}
-Similar to discriminator feature matching loss which is designed to minimize the error between generated image and real image in feature space, we propose a novel generator feature matching loss that aims to minimize the error between the presentations of $S$ and $S'$ in generator feature space. Let $G^t()$ and This loss is calculated as:
+Similar to discriminator feature matching loss which is designed to minimize the error between generated image and real image in feature space, we propose a novel generator feature matching loss that aims to minimize the error between the presentations of $S$ and $S'$ in generator feature space. Let $G^t()$ and $G'^t()$ be the output of $t$th layer in $G$ and $G'$ respectively. This loss is calculated as:
 
 \begin{equation}
 \label{eqn:loss_GFM}
-\mathcal{L}_{GFM}(G, G')=\mathbb{E}_{(S, S')\sim p_{data}(S, S')} \frac{1}{N_T} \sum_{q\in Q}  \frac{1}{|G_q|} \|G_q(S)-G_q(\tilde{S}) \|_1,
+\mathcal{L}_{GFM}(G, G')=\mathbb{E}_{(S, S')\sim p_{data}(S, S')} \frac{1}{N_T} \sum_{t\in T}  \frac{1}{|n^t|} \|G^t(S)-G'^t(S') \|_1,
 \end{equation}
 
+where $T$ is the set of selected generator layers for calculating this loss, $N_T$ is the number of elements of $T$, and $n^t$ is the number of elements of $G^T()$ and $G^T()$.
 
 Let $G_q(\cdot)$ produces the feature maps of the $q$-th layer in the generator $G$.
 %

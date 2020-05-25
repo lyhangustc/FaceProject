@@ -1,6 +1,10 @@
 % !TeX root = SketchFace.tex
 % 
 
+Our task is to train a sketch-to-face translation model that is robust to hand-drawn sketches. Existing methods trained with edge-aligned sketches fail to be generalized to hand-drawn sketches. Hence, we propose a novel framework which consists of two generators and trained by both edge-aligned sketches and deformed sketches.
+
+As shown in Figure~\ref{fig:architecture}, $G_m$ is the main generator trained by deformed sketches, aiming to generate plausible photo-realistic face images from unseen hand-drawn sketches 
+
 The architecture of the proposed model is shown in Figure~\ref{fig:architecture}.
 Our model consists of two generators and one multi-scale discriminator.
 The first generator $G$ generate realistic face image $G(S)$ from an edge-aligned sketch $S$ while the second generator $G'$ generate $G'(S')$ from a deformed sketch $S'$. 
