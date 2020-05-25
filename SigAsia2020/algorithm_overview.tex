@@ -1,21 +1,20 @@
 % !TeX root = SketchFace.tex
 % 
 
+The architecture of the proposed model is shown in Figure~\ref{fig:architecture}.
+Our model consists of two generators and one multi-scale discriminator.
+The first generator $G$ generate realistic face image $G(S)$ from an edge-aligned sketch $S$ while the second generator $G'$ generate $G'(S')$ from a deformed sketch $S'$. 
+Both generators are encoder-residual-decoder architectures, including a downsample encoder, several residual blocks and an upsample decoder, which is proven to be effective for generate high-quality images. 
+The proposed spatial attention pooling module (SAP) is added before the encoder $E'$ of $G'$ to adaptively adjust the spatial-variant balance between \textit{the realism} and \textit{the correspondence}. 
+The generators share weights of the residual blocks and decoders since the high-level features of both generators are supposed to share with each other.
 
 
-%\subsection{Model Overview}
-%\label{subsec:algorithm_overview}
-
-In this paper, we propose a sketch-to-photo translation model that is robust to hand-drawn sketches.
-
-The architecture of the proposed model is shown in Figure~\ref{fig:architecture}. We use pix2pixHD model~\cite{pix2pixHD} with the 'global' version generator and the multi-scale discriminator as baseline model. The input of the generator is either a face sketch or a deformed face sketch and the output is the corresponding generated photo-realistic face image. A novel module named Spatial Attention Pooling (SAP) is added in the front of the generator to enable our model to adaptively handle line distortions of input sketches \td(before the lowest level of feature extraction.) 
 %
-For the discriminator, the generated image concatenated with the input sketch (or the deformed input sketch) is treated as a fake sample while a real face image sampled from real face distribution concatenated with its corresponding sketch is regarded as a real sample. 
+The discriminator is a multi-scale discriminator~\cite{pix2pixHD} which distinguishes real face images from generated fake images in both global and local scales.
+For the discriminator, the generated image $G(S)$ and $G'(S')$ concatenated with their input sketch $S$ and $S'$ respectively are treated as fake samples while a real face image sampled from real face distribution concatenated with its corresponding sketch is regarded as a real sample. 
 %
 %In the adversarial training stage, the generator and the discriminator are updated alternately.
-%
-In order to guided the model with SAP to be tolerant with line distortion of input sketches, we design a novel generator feature matching loss for our task, besides the adversarial loss, the reconstruction loss and the discriminator feature matching loss used in pix2pixHD. The model is trained in a multi-stage training schedule.
-%
 
-In this section, we first introduce the dataset we use in our experiment in Subsection~\ref{subsec:algorithm_}. Then we describe the proposed SAP in Subsection~\ref{subsec:algorithm_sap}. At last we discuss losses applied in our model in Subsection~\ref{subsec:algorithm_loss} and the multi-stage training schedule in Subsection~\ref{subsec:training}.
+In order to guide the model with SAP to be tolerant with line distortion of deformed sketches, we design a novel generator feature matching loss for our task, besides the adversarial loss, the reconstruction loss and the discriminator feature matching loss used in pix2pixHD. The model is trained in a multi-stage training schedule to ensure the convergence of the training.
+%
 

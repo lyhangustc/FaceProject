@@ -2,18 +2,20 @@ This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: SketchFace.aux
 The style file: ACM-Reference-Format.bst
-Illegal, another \bibdata command---line 104 of file SketchFace.aux
- : \bibdata
- :         {sketchRef}
-I'm skipping whatever remains of this command
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: sketch.bib
 A bad cross reference---entry "pix2pixHD"
 refers to entry "DBLP:conf/cvpr/2018", which doesn't exist
+A bad cross reference---entry "GANs"
+refers to entry "DBLP:conf/nips/2014", which doesn't exist
+A bad cross reference---entry "DCGANs"
+refers to entry "DBLP:conf/iclr/2016", which doesn't exist
 A bad cross reference---entry "HED"
 refers to entry "DBLP:conf/iccv/2015", which doesn't exist
+A bad cross reference---entry "Adam"
+refers to entry "DBLP:conf/iclr/2015", which doesn't exist
 Warning--I didn't find a database entry for "SutherlandSketchPad64"
 Warning--I didn't find a database entry for "Zeleznik-Sketch96"
 Warning--I didn't find a database entry for "Igarashi-teddy99"
@@ -23,15 +25,19 @@ Warning--I didn't find a database entry for "DualGAN"
 Warning--I didn't find a database entry for "BicycleGAN"
 Warning--I didn't find a database entry for "CycleGAN"
 Warning--I didn't find a database entry for "DiscoGAN"
-Warning--I didn't find a database entry for "StarGAN"
 Warning--I didn't find a database entry for "SketchyGAN"
-Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "CSAGAM"
-Warning--I didn't find a database entry for "CelebAMask-HQ"
+Warning--I didn't find a database entry for "StyleGAN"
+Warning--I didn't find a database entry for "StarGAN"
 Warning--I didn't find a database entry for "FaceShop"
+Warning--I didn't find a database entry for "SC-FEGAN"
 Warning--I didn't find a database entry for "AutoTrace"
-Warning--I didn't find a database entry for "DeepSurgery"
-Warning--I didn't find a database entry for "tsne"
+Warning--I didn't find a database entry for "Pytorch"
+Warning--I didn't find a database entry for "IN"
+Warning--I didn't find a database entry for "ReLU"
+Warning--I didn't find a database entry for "LeakyReLU"
+Warning--I didn't find a database entry for "DBLP:conf/iclr/2015"
+Warning--I didn't find a database entry for "DBLP:conf/nips/2014"
+Warning--I didn't find a database entry for "DBLP:conf/iclr/2016"
 Warning--I didn't find a database entry for "DBLP:conf/cvpr/2018"
 Warning--I didn't find a database entry for "DBLP:conf/iccv/2015"
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -39,11 +45,38 @@ Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty publisher in KID
+Warning--empty address in KID
+Warning--page numbers missing in both pages and numpages fields in KID
+Warning--empty publisher in GANs
+Warning--empty address in GANs
+Warning--empty publisher in FID
+Warning--empty address in FID
 Warning--empty publisher in pix2pix
 Warning--empty address in pix2pix
 Warning--page numbers missing in both pages and numpages fields in outdoor_scene
+Warning--empty publisher in PGGAN
+Warning--empty address in PGGAN
+Warning--page numbers missing in both pages and numpages fields in PGGAN
 Warning--no number and no volume in DiscoGANs
 Warning--page numbers missing in both pages and numpages fields in DiscoGANs
+Warning--empty publisher in Adam
+Warning--empty address in Adam
+Warning--page numbers missing in both pages and numpages fields in Adam
+Warning--empty publisher in CelebAMask-HQ
+Warning--empty address in CelebAMask-HQ
+Warning--page numbers missing in both pages and numpages fields in CelebAMask-HQ
+Warning--empty year in GANs_equal
+Warning--empty publisher in GANs_equal
+Warning--empty address in GANs_equal
+Warning--empty publisher in DCGANs
+Warning--empty address in DCGANs
+Warning--page numbers missing in both pages and numpages fields in DCGANs
+Warning--empty publisher in Improved_Techniques
+Warning--empty address in Improved_Techniques
+Warning--empty publisher in evaluation
+Warning--empty address in evaluation
+Warning--page numbers missing in both pages and numpages fields in evaluation
 Warning--empty publisher in pix2pixHD
 Warning--empty address in pix2pixHD
 Warning--empty publisher in HED
@@ -54,45 +87,45 @@ Warning--empty publisher in CycleGANs
 Warning--empty address in CycleGANs
 Warning--empty publisher in BicycleGANs
 Warning--empty address in BicycleGANs
-You've used 11 entries,
+You've used 21 entries,
             5901 wiz_defined-function locations,
-            1601 strings with 19781 characters,
-and the built_in function-call counts, 15219 in all, are:
-= -- 1811
-> -- 645
+            1668 strings with 22092 characters,
+and the built_in function-call counts, 27644 in all, are:
+= -- 2975
+> -- 1228
 < -- 0
-+ -- 216
-- -- 208
-* -- 1166
-:= -- 1543
-add.period$ -- 55
-call.type$ -- 11
-change.case$ -- 95
-chr.to.int$ -- 10
-cite$ -- 26
-duplicate$ -- 1304
-empty$ -- 905
-format.name$ -- 251
-if$ -- 3635
++ -- 412
+- -- 396
+* -- 2144
+:= -- 2856
+add.period$ -- 99
+call.type$ -- 21
+change.case$ -- 180
+chr.to.int$ -- 20
+cite$ -- 63
+duplicate$ -- 2459
+empty$ -- 1708
+format.name$ -- 479
+if$ -- 6480
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 51
-newline$ -- 143
-num.names$ -- 87
-pop$ -- 507
+missing$ -- 101
+newline$ -- 229
+num.names$ -- 167
+pop$ -- 1077
 preamble$ -- 1
-purify$ -- 191
+purify$ -- 360
 quote$ -- 0
-skip$ -- 470
+skip$ -- 880
 stack$ -- 0
-substring$ -- 1138
-swap$ -- 150
+substring$ -- 1908
+swap$ -- 248
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 268
-warning$ -- 15
-while$ -- 71
+type$ -- 568
+warning$ -- 42
+while$ -- 127
 width$ -- 0
-write$ -- 242
-(There were 3 error messages)
+write$ -- 412
+(There were 5 error messages)

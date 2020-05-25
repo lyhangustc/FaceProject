@@ -2,6 +2,12 @@
 Our method is related to studies on image-to-image translation, sketch-based image generation and face image generation and editing.
 In this section, we discuss the most related works of our method. 
 
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{figs/data}
+	\caption{Comparison between a sketch generated from edge detection and from semantic boundary.}
+	\label{fig:sketch_data}
+\end{figure}
 
 \subsection{Image-to-Image Translation}
 Given an input image from one domain, an image-to-image translation model outputs a corresponding image from another domain and preserves the content in the input image. Existing image-to-image translation models are based on generative adversarial networks conditioned on images. 
@@ -14,11 +20,9 @@ In order to model multi-modal distribution of output images, BicycleGAN~\cite{Bi
 %
 CycleGAN~\cite{CycleGAN}, DualGAN~\cite{DualGAN}, and DiscoGAN~\cite{DiscoGAN} propose unsupervised image translation model with a similar idea named cycle consistency borrowed from language translation literature. 
 %
-StarGAN~\cite{StarGAN} presents a framework for one-to-many image translation by adding a domain code as input and a domain classifier as guidance.
-%
 Pix2pixHD~\cite{pix2pixHD} is proposed as a high-resolution image-to-image translation model for generating photo-realistic image from semantic label maps using a coarse-to-fine generator and a multi-scale discriminator. It can also be applied to edge-to-photo generation by using the paired edge maps and photos as training data.
 %
-\td{However, xxxxxxxxxxxxxx}
+However, the gap between edge maps and hand-drawn sketches challenges the generalization of these models.
 
 \subsection{Sketch-based Image generation}
 Sketch-based image generation is a hot topic in computer vision and computer graphics. Given a sketch of a scene with text labels for objects, traditional methods, such as Sketch2Photo~\cite{Sketch2Photo} and PhotoSketcher~\cite{PhotoSketcher}, search corresponding image patches from a large image dataset and then fuse the the retrieved image patches together according to the sketch. These methods are not able to ensure the global consistency of the resultant image and fails to generate totally new images.
@@ -27,13 +31,18 @@ After the breakthrough made by deep neural networks (DNN) in computer graphics a
 %
 The general image-to-image translation models mentioned above are able to be applied to sketch-based image generation once sketches and the corresponding images are used as training data.
 %
-Besides, many other models are designed specially for sketch inputs. SketchyGAN~\cite{SketchyGAN} aims to generate real images from multi-class sketches. A novel neural network module, called mask residual unit (MRU), is proposed to improve the information flow by injecting the input image at multiple scales. \td{Edge maps are extracted from real images and utiled as training sketches.} However, the resultant images of SketchyGAN are still not satisfied.
+Besides, a few other models are designed specially for sketch inputs. SketchyGAN~\cite{SketchyGAN} aims to generate real images from multi-class sketches. A novel neural network module, called mask residual unit (MRU), is proposed to improve the information flow by injecting the input image at multiple scales. Edge maps are extracted from real images and utiled as training sketches. However, the resultant images of SketchyGAN are still not satisfied.
 %
+Lines2face~\cite{Lines2Face} utilizes a conditional self-attention module to preserve the completeness of global facial structure in generated face images.
+However, this model cannot be generalized to hand-drawn sketches directly.
 
-\subsection{pooling}
+\subsection{Face Image Generation and Editing}
 
-\subsection{Face Generation and Editing}
+Recently studies on face image generation and editing have made tremendous progress. The original generative adversarial network (GAN)`\cite{GANs} is able to applied to generate face images from noise vectors.
+%
+DCGAN~\cite{DCGANs} proposes a convolutional network to stabilize the training of GAN.
+PGGAN\cite{PGGAN} utilizes a progressively growing architecture to generate high-quality face images of high resolution.
+Inspired by style transfer literature, StyleGAN~\cite{StyleGAN} introduces a novel generator which synthesizes plausible high-resolution face images and learns unsupervised separation of high-level attributes and stochastic variation in synthesized images. 
 
-\td{All existing methods for local face editing require the user to provide masks and strokes manually}. In comparison, strokes are only the input to indicate the desired shape. Our system automatically interprets the intended edit and produces the local change accurately. This greatly reduces users' burden and preserves the fluency of user interaction. 
+On the other side, a number of works focus on face image editing through different control information. StarGAN~\cite{StarGAN} designs a one-to-many translation framework which switches face attributes assigned by an attribute code. FaceShop~\cite{FaceShop} and SC-FEGAN~\cite{SC-FEGAN} treats sketch-base face image editing as a sketch-guided image inpainting problem where stoke colors is also applied as guidance information. 
 
-\td{Only local edit in a relatively small area is supported.} As reported in SC-FEGAN~\cite{}, artifacts appear when complete a large region in FaceShop~\cite{}.

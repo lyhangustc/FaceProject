@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{11}
+\begin{thebibliography}{21}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -37,6 +37,22 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[\protect\citeauthoryear{Bińkowski, Sutherland, Arbel, and
+  Gretton}{Bińkowski et~al\mbox{.}}{2018}]%
+        {KID}
+\bibfield{author}{\bibinfo{person}{Mikołaj Bińkowski},
+  \bibinfo{person}{Dougal~J. Sutherland}, \bibinfo{person}{Michael Arbel},
+  {and} \bibinfo{person}{Arthur Gretton}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Demystifying {MMD} {GAN}s}. In
+  \bibinfo{booktitle}{\emph{6th International Conference on Learning
+  Representations, {ICLR} 2018}}.
+\newblock
+\urldef\tempurl%
+\url{https://openreview.net/forum?id=r1lUOzWCW}
+\showURL{%
+\tempurl}
+
+
 \bibitem[\protect\citeauthoryear{Chen, Cheng, Tan, Shamir, and Hu}{Chen
   et~al\mbox{.}}{2009}]%
         {Sketch2Photo}
@@ -62,6 +78,39 @@
   \bibinfo{year}{2011}), \bibinfo{pages}{56--66}.
 \newblock
 \showISSN{0272-1716}
+
+
+\bibitem[\protect\citeauthoryear{Goodfellow, Pouget{-}Abadie, Mirza, Xu,
+  Warde{-}Farley, Ozair, Courville, and Bengio}{Goodfellow
+  et~al\mbox{.}}{2014}]%
+        {GANs}
+\bibfield{author}{\bibinfo{person}{Ian~J. Goodfellow}, \bibinfo{person}{Jean
+  Pouget{-}Abadie}, \bibinfo{person}{Mehdi Mirza}, \bibinfo{person}{Bing Xu},
+  \bibinfo{person}{David Warde{-}Farley}, \bibinfo{person}{Sherjil Ozair},
+  \bibinfo{person}{Aaron~C. Courville}, {and} \bibinfo{person}{Yoshua Bengio}.}
+  \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Generative Adversarial Nets}. In
+  \bibinfo{booktitle}{\emph{Advances in Annual Conference on Neural Information
+  Processing Systems 2014, December 8-13 2014, Montreal, Quebec, Canada}}.
+  \bibinfo{pages}{2672--2680}.
+\newblock
+\urldef\tempurl%
+\url{http://papers.nips.cc/paper/5423-generative-adversarial-nets}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Heusel, Ramsauer, Unterthiner, Nessler, and
+  Hochreiter}{Heusel et~al\mbox{.}}{2017}]%
+        {FID}
+\bibfield{author}{\bibinfo{person}{Martin Heusel}, \bibinfo{person}{Hubert
+  Ramsauer}, \bibinfo{person}{Thomas Unterthiner}, \bibinfo{person}{Bernhard
+  Nessler}, {and} \bibinfo{person}{Sepp Hochreiter}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{GANs Trained by a Two Time-Scale Update Rule
+  Converge to a Local Nash Equilibrium}. In \bibinfo{booktitle}{\emph{Advances
+  in Neural Information Processing Systems 30}}. \bibinfo{pages}{6626--6637}.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Isola, Zhu, Zhou, and Efros}{Isola
@@ -95,6 +144,18 @@
 \showeprint[arxiv]{1612.00215}
 
 
+\bibitem[\protect\citeauthoryear{Karras, Aila, Laine, and Lehtinen}{Karras
+  et~al\mbox{.}}{2018}]%
+        {PGGAN}
+\bibfield{author}{\bibinfo{person}{Tero Karras}, \bibinfo{person}{Timo Aila},
+  \bibinfo{person}{Samuli Laine}, {and} \bibinfo{person}{Jaakko Lehtinen}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Progressive Growing of {GAN}s for Improved Quality,
+  Stability, and Variation}. In \bibinfo{booktitle}{\emph{6th International
+  Conference on Learning Representations, {ICLR} 2018}}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Kim, Cha, Kim, Lee, and Kim}{Kim
   et~al\mbox{.}}{2017}]%
         {DiscoGANs}
@@ -105,6 +166,32 @@
   generative adversarial networks}.
 \newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1703.05192}}
   (\bibinfo{year}{2017}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Kingma and Ba}{Kingma and Ba}{2015}]%
+        {Adam}
+\bibfield{author}{\bibinfo{person}{Diederik~P. Kingma} {and}
+  \bibinfo{person}{Jimmy Ba}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Adam: A Method for Stochastic Optimization}. In
+  \bibinfo{booktitle}{\emph{3rd International Conference on Learning
+  Representations, {ICLR} 2015,}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/1412.6980}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Lee, Liu, Wu, and Luo}{Lee
+  et~al\mbox{.}}{2020}]%
+        {CelebAMask-HQ}
+\bibfield{author}{\bibinfo{person}{Cheng-Han Lee}, \bibinfo{person}{Ziwei Liu},
+  \bibinfo{person}{Lingyun Wu}, {and} \bibinfo{person}{Ping Luo}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{MaskGAN: Towards Diverse and Interactive Facial
+  Image Manipulation}. In \bibinfo{booktitle}{\emph{IEEE Conference on Computer
+  Vision and Pattern Recognition (CVPR)}}.
 \newblock
 
 
@@ -125,6 +212,59 @@
 \urldef\tempurl%
 \url{https://doi.org/10.1145/3343031.3350854}
 \showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Lucic, Kurach, Michalski, Gelly, and
+  Bousquet}{Lucic et~al\mbox{.}}{[n.d.]}]%
+        {GANs_equal}
+\bibfield{author}{\bibinfo{person}{Mario Lucic}, \bibinfo{person}{Karol
+  Kurach}, \bibinfo{person}{Marcin Michalski}, \bibinfo{person}{Sylvain Gelly},
+  {and} \bibinfo{person}{Olivier Bousquet}.} \bibinfo{year}{[n.d.]}\natexlab{}.
+\newblock \showarticletitle{Are GANs Created Equal? A Large-Scale Study}. In
+  \bibinfo{booktitle}{\emph{Advances in Neural Information Processing Systems
+  31}}. \bibinfo{pages}{700--709}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Radford, Metz, and Chintala}{Radford
+  et~al\mbox{.}}{2016}]%
+        {DCGANs}
+\bibfield{author}{\bibinfo{person}{Alec Radford}, \bibinfo{person}{Luke Metz},
+  {and} \bibinfo{person}{Soumith Chintala}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Unsupervised Representation Learning with Deep
+  Convolutional Generative Adversarial Networks}. In
+  \bibinfo{booktitle}{\emph{4th International Conference on Learning
+  Representations, {ICLR} 2016,}}.
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/1511.06434}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Salimans, Goodfellow, Zaremba, Cheung,
+  Radford, Chen, and Chen}{Salimans et~al\mbox{.}}{2016}]%
+        {Improved_Techniques}
+\bibfield{author}{\bibinfo{person}{Tim Salimans}, \bibinfo{person}{Ian
+  Goodfellow}, \bibinfo{person}{Wojciech Zaremba}, \bibinfo{person}{Vicki
+  Cheung}, \bibinfo{person}{Alec Radford}, \bibinfo{person}{Xi Chen}, {and}
+  \bibinfo{person}{Xi Chen}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Improved Techniques for Training GANs}. In
+  \bibinfo{booktitle}{\emph{Advances in Neural Information Processing Systems
+  29}}. \bibinfo{pages}{2234--2242}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Theis, van~den Oord, and Bethge}{Theis
+  et~al\mbox{.}}{2016}]%
+        {evaluation}
+\bibfield{author}{\bibinfo{person}{Lucas Theis}, \bibinfo{person}{Aaron van~den
+  Oord}, {and} \bibinfo{person}{Matthias Bethge}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{A note on the evaluation of generative models}. In
+  \bibinfo{booktitle}{\emph{4th International Conference on Learning
+  Representations, {ICLR} 2016,}}.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Wang, Liu, Zhu, Tao, Kautz, and
