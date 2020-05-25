@@ -4,7 +4,7 @@
 Our task is to train a sketch-to-face translation model that is robust to hand-drawn sketches. Existing methods trained with edge-aligned sketches fail to be generalized to hand-drawn sketches. Hence, we propose a novel framework which consists of two generators and trained by both edge-aligned sketches and deformed sketches.
 
 As shown in Figure~\ref{fig:architecture}, $G_m$ is the main generator trained by deformed sketches $S'$, aiming to generate plausible photo-realistic face images from unseen hand-drawn sketches in test stage. 
-$G_A$ is an auxiliary generator trained with edge-aligned sketches whose goal is to guide $G_m$ to adaptively sense the line distortion in deformed sketches.
+$G_a$ is an auxiliary generator trained with edge-aligned sketches whose goal is to guide $G_m$ to adaptively sense the line distortion in deformed sketches.
 
 Both generators are encoder-residual-decoder architectures, including an encoder, several residual blocks and a decoder, which is proven to be effective for generate high-quality images. 
 The proposed spatial attention pooling module (SAP) is added before the encoder $E_m$ of $G_m$ to adaptively adjust the spatial-variant balance between \textit{the realism} and \textit{the conformance}. 
