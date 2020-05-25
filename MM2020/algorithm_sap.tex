@@ -1,19 +1,22 @@
 % !TeX root = SketchFace.tex
 
-
-\td{(Check if the idea about the relax is well-described)}
-\td{(Spatial-specific?Position-specific?Spatially variant?)}
-A sketch-to-image model trained with edge-aligned sketch-image pairs tends to generate images whose edges align with the stokes in the input sketches.
-When an input hand-drawn sketch is not well-drawn, line distortions in the input sketch damages the quality of the generated face image. It is a trade-off between the realism of the output face image and the correspondence between the input sketch and the output face image.
-
-In order to alleviate the edge alignment between the input sketch and the output face image, we desire to relax thin strokes to ambiguity bands with various width.
-One of the straightforward ways is to smooth the strokes with one-pixel width to multi-pixel width using image smoothing algorithm. 
+ 
+A sketch-to-image model trained with edge-aligned sketch-image pairs tends to generate images whose edges strictly align with the stokes of the input sketch.
+When an input hand-drawn sketch is not well-drawn, line distortions in the input sketch damages the quality of the generated face image. 
+It is a trade-off between the realism of the generated face image and the correspondence between the input sketch and the output face image.
+%
+In order to alleviate the edge alignment between the input sketch and the output face image, we propose to relax thin strokes to a tolerance region with various width.
+%
+A straightforward way is to smooth the strokes to multi-pixel width by image smoothing or dilation. 
 %
 However, the capacity of this hand-crafted way is limited, because the uniform smoothness for all positions of the whole sketch violate the unevenness of hand-drawn sketches on depicting different facial parts. 
 %
-We argue that the balance between the realism and the correspondence differs from one position to another across the face image. Therefore, the relax degree should be spatial-variant. 
+We argue that the balance between the realism and the correspondence differs from one position to another across the face image. Therefore, the relaxation degree should be spatially varying. 
 
-Based on the discussion above, we propose a new module, called spatial attention pooling (SAP), to adaptively relax the widths of strokes in the input sketch in a spatial-specific way. In order to break the edge-alignment between sketches and real images, SAP relaxes strokes with one-pixel width to multiple-pixel width using pooling operators. A stroke with a larger width indicates the less restrict between this stroke and the corresponding edge in the synthesized image. The widths are controlled by the kernel sizes of pooling operators. However, the kernel size of pooling operator is not trainable using back propagation algorithm. SAP applies multiple branches of pooling operators with different kernel sizes to get multiple relaxed sketches with different widths. The relaxed sketches are then fused by a spatial attention layer which spatially adjusts the balance of \textit{realism} and \textit{correspondence}. The module is formulated as follow.
+
+Based on the discussion above, we propose a new module, called spatial attention pooling (SAP), to adaptively relax the strokes in the input sketch to spatially varying tolerance regions. 
+%
+A stroke with a larger width indicates the less restrict between this stroke and the corresponding edge in the synthesized image. The widths are controlled by the kernel sizes of pooling operators. However, the kernel size of pooling operator is not trainable using back propagation algorithm. SAP applies multiple branches of pooling operators with different kernel sizes to get multiple relaxed sketches with different widths. The relaxed sketches are then fused by a spatial attention layer which spatially adjusts the balance of \textit{realism} and \textit{correspondence}. The module is formulated as follow.
 
 %Let $\mathbf{r}=\{r_i | i=1,2,...,N_r\}$ be a set of relax radius. 
 The architecture of SAP is shown in Figure~\ref{fig:sap}.

@@ -1,6 +1,6 @@
 % !TeX root = SketchFace.tex
 
-\section{Deep Network for Sketch-Photo Translation}
+\section{Our Approach for Sketch-to-Photo Translation}
 \label{sec:network}
 
 \begin{figure*}
@@ -10,12 +10,11 @@
 \end{figure*}
 %
 %%%%%%%%%%%%%%% Section Openning %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this paper, we propose a sketch-to-photo translation model that is robust to hand-drawn sketches. In order to handle hand-drawn sketches, we design a novel spatial attention pooling (SAP) module to adaptively adjust the spatial-variant balance between \textit{the realism} of the synthesized face image and \textit{the correspondence} between input sketch and the edges in synthesized image. 
-We arrange this section as follow. We first introduce the dataset we construct for our model in Subsection~\ref{subsec:algorithm_data}.
-Then we describe the architecture of our model in Subsection~\ref{subsec:algorithm_overview} and the proposed SAP in Subsection~\ref{subsec:algorithm_sap}.
-At last we discuss losses applied in our model in Subsection~\ref{subsec:algorithm_loss} and the multi-stage training schedule in Subsection~\ref{subsec:algorithm_training}.
 
-
+%
+%%%%%%%%%%%%%% Overview  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Overview}
+\input{algorithm_overview}
 
 
 %%%%%%%%%%%%%% Face Sketches and Stroke Deformation  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -30,10 +29,7 @@ At last we discuss losses applied in our model in Subsection~\ref{subsec:algorit
 	\caption{Sap}
 	\label{fig:sap}
 \end{figure}
-%
-%%%%%%%%%%%%%% Overview  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Overview}
-\input{algorithm_overview}
+
 
 %%%%%%%%%%%%%% Spatial Attention Pooling  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Spatial Attention Pooling}
@@ -45,7 +41,7 @@ At last we discuss losses applied in our model in Subsection~\ref{subsec:algorit
 %%%%%%%%%%%%%% Losses  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Losses}
 \label{subsec:algorithm_loss}
-\input{algorithm_loss}
+%\input{algorithm_loss}
 
 %%%%%%%%%%%%%% Traning Schedule %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Training Schedule}
