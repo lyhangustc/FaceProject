@@ -1,6 +1,6 @@
 
 \documentclass[sigconf,anonymous,review]{acmart}
-\acmSubmissionID{1234}
+\acmSubmissionID{1570}
 
 \usepackage{booktabs} % For formal tables
 \usepackage{color}
@@ -46,6 +46,18 @@
 %\received[final version]{June 2009}
 %\received[accepted]{July 2009}
 
+\setcopyright{acmcopyright}
+\copyrightyear{2020}
+\acmYear{2020}
+\acmDOI{10.1145/1122445.1122456}
+
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[MM '20]{Proceedings of the 27th ACM International Conference on Multimedia}{October 21--25, 2020}{Seattle, US}
+\acmBooktitle{Proceedings of the 27th ACM International Conference on Multimedia (MM '20), October 21--25, 2020, Seattle, US}
+\acmPrice{15.00}
+\acmISBN{978-1-4503-XXXX-X/20/06}
+
+
 \newcommand{\cxj}[1]{\textcolor{red}{(#1)}}
 \newcommand{\td}[1]{\textcolor{blue}{#1}}
 \newcommand{\rmv}[1]{\textcolor{green}{#1}}
@@ -55,8 +67,8 @@
 % Document starts
 \begin{document}
 % Title portion
-\title{FaceSketching: Interactive Realistic Face Image Creation from Free-hand Sketches }
-
+%\title{FaceSketching: Interactive Realistic Face Image Creation from Free-hand Sketches }
+\title{DeepFacePencil: Realistic Face Image Creation from Free-hand Sketches}
 
 \begin{abstract}
 In this paper, we explore the task of generating photo-realistic face images from sketches based on image-to-image translation framework. 
@@ -82,15 +94,15 @@ We conduct extensive experiments on CelebA-HQ dataset. The experiment results sh
 
 \ccsdesc[500]{Computing methodologies~Neural networks}
 
-\keywords{spatial attention; conditional generative adversarial nets; face; sketch; realistic images}
+%\keywords{spatial attention; conditional generative adversarial nets; face; sketch; realistic images}
 
 %
 % End generated code
 %
 
 
-\keywords{Image synthesis, sketch-based interface,
-face editing, deep neural network}
+\keywords{Image synthesis, spatial attention, sketch-based interface,
+face editing, conditional generative adversarial networks}
 
 \begin{teaserfigure}
 	\includegraphics[width=\textwidth]{figs/teaser.png}
