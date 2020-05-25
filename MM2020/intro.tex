@@ -1,0 +1,36 @@
+
+\section{Introduction}
+
+
+Flexibly creating new content is one of the most important goals in both computer graphics and computer-human interaction. While sketching is an efficient and natural way for common users to express their ideas for designing and editing new content, sketch-based interaction techniques have been extensively studied~\cite{SutherlandSketchPad64,Zeleznik-Sketch96,Igarashi-teddy99,Chen_sketchingreality08,Chen09sketch2photo}. 
+Imagery content is the most ubiquitous media with a large variety of display devices everywhere in our daily life. 
+Creating new imagery content is one way to show people's creativity and communicate smart ideas.
+%
+In this paper, we target portrait imagery, which is inextricably bound to our life, and present a sketch-based system, \emph{DeepFacePencil}, which allows common users to create new face imagery by specifying the desired facial shapes via free-hand sketches. 
+
+%%%%%%%%%%%%%%%%%% DL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Deep learning techniques have brought significant improvement on the realism of virtual images. 
+Recently, a large amount of studies have been conducted on general image-to-image translation which aims to translate an image in one domain to a corresponding image in another domain, preserving the same content, such as structure, scene or objects~\cite{pix2pix,pix2pixHD,CycleGANs,DiscoGANs, DualGANs,BicycleGANs}. 
+%
+Treating sketches as the source domain and realistic face images as the target domain, \td{this task is a typical image-to-image translation problem.
+However, exiting image-to-image translation techniques are not off-the-shelf for this task due to the underlying challenges: data scarcity in the sketch domain and ambiguity in freehand sketches. }
+
+
+Since there exists no large-scale dataset of \td{paired sketch and face images?} and collecting hand-drawn sketches is time-consuming, existing methods~\cite{pix2pix, pix2pixHD, Lines2Face} utilize edge maps or contours of real face images as training data when applied on the sketch-to-face task. Edge maps and contours enable existing models to be trained in a supervised manner and obtain plausible results on synthesized edge maps or contours . 
+%
+However, models trained on synthesized data are not able to achieve satisfactory results on hand-drawn sketches, specially on those drawn by common users without considerable drawing skills. 
+
+Since strokes in edge maps and contours align perfectly with edges of the corresponding real images, models trained on edge-aligned data tend to generate unreal shapes of facial parts following the inaccurate strokes when the input sketch is poor-drawn. Hence, for an imperfect hand-drawn sketch, it is a trade-off between \textit{the realism} of the synthesized image and \textit{the correspondence} between input sketch and the edges of the synthesized image.
+Models with high edge-alignment fails to be generalized to sketches with imperfect strokes.
+
+Moreover, we observe that the balance between the trade-off mentioned above varies from one position to another across the image. In a portrait sketch, some facial parts might be well-drawn while the others not. For the well-drawn facial parts, the balance are supposed to move towards the correspondence ensuring those parts in synthesized image depicting the user's imagination. On the other hand, the areas of poorly-drawn parts should emphasize the realism and not follow the irregular shapes and strokes.
+
+%%%%%%%%%%%%%%%%%% Our Idea $$$$$$$$$$$$$$$$$$$$$$$
+Based on the discussion above, we propose a novel sketch-based synthesis framework which is robust to hand-drawn sketches. A new module, named spatial attention pooling (SAP), is designed to adaptively adjust the spatially varying balance between \textit{realism} and \textit{correspondence} \cxj{alignment?} across the image. In order to break the edge-alignment between sketches and real images, our SAP relaxes strokes with one-pixel widths to multiple-pixel widths using pooling operators. A larger width of a stroke, which is controlled by the kernel size of pooling operator, indicates the less restrict between this stroke and the corresponding edge in the synthesized image. However, the kernel size is not trainable using back propagation algorithm. Hence, for an input sketch, multiple branches of pooling operators with different kernel sizes are added in SAP to get multiple relaxed sketches with different widths. The relaxed sketches are then fused by a spatial attention layer which adjusts the balance of \textit{realism} and \textit{correspondence}. For different location in a portrait sketch, the spatial attention layer assigns high attention to the relaxed sketch with large width if this position requires more \textit{realism} than \textit{correspondence}. 
+
+In summary, our contribution in this paper is three-fold.
+\begin{itemize}
+\item Based on comprehensive analysis on the edge alignment issue in image translation frameworks, we propose a sketch-to-face translation system that is robust to hand-drawn sketches \td{with various drawing skills}. 
+\item A novel deep neural network module for sketch, named \emph{spatial attention pooling}, is designed to adaptively adjust the spatial-variant balance between the realism of the synthesized image and the correspondence between the input sketch and the synthesized image.
+\item Extensive experiments demonstrate the superiority of our model over existing methods on perceptual realism and generalization on the sketch-to-image task.
+\end{itemize}

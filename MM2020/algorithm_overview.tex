@@ -1,0 +1,57 @@
+% !TeX root = SketchFace.tex
+% 
+
+The task of sketch-to-photo translation can be defined as looking for a generator $G(S)$ so that the generated image $I=G(S)$ from a hand-drawn sketch $S$ looks realistic and keeps the shape characteristics for the input sketch.
+%
+Existing image translation techniques train a neural network as the generator with paired of sketch and photo data $(\mathcal{S}, \mathcal{I})$.
+%
+Due to the scarcity of real hand-drawn sketches, existing techniques synthesize sketches in a certain style to approximate the sketch set $\mathcal{S}$ from face image set $\mathcal{I}$ to train their generator in an adversarial manner.
+The synthesized sketches $\mathcal{S}_{syn}$ are usually well aligned with the face images and present different distributions from hand-drawn sketches $\mathcal{S}$.
+These models typically fail to generalize to hand-drawn sketches by common users. 
+%
+
+
+As shown in Figure~\ref{fig:architecture}, $G_m$ is the main generator trained by deformed sketches $S'$, aiming to generate plausible photo-realistic face images from unseen hand-drawn sketches in test stage. 
+$G_a$ is an auxiliary generator trained with edge-aligned sketches whose goal is to guide $G_m$ to adaptively sense the line distortion in deformed sketches.
+
+
+We propose a novel network architecture with a specially designed training strategy to improve the capability of the sketch-based image generator.
+%
+Figure~\ref{fig:architecture} shows the overview of our method.
+%
+In order to synthesize a set of sketches $\synS$ that has similar distribution with hand-drawn sketches $\hdS$, we deform the edge-aligned sketches to generate a set of deformed sketches $\dfmS$ to augment the training set.
+We propose a novel framework using dual generators from the edge-aligned sketches $\synS$ and the deformed sketches $\dfmS$ respectively.
+%
+$G_m$ is the main generator trained by deformed sketches $S'$, aiming to generate plausible photo-realistic face images from unseen hand-drawn sketches in test stage. 
+$G_a$ is an auxiliary generator trained with edge-aligned sketches whose goal is to guide $G_m$ to adaptively sense the line distortion in deformed sketches.
+%
+A spatial attention pooling module (SAP) is added before the encoder $E_m$ of $G_m$ to adjust the spatially varying balance between \textit{the realism} of generated images and \textit{the conformance} between the generated image and the input sketch. 
+%
+
+The dual generators are trained together under a set of supervision. 
+First, for a triplet $(S,S',I)$, both the generators $G_m$ and $G_a$ are trained to produce images $G_m(S')$ and $G_a(S)$ to approximate the real image $I$ under a reconstruction loss $L_{rec}$. 
+Second, a multi-scale discriminators $D$ is employed for three combinations of sketch-image pairs to distinguish real face images from generated fake images in both global and local scales. 
+By training the dual generators simultaneously with the discriminator adversarially, our main generator $G_m$ effectively captures the spatially-varying stroke distortions and maps it to the manifold of well-drawn sketches to produce realistic face images.
+
+
+\dlt{
+
+%Both generators are encoder-residual-decoder architectures, including an encoder, several residual blocks and a decoder, which is proven to be effective for generate high-quality images. 
+%The generators share weights of the residual blocks and decoders since the high-level features of both generators are supposed to share with each other.
+
+
+
+The discriminator is a multi-scale discriminator~\cite{pix2pixHD} which distinguishes real face images from generated fake images in both global and local scales.
+For the discriminator, the generated image $G_m(S')$ and $G_A(S)$ concatenated with their input sketch $S$ and $S'$ respectively are treated as fake samples while a real face image sampled from real face distribution concatenated with its corresponding sketch is regarded as a real sample. 
+%
+%In the adversarial training stage, the generator and the discriminator are updated alternately.
+
+In order to guide the model with SAP to be tolerant with line distortion of deformed sketches, we design a novel generator feature matching loss for our task, besides the adversarial loss, the reconstruction loss and the discriminator feature matching loss. The model is trained in a multi-stage training schedule to ensure the convergence of the training.
+%
+
+
+
+We arrange this section as follow. We first introduce the dataset we construct for our model in Subsection~\ref{subsec:algorithm_data}.
+Then we describe the architecture of our model in Subsection~\ref{subsec:algorithm_overview} and the proposed SAP in Subsection~\ref{subsec:algorithm_sap}.
+At last we discuss losses applied in our model in Subsection~\ref{subsec:algorithm_loss} and the multi-stage training schedule in Subsection~\ref{subsec:algorithm_training}.
+}

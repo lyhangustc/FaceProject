@@ -1,0 +1,63 @@
+% !TeX root = SketchFace.tex
+
+Our model consists of two generators, $G()$ for edge-aligned sketch $S$ and $G'()$ deform sketch $S'$, and one discriminator $D()$. Loss functions and objective of our model are discussed as follow.
+
+\paragraph{Reconstruction Loss}
+For either generator, a reconstruction loss is applied to guide the generated image to get close to its corresponding real image $x$.
+
+\begin{equation}
+\label{eqn:loss_rec}
+\begin{aligned}
+\mathcal{L}_{Rec}(G, G') &=\textbf{E}_{(S, x)\sim p_{data}(S,x)\|G(S) - x\|_1} \\
+&+ \mathbb{E}_{(S', x)\sim p_{data}(S',x)\|G'(S') - x\|_1},
+\end{aligned}
+\end{equation}
+
+\paragraph{Adversarial Loss}
+The multi-scale discriminator~\cite{pix2pixHD} $D$ consists of three sub-discriminators $D_i, i=1,2,3$.  The adversarial loss for $G$ and $D$ is defined as:
+\begin{equation}
+\label{eqn:new_loss_adv}
+\begin{aligned}
+\textbf{L}_{adv}(G;D) &=\frac{1}{3}\sum_{i=1}^{3}\textbf{E}_{(\bm{S},\bm{x})\sim p_{data}(\bm{S},\bm{x})}\big[\log D_i(\bm{S},\bm{x})\big] \\
+& + E_{\bm{x}\sim p_{data}(\bm{S})}\Big[\log \Big(1-D_i \big(\bm{S},G(\bm{S})\big)\Big)\Big].
+\end{aligned}
+\end{equation}
+The adversarial loss for $G'$ and $D$ is defined similarly.
+
+\paragraph{Discriminator Feature Matching Loss} Similar to pix2pixHD\cite{pix2pixHD} and lines2face~\cite{Lines2Face}, we use a discriminator feature matching loss as the perceptual loss, which is designed to minimize the error between generated image and real image in feature space. Here discriminator feature matching loss use the discriminator as the feature extractor. Let $D^q_i()$ be the output of $q$th layer in $D_i$. This loss for $G$ and $D$ is defined as:
+\begin{equation}
+\label{eqn:feature_matching_loss}
+\mathcal{L}_{fm}(G)=\frac{1}{3N_Q}\mathbb{E}_{(\bm{S},\bm{x})\sim p_{data}(\bm{S},\bm{x})}\sum_{i=1}^{3}\sum_{q\in Q} \frac{1}{n_i^q} \|D^q_i(G(\bm{S}))-D^q_i(\bm{x})\|_1 ,
+\end{equation}
+where $Q$ is the selected layers of discriminator for computing this loss, $NQ$ is the number of elements in $Q$, $n^q_i$ is the number of elements in $D^q_i$.
+Also, the discriminator feature matching loss for $G'$ and $D$ is defined similarly.
+
+\paragraph{Generator Feature Matching Loss}
+Similar to discriminator feature matching loss which is designed to minimize the error between generated image and real image in feature space, we propose a novel generator feature matching loss that aims to minimize the error between the presentations of $S$ and $S'$ in generator feature space. Let $G^t()$ and $G'^t()$ be the output of $t$th layer in $G$ and $G'$ respectively. This loss is calculated as:
+
+\begin{equation}
+\label{eqn:loss_GFM}
+\mathcal{L}_{GFM}(G, G')=\mathbb{E}_{(S, S')\sim p_{data}(S, S')} \frac{1}{N_T} \sum_{t\in T}  \frac{1}{|n^t|} \|G^t(S)-G'^t(S') \|_1,
+\end{equation}
+
+where $T$ is the set of selected generator layers for calculating this loss, $N_T$ is the number of elements of $T$, and $n^t$ is the number of elements of $G^T()$ and $G^T()$.
+
+Let $G_q(\cdot)$ produces the feature maps of the $q$-th layer in the generator $G$.
+%
+Given an input sketch $S$ and the corresponding deformed sketch $\tilde{S}$, we compute the generator feature matching loss as:
+
+
+%
+where $|G_q|$ denotes the number of elements in $G_q(\cdot)$, $Q$ indicates a set of the selected generator layers for computing this loss and the size of $Q$ is $N_Q$. 
+We select \td{the xxx layers} of the generator in our experiments.
+
+Besides the generator feature matching loss $\mathcal{L}_{GFM}(G)$, for generator $G$ and multi-scale discriminator $D={D_k | k=1,2,...,N_D}$, the adversarial loss $\mathcal{L}_{GAN}(G, D)$ and the discriminator feature matching loss $\mathcal{L}_{DFM}(G, D)$ are computed as the same form as those in pix2pixHD~\cite{pix2pixHD}. \td{Discussion: add equations of these two losses or not}
+%
+The objective of the proposed model is:
+
+\begin{equation}
+	\label{eqn:new_minmax_game}
+	\min_G \max_{D} \mathcal{L}_{GAN}(G, D)+\lambda \mathcal{L}_{DFM}(G, D) +\mu \mathcal{L}_{GFM}(G).
+\end{equation}
+
+where $\lambda$ and $\mu$ are the weights for balancing different losses. We set $\lambda=\td{xxx}$ and $\mu=\td{xxx}$ in our experiments.
