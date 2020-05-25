@@ -1,11 +1,11 @@
 % !TeX root = SketchFace.tex
 % 
 
-The task of sketch-to-photo translation can be defined as looking for a generator $G(S)$ so that the generated image $I=G(S)$ from a hand-drawn sketch $S$ looks realistic and keeps the shape characteristics for the input sketch.
+The task of sketch-to-photo translation can be defined as looking for a generator $G(S)$ so that the generated image $x=G(S)$ from a hand-drawn sketch $S$ looks realistic and keeps the shape characteristics for the input sketch.
 %
-Existing image translation techniques train a neural network as the generator with paired of sketch and photo data $(\mathcal{S}, \mathcal{I})$.
+Existing image translation techniques train a neural network as the generator with paired of sketch and photo data $(\mathcal{S}, \mathcal{X})$.
 %
-Due to the scarcity of real hand-drawn sketches, existing techniques synthesize sketches in a certain style to approximate the sketch set $\mathcal{S}$ from face image set $\mathcal{I}$ to train their generator in an adversarial manner.
+Due to the scarcity of real hand-drawn sketches, existing techniques synthesize sketches in a certain style to approximate the sketch set $\mathcal{S}$ from face image set $\mathcal{X}$ to train their generator in an adversarial manner.
 The synthesized sketches $\mathcal{S}_{syn}$ are usually well aligned with the face images and present different distributions from hand-drawn sketches $\mathcal{S}$.
 These models typically fail to generalize to hand-drawn sketches by common users. 
 %
@@ -29,7 +29,7 @@ A spatial attention pooling module (SAP) is added before the encoder $E_m$ of $G
 %
 
 The dual generators are trained together under a set of supervision. 
-First, for a triplet $(S,S',I)$, both the generators $G_m$ and $G_a$ are trained to produce images $G_m(S')$ and $G_a(S)$ to approximate the real image $I$ under a reconstruction loss $L_{rec}$. 
+First, for a triplet $(S,S',x)$, both the generators $G_m$ and $G_a$ are trained to produce images $G_m(S')$ and $G_a(S)$ to approximate the real image $x$ under a reconstruction loss $L_{rec}$. 
 Second, a multi-scale discriminators $D$ is employed for three combinations of sketch-image pairs to distinguish real face images from generated fake images in both global and local scales. 
 By training the dual generators simultaneously with the discriminator adversarially, our main generator $G_m$ effectively captures the spatially-varying stroke distortions and maps it to the manifold of well-drawn sketches to produce realistic face images.
 
