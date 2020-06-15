@@ -15,8 +15,8 @@ mouse.pdf
 *.dtx
 *.hd
 build/
-results/
-results/*
+#results/
+#results/*
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
