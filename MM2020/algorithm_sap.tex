@@ -20,7 +20,7 @@ A stroke with a larger width indicates the less restrict between this stroke and
 
 %Let $\mathbf{r}=\{r_i | i=1,2,...,N_r\}$ be a set of relax radius. 
 The architecture of SAP is shown in Figure~\ref{fig:sap}.
-Given an input deformed sketch $S'\in \real^{H\times W}$, we first pass it through $N_r$ pooling branches with different kernel sizes of $\{r_i, i=1,\ldots, N_r\}$ to get $\P_{i}=Pooling_{r_i}(S') (i=1,\ldots,N_r)$. 
+Given an input deformed sketch $S'\in \real^{H\times W}$, we first pass it through $N_r$ pooling branches with different kernel sizes of $\{r_i, i=1,\ldots, N_r\}$ to get $P_{i}=Pooling_{r_i}(S') (i=1,\ldots,N_r)$. 
 Then we utilize convolutional layers to extract feature maps of $P_i$ separately. These feature maps are concatenated to get a relaxed representation of $S'$, denoted as $R$:
 %
 \begin{equation}
