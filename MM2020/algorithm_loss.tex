@@ -1,54 +1,93 @@
 % !TeX root = SketchFace.tex
 
-Our model consists of two generators, $G_a$ for edge-aligned sketch $S$ and $G_m$ deform sketch $S'$, and one discriminator $D$. Loss functions and objective of our model are discussed as follow.
+Our model consists of two generators, $G_a$ for edge-aligned sketch $\synS$ and $G_m$ for deform sketch $\dfmS$, and one discriminator $D$. Loss functions and objective of our model are discussed as follow.
 
 \paragraph{Reconstruction Loss}
 For either generator, a reconstruction loss is applied to guide the generated image to get close to its corresponding real image $x$.
-
+%
+\dlt{ % remove the subscripts of E because the equations are too long
 \begin{equation}
 \label{eqn:loss_rec}
 \begin{aligned}
-\mathcal{L}_{Rec}(G_a, G_m) &=\mathbb{E}_{(S, x)\sim p_{data}(S,x)\|G_a(S) - x\|_1} \\
-&+ \mathbb{E}_{(S', x)\sim p_{data}(S',x)\|G_m(S') - x\|_1},
+\mathcal{L}_{Rec}(G_a, G_m) &=\mathbb{E}_{(\synS, x)\sim p_{data}(\synS,x)\|G_a(\synS) - x\|_1} \\
+&+ \mathbb{E}_{(\dfmS, x)\sim p_{data}(\dfmS,x)\|G_m(\dfmS) - x\|_1},
+\end{aligned}
+\end{equation}
+}
+%
+\begin{equation}
+\label{eqn:loss_rec}
+\begin{aligned}
+\mathcal{L}_{Rec}(G_a, G_m) &=\mathbb{E}\|G_a(\synS) - x\|_1 \\
+&+ \mathbb{E}\|G_m(\dfmS) - x\|_1.
 \end{aligned}
 \end{equation}
 
 \paragraph{Adversarial Loss}
 The multi-scale discriminator~\cite{pix2pixHD} $D$ consists of three sub-discriminators $D_i, i=1,2,3$.  The adversarial loss for $G$ and $D$ is defined as:
+%
+\dlt{ % remove the subscripts of E because the equations are too long
 \begin{equation}
 \label{eqn:new_loss_adv}
 \begin{aligned}
-\mathcal{L}_{adv}(G_a;D) &=\frac{1}{3}\sum_{i=1}^{3}\mathbb{E}_{(\bm{S},\bm{x})\sim p_{data}(\bm{S},\bm{x})}\big[\log D_i(\bm{S},\bm{x})\big] \\
-& + E_{\bm{x}\sim p_{data}(\bm{S})}\Big[\log \Big(1-D_i \big(\bm{S},G_a(\bm{S})\big)\Big)\Big].
+\mathcal{L}_{adv}(G_a;D) &=\frac{1}{3}\sum_{i=1}^{3}\mathbb{E}_{(\bm{\synS},\bm{x})\sim p_{data}(\bm{\synS},\bm{x})}\big[\log D_i(\bm{\synS},\bm{x})\big] \\
+& + E_{\bm{x}\sim p_{data}(\bm{\synS})}\Big[\log \Big(1-D_i \big(\bm{\synS},G_a(\bm{\synS})\big)\Big)\Big].
 \end{aligned}
 \end{equation}
+}
+%
+\begin{equation}
+\label{eqn:new_loss_adv}
+\begin{aligned}
+\mathcal{L}_{adv}(G_a;D) &=\frac{1}{3}\sum_{i=1}^{3}\mathbb{E}\big[\log D_i(\bm{\synS},\bm{x})\big] \\
+& + \mathbb{E}\Big[\log \Big(1-D_i \big(\bm{\synS},G_a(\bm{\synS})\big)\Big)\Big].
+\end{aligned}
+\end{equation}
+%
 The adversarial loss for $G_m$ and $D$, denoted as $\mathcal{L}_{adv}(G_m;D)$ is defined similarly.
 
 \paragraph{Discriminator Feature Matching Loss} Similar to pix2pixHD\cite{pix2pixHD} and lines2face~\cite{Lines2Face}, we use a discriminator feature matching loss as the perceptual loss, which is designed to minimize the error between generated image and real image in feature space. Here discriminator feature matching loss use the discriminator as the feature extractor. Let $D^q_i()$ be the output of $q$th layer in $D_i$. This loss is defined as:
+
+\dlt{ % remove the subscripts of E because the equations are too long
 \begin{equation}
 \label{eqn:feature_matching_loss}
-\mathcal{L}_{DFM}(G_a)=\frac{1}{3N_Q}\mathbb{E}_{(\bm{S},\bm{x})\sim p_{data}(\bm{S},\bm{x})}\sum_{i=1}^{3}\sum_{q\in Q} \frac{1}{n_i^q} \|D^q_i(G_a(\bm{S}))-D^q_i(\bm{x})\|_1 ,
+\mathcal{L}_{DFM}(G_a)=\frac{1}{3N_Q}\mathbb{E}_{(\bm{\synS},\bm{x})\sim p_{data}(\bm{\synS},\bm{x})}\sum_{i=1}^{3}\sum_{q\in Q} \frac{1}{n_i^q} \|D^q_i(G_a(\bm{\synS}))-D^q_i(\bm{x})\|_1 ,
+\end{equation}
+}
+\begin{equation}
+\label{eqn:feature_matching_loss}
+\mathcal{L}_{DFM}(G_a)=\frac{1}{3N_Q}\mathbb{E}\sum_{i=1}^{3}\sum_{q\in Q} \frac{1}{n_i^q} \|D^q_i(G_a(\bm{\synS}))-D^q_i(\bm{x})\|_1 ,
 \end{equation}
 where $Q$ is the selected layers of discriminator for computing this loss, $N_Q$ is the number of elements in $Q$, $n^q_i$ is the number of elements in $D^q_i$.
 Also, the discriminator feature matching loss for $G_m$ and $D$, denoted as $\mathcal{L}_{DFM}(G_m)$, is defined similarly.
 
 \paragraph{Generator Feature Matching Loss}
-Similar to discriminator feature matching loss which is designed to minimize the error between generated image and real image in feature space, we propose a novel generator feature matching loss that aims to minimize the error between the presentations of $S$ and $S'$ in generator feature space. Let $G^t()$ and $G_m^t()$ be the output of $t$th layer in $G$ and $G_m$ respectively. This loss is calculated as:
+Similar to discriminator feature matching loss which is designed to minimize the error between generated image and real image in discriminator feature space, we propose a novel generator feature matching loss that aims to minimize the error between the presentations of $\synS$ and $\dfmS$ in generator feature space. Let $G_a^t()$ and $G_m^t()$ be the output of $t$th layer in $G_a$ and $G_m$ respectively. This loss is calculated as:
+
+\dlt{ % remove the subscripts of E because the equations are too long
+\begin{equation}
+\label{eqn:loss_GFM}
+\mathcal{L}_{GFM}(G_a, G_m)=\frac{1}{N_T} \mathbb{E}_{(\synS, \dfmS)\sim p_{data}(\synS, \dfmS)}  \sum_{t\in T}  \frac{1}{|n^t|} \|G_a^t(\synS)-G_m^t(\dfmS) \|_1,
+\end{equation}
+}
 
 \begin{equation}
 \label{eqn:loss_GFM}
-\mathcal{L}_{GFM}(G_a, G_m)=\mathbb{E}_{(S, S')\sim p_{data}(S, S')} \frac{1}{N_T} \sum_{t\in T}  \frac{1}{|n^t|} \|G_a^t(S)-G_m^t(S') \|_1,
+\mathcal{L}_{GFM}(G_a, G_m)=\mathbb{E}\frac{1}{N_T} \sum_{t\in T}  \frac{1}{|n^t|} \|G_a^t(\synS)-G_m^t(\dfmS) \|_1,
 \end{equation}
-
 where $T$ is the set of selected generator layers for calculating this loss, $N_T$ is the number of elements of $T$, and $n^t$ is the number of elements of $G_a^t()$ and $G_m^t()$.
 We select the output of the first four residual blocks of the generator in our experiments.
 
 %
 The objective of the proposed model is:
-
+%
 \begin{equation}
 	\label{eqn:new_minmax_game}
-	\min_G \max_{D} \mathcal{L}_{GAN}(G_a, D)+ \mathcal{L}_{GAN}(G_m, D)+\lambda (\mathcal{L}_{DFM}(G_a, D) +\mathcal{L}_{DFM}(G_m, D)) +\mu \mathcal{L}_{GFM}(G_a, G_m).
+	\begin{aligned}
+		\min_G  &\max_{D} \mathcal{L}_{GAN}(G_a, D)+ \mathcal{L}_{GAN}(G_m, D) \\
+		& +\lambda (\mathcal{L}_{DFM}(G_a, D) +\mathcal{L}_{DFM}(G_m, D)) \\
+		& +\mu \mathcal{L}_{GFM}(G_a, G_m),
+	\end{aligned}
 \end{equation}
-
+%
 where $\lambda$ and $\mu$ are the weights for balancing different losses. We set $\lambda=10$ and $\mu=10$ in our experiments.

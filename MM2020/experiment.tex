@@ -11,7 +11,7 @@ Before showing experimental results, we first introduce details in our network i
 
 \paragraph{Implementation Details}
 We implement our model on Pytorch~\cite{Pytorch}. Both generators for edge-aligned sketches and deformed sketches share an encoder-residual-decoder structure with shared weights except that an SAP module is added to the front of the main generator $G_m$ for deformed sketches. 
-The encoder consists of four convolutional layers with $2\times$ downsampling, while the decoder consist of four convolutional layers with $2\times$ upsampling. 
+The encoder consists of four convolutional layers with $2\times$ downsampling, while the decoder consists of four convolutional layers with $2\times$ upsampling. 
 Nine residual blocks between the encoder and decoder enlarge the capacity of the generators. 
 %Weights of residual blocks and decoders of two generators share with each other. 
 The multi-scale discriminator $D$ consists of three sub-networks for three scales separately, same as Pix2PixHD~\cite{pix2pixHD}. 
@@ -19,7 +19,7 @@ Instance normalization~\cite{IN} is applied after the convolutional layers to st
 ReLU is used as activation for generators and LeakyReLU for discriminator. 
 %
 \paragraph{Data}
-To produce triplets, consisted of sketches, deform sketches, and real images, $(S, S', x)$ for our network training, we use 
+To produce triplets, consisted of sketches, deform sketches, and real images, $(\synS, \dfmS, x)$ for our network training, we use 
 CelebA-HQ~\cite{PGGAN}, a large-scale face image dataset which contains 30K $1024\times1024$ high-resolution face images. 
 %
 CelebAMask-HQ~\cite{CelebAMask-HQ} offers manually-annotated face semantic masks for CelebA-HQ with 19 classes including all facial components and accessories such as skin, nose, eyes, eyebrows, ears, mouth, lip, hair, hat, eyeglass, earring, necklace, neck, and cloth. We utilize semantic masks in this dataset to extract semantic boundary maps as edge-aligned sketches. 
@@ -92,7 +92,7 @@ Visual results are shown in Figure~\ref{fig:generative_quality}. As we can see, 
 
 \begin{figure}
 	\includegraphics[width=0.9\linewidth]{figs/results}
-	\caption{Both our model and existing models, which generate plausible photo-realistic face images from sketches in test set, are able to be generalized to test sketches from similar distribution as the training distribution. We will show our model's superiority on generalization to more challenging sketches in the next few experiments.}
+	\caption{Both our model and existing models, which generate plausible photo-realistic face images from sketches in test set, are able to be generalized to test sketches from similar distribution as the training distribution. }
 	\label{fig:generative_quality}
 \end{figure}
 
@@ -101,15 +101,15 @@ Visual results are shown in Figure~\ref{fig:generative_quality}. As we can see, 
 In order to verify the generalization ability of our model, we compare our model with state-of-the-art image translation models by testing with synthesized sketches of different levels of deformation, well-drawn sketches and poorly-drawn sketches by novel users.
 
 \subsubsection{Different Level of Deformation}
-As mentioned in Subsection~\ref{subsec:algorithm_data}, we deform an edge-aligned sketch $S$ to obtain a corresponding deformed sketch $S'$ by adding random offsets to the control points and end points of the vectorized strokes in $S$. 
+As mentioned in Subsection~\ref{subsec:algorithm_data}, we deform an edge-aligned sketch $\synS$ to obtain a corresponding deformed sketch $\dfmS$ by adding random offsets to the control points and end points of the vectorized strokes in $\synS$. 
 The maximum offset $d$ is set to $11$ in the training data. 
-We further create more deformed sketches with multiple levels of deformation, denoted as $S'_d$, by modifying the maximum offset $d$.
+We further create more deformed sketches with multiple levels of deformation, denoted as $\dfmS^d$, by modifying the maximum offset $d$.
 %
 We examine the generalization ability of our model and baseline model on these deformed sketches. 
 Note that the \textit{baseline} is trained with only edge-aligned sketches while our model and \textit{baseline\_deform} model are trained both edge-aligned sketches and deformed sketches with $d=11$.
 
 In this experiment, the input sketches are deformed by larger offsets where the maximum $d$ is set to $30$. 
-As shown in Figure~\ref{fig:generalization_examples}, strokes in sketches with larger deformation looks quite different from those in the training sketches including edge-aligned sketches $S$ and deformed sketches $S_{11}'$. 
+As shown in Figure~\ref{fig:generalization_examples}, strokes in sketches with larger deformation looks quite different from those in the training sketches including edge-aligned sketches $\synS$ and deformed sketches $\dfmS^{11}$. 
 %
 By adding deformed sketches into training data, \textit{baseline\_deform} produces better images than \textit{baseline}. However, when larger deformation occurs, \textit{baseline\_deform} suffers from artifacts in facial features, for example, the mouth in the first example, the eyes of the third and the last case in Figure~\ref{fig:generalization_examples}, 
 In comparison, our model produces more realistic face images with more symmetric eyes and find textures, benefited from its ability of capturing shape feature from deformed strokes by our spatial attention pooling module. 
@@ -123,7 +123,7 @@ In comparison, our model produces more realistic face images with more symmetric
 Besides the synthesized sketches with stroke deformation, we further examine the model generalization ability by comparing performances of our model with baseline model tested with two kinds of hand-drawn sketches: expert-drawn sketches and common-user sketches drawn by users without professional painting skills.
 
 \paragraph{Expert-Drawn Sketches}
-We invite an expert with well-trained drawing skills to draw portrait sketches for testing. 
+We invite an expert with well-trained drawing skills to draw 12 portrait sketches for testing. 
 These expert sketches were drawn on a pen tablet so that the strokes are smooth and precise. 
 Note that shading strokes are not drawn. 
 %
@@ -141,7 +141,7 @@ In comparison, our results are more realistic with fine textures and intact stru
 
 
 \paragraph{Common Sketches}
-We also invited a large number of graduate students without drawing skills to draw freehand sketches of their imagined faces using mouses. Hence, strokes of these common sketches rough depicts the desired face structure and shapes of facial features with some distortion. 
+We also invited 20 graduate students without drawing skills to draw 200 freehand sketches of their imagined faces using mouses. Hence, strokes of these common sketches rough depicts the desired face structure and shapes of facial features with some distortion. 
 Moreover, common sketches turn to be of different levels of details. For example, some sketches contains many strokes inside the hair areas which are blank in the training sketches. 
 %
 Results shown in Figure~\ref{fig:common_sketches} demonstrate that our model is robust to these poorly-drawn sketches. 

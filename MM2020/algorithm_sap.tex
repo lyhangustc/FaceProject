@@ -11,7 +11,10 @@ A straightforward way is to smooth the strokes to multi-pixel width by image smo
 %
 However, the capacity of this hand-crafted way is limited, because the uniform smoothness for all positions of the whole sketch violate the unevenness of hand-drawn sketches on depicting different facial parts. 
 %
-We argue that the balance between the realism and the conformance differs from one position to another across the face image. Therefore, the relaxation degree should be spatially varying. 
+We argue that the balance between the realism and the conformance differs from one position to another across the face image. 
+Even in the same input sketch, the user might draw strokes in some parts (such as, eyes, mouth) carefully with little distortions, while draw strokes in other parts (chin, hair) roughly. 
+The balance moves forwards to the conformance at a well-drawn part with realistic shape to meet the desire/tendency of user, while moving forwards to the realism at a poorly-drawn part to ensure the quality of the generated image.
+Therefore, the relaxation degree should be spatially varying. 
 
 
 Based on the discussion above, we propose a new module, called spatial attention pooling (SAP), to adaptively relax the strokes in the input sketch to spatially varying tolerance regions. 
@@ -20,8 +23,8 @@ A stroke with a larger width indicates the less restrict between this stroke and
 
 %Let $\mathbf{r}=\{r_i | i=1,2,...,N_r\}$ be a set of relax radius. 
 The architecture of SAP is shown in Figure~\ref{fig:sap}.
-Given an input deformed sketch $S'\in \real^{H\times W}$, we first pass it through $N_r$ pooling branches with different kernel sizes of $\{r_i, i=1,\ldots, N_r\}$ to get $P_{i}=Pooling_{r_i}(S') (i=1,\ldots,N_r)$. 
-Then we utilize convolutional layers to extract feature maps of $P_i$ separately. These feature maps are concatenated to get a relaxed representation of $S'$, denoted as $R$:
+Given an input deformed sketch $\dfmS \in \real^{H\times W}$, we first pass it through $N_r$ pooling branches with different kernel sizes of $\{r_i, i=1,\ldots, N_r\}$ to get $P_{i}=Pooling_{r_i}(\dfmS) (i=1,\ldots,N_r)$. 
+Then we utilize convolutional layers to extract feature maps of $P_i$ separately. These feature maps are concatenated to get a relaxed representation of $\dfmS$, denoted as $R$:
 %
 \begin{equation}
 R=Cat(Conv_1(P_1), Conv_2(P_2),..., Conv(P_{N_r})),
@@ -31,7 +34,7 @@ where $Conv_i() (i=1,\ldots,N_r)$ indicates convolutional layers, $Cat$ is a cha
 On the other hand, we compute a spatial attention map $A$ which controls the relax degrees of all positions by assigning different attention weights to $R$.
 A stoke with a large distortion is supposed to be assigned with a large relax degree. Hence, $A$ is supposed to adaptively pay more attention (a large weight) to a $Conv_i(P_i)$ with a large kernel size in the areas with large line distortions.
 %
-A straightforward way to get $A$ is passing the input sketch through a few convolutional layers and these convolutional layers are trained to detect the areas with line distortions. However, we found the a few convolutional layers are insufficient to learn to detect line distortions directly. Therefore, we introduce a two-class classifier to ease the detection. Specifically, we pre-train a fully-convolutional two-class classifier $C$ with three convolutional layers to distinguish sketches from deformed sketches. Then we utilize this pre-trained classifier to extract features of the input sketch $S$ to get ${C_i(S), i=1,2,3}$, where $C_i(·)$ denotes the $ith$ feature maps extracted by $C$. These feature maps from classifier emphasize the differences between sketches and deform sketches. We resize and concatenate these feature maps, and pass them through three convolutional layers to get the spatial attention map:
+A straightforward way to get $A$ is passing the input sketch through a few convolutional layers and these convolutional layers are trained to detect the areas with line distortions. However, we found the a few convolutional layers are insufficient to learn to detect line distortions directly. Therefore, we introduce a two-class classifier to ease the detection. Specifically, we pre-train a fully-convolutional two-class classifier $C$ with three convolutional layers to distinguish edge-aligned $\synS$ sketches from deformed sketches $\dfmS$. Then we utilize this pre-trained classifier to extract features of the input sketch $\dfmS$ to get ${C_i(\dfmS), i=1,2,3}$, where $C_i(·)$ denotes the $ith$ feature maps extracted by $C$. These feature maps from classifier emphasize the differences between sketches and deform sketches. We resize and concatenate these feature maps, and pass them through three convolutional layers to get the spatial attention map:
 %	
 \begin{equation}
 A=Softmax(Conv([C_1, Up_2(C_2), Up_4(C_3)])), 
@@ -42,7 +45,7 @@ where $Up_2$ and $Up_4$ indicates $2\times$ and $4\times$ upsampling, Conv(·) i
 At last, the output SAP is computed as:
 %	
 \begin{equation}
-SAP(S')=A*R,
+SAP(\dfmS)=A*R,
 \end{equation}
 %
 where $*$ is element-wise multiplication.
